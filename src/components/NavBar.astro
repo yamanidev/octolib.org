@@ -1,0 +1,66 @@
+---
+
+---
+
+<script>
+  const navMenu = document.getElementById('navMenu');
+  const burgerButton = document.getElementById('burgerButton');
+
+  burgerButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+<style>
+  .active {
+    @apply absolute lg:static block text-center inset-0 bg-beige pt-28 lg:pt-0 px-2;
+  }
+</style>
+
+<header>
+  <nav class="bg-beige shadow-navbar">
+    <div class="wrapper flex justify-between items-center py-4">
+      <div class="flex items-center gap-24">
+        <a href="/" class="shrink-0">
+          <img src="/images/logo.png" alt="octolib logo" width="90" />
+        </a>
+        <a
+          href="#"
+          class="text-beige hidden lg:block bg-blue-light transition hover:bg-blue-dark px-5 py-1 rounded-md text-xl font-bold">
+          Contribute
+        </a>
+      </div>
+      <button id="burgerButton" class="flex lg:hidden flex-col gap-1 relative z-10">
+        <span class="inline-block w-12 h-1.5 bg-blue-light"></span>
+        <span class="inline-block w-12 h-1.5 bg-blue-light"></span>
+        <span class="inline-block w-12 h-1.5 bg-blue-light"></span>
+      </button>
+      <div id="navMenu" class="hidden lg:block">
+        <ul
+          class="flex lg:justify-between gap-9 lg:gap-0 flex-col lg:flex-row font-bold text-blue-light text-2xl lg:text-base lg:w-[29rem]">
+          <li>
+            <a href="#" class="transition hover:text-blue-dark">1CP</a>
+          </li>
+          <li>
+            <a href="#" class="transition hover:text-blue-dark">2CP</a>
+          </li>
+          <li>
+            <a href="#" class="transition hover:text-blue-dark">1CS</a>
+          </li>
+          <li>
+            <a href="#" class="transition hover:text-blue-dark">2CS</a>
+          </li>
+          <li>
+            <a href="#" class="transition hover:text-blue-dark">3CS</a>
+          </li>
+        </ul>
+        <div class="lg:hidden max-w-[16.5rem] h-0.5 bg-blue-light mx-auto mt-12"></div>
+        <a
+          href="#"
+          class="text-beige mt-10 lg:hidden inline-block bg-blue-light transition hover:bg-blue-dark px-5 py-1 rounded-md text-xl font-bold">
+          Contribute
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
