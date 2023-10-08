@@ -24,3 +24,7 @@
     url('/fonts/montserrat-bold.woff2') format('woff2'),
     url('/fonts/montserrat-bold.woff') format('woff');
 }
+
+.wrapper {
+  @apply max-w-7xl mx-auto px-4;
+}
