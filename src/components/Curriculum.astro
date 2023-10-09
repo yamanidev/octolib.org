@@ -8,8 +8,6 @@ interface Props {
 }
 
 const { yearCodeName, curriculum, className } = Astro.props;
-
-console.log(curriculum);
 ---
 
 <section id={yearCodeName} class={`text-blue-dark ${className}`}>
@@ -25,7 +23,7 @@ console.log(curriculum);
             curriculum.semester1.map((semesterClass) => (
               <a href={semesterClass.link} class="flex items-center gap-2 text-lg">
                 <span>
-                  <img src="/public/images/document-icon.svg" alt="text document icon" width="35" />
+                  <img src="/images/document-icon.svg" alt="text document icon" width="35" />
                 </span>
                 <span>{semesterClass.title}</span>
               </a>
@@ -40,7 +38,7 @@ console.log(curriculum);
             curriculum.semester2.map((semesterClass) => (
               <a href={semesterClass.link} class="flex items-center gap-2 text-lg">
                 <span>
-                  <img src="/public/images/document-icon.svg" alt="text document icon" width="35" />
+                  <img src="/images/document-icon.svg" alt="text document icon" width="35" />
                 </span>
                 <span>{semesterClass.title}</span>
               </a>
