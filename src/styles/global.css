@@ -26,5 +26,5 @@
 }
 
 .wrapper {
-  @apply max-w-7xl mx-auto px-4;
+  @apply mx-auto max-w-7xl px-4;
 }

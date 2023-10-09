@@ -13,31 +13,31 @@
 
 <style>
   .active {
-    @apply absolute lg:static block text-center h-screen inset-0 bg-beige pt-28 lg:pt-0 px-2;
+    @apply absolute inset-0 block h-screen bg-beige px-2 pt-28 text-center lg:static lg:pt-0;
   }
 </style>
 
 <header class="relative z-10">
   <nav class="bg-beige shadow-navbar">
-    <div class="wrapper flex justify-between items-center py-4">
+    <div class="wrapper flex items-center justify-between py-4">
       <div class="flex items-center gap-24">
         <a href="/" class="shrink-0">
           <img src="/images/logo.png" alt="octolib logo" width="90" />
         </a>
         <a
           href="#"
-          class="text-beige hidden lg:block bg-blue-light transition hover:bg-blue-dark px-5 py-1 rounded-md text-xl font-bold">
+          class="hidden rounded-md bg-blue-light px-5 py-1 text-xl font-bold text-beige transition hover:bg-blue-dark lg:block">
           Contribute
         </a>
       </div>
-      <button id="burgerButton" class="flex lg:hidden flex-col gap-1 relative z-10">
-        <span class="inline-block w-12 h-1.5 bg-blue-light"></span>
-        <span class="inline-block w-12 h-1.5 bg-blue-light"></span>
-        <span class="inline-block w-12 h-1.5 bg-blue-light"></span>
+      <button id="burgerButton" class="relative z-10 flex flex-col gap-1 lg:hidden">
+        <span class="inline-block h-1.5 w-12 bg-blue-light"></span>
+        <span class="inline-block h-1.5 w-12 bg-blue-light"></span>
+        <span class="inline-block h-1.5 w-12 bg-blue-light"></span>
       </button>
       <div id="navMenu" class="hidden lg:block">
         <ul
-          class="flex lg:justify-between gap-9 lg:gap-0 flex-col lg:flex-row font-bold text-blue-light text-2xl lg:text-base lg:w-[29rem]">
+          class="flex flex-col gap-9 text-2xl font-bold text-blue-light lg:w-[29rem] lg:flex-row lg:justify-between lg:gap-0 lg:text-base">
           <li>
             <a href="#" class="transition hover:text-blue-dark">1CP</a>
           </li>
@@ -54,10 +54,10 @@
             <a href="#" class="transition hover:text-blue-dark">3CS</a>
           </li>
         </ul>
-        <div class="lg:hidden max-w-[16.5rem] h-0.5 bg-blue-light mx-auto mt-12"></div>
+        <div class="mx-auto mt-12 h-0.5 max-w-[16.5rem] bg-blue-light lg:hidden"></div>
         <a
           href="#"
-          class="text-beige mt-10 lg:hidden inline-block bg-blue-light transition hover:bg-blue-dark px-5 py-1 rounded-md text-xl font-bold">
+          class="mt-10 inline-block rounded-md bg-blue-light px-5 py-1 text-xl font-bold text-beige transition hover:bg-blue-dark lg:hidden">
           Contribute
         </a>
       </div>
