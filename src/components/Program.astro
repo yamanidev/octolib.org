@@ -1,0 +1,15 @@
+---
+import Curriculum from './Curriculum.astro';
+import firstYear from '../data/firstYear';
+import secondYear from '../data/secondYear';
+import thirdYear from '../data/thirdYear';
+---
+
+<section class="bg-blue-light">
+  <div class="wrapper">
+    <Curriculum yearCodeName="1CP" className="mb-20" curriculum={firstYear} />
+    <Curriculum yearCodeName="2CP" className="mb-20" curriculum={secondYear} />
+    <Curriculum yearCodeName="1CS" curriculum={thirdYear} />
+    <!-- <Curriculum yearCodeName="2CS" /> -->
+  </div>
+</section>
