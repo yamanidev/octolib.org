@@ -16,7 +16,8 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif']
       },
       boxShadow: {
-        navbar: '0px 4px 10px 0px rgba(0, 0, 0, 0.25)'
+        navbar: '0px 4px 10px 0px rgba(0, 0, 0, 0.25)',
+        curriculum: '-5px 4px 10px 0px #00000040'
       }
     }
   },
