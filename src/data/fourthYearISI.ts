@@ -1,6 +1,6 @@
 import type { Curriculum } from './types';
 
-export const fourthYearISICurriculum: Curriculum = {
+const fourthYearISICurriculum: Curriculum = {
   semester1: [
     {
       title: 'Embedded Systems 1',
@@ -66,3 +66,5 @@ export const fourthYearISICurriculum: Curriculum = {
     }
   ]
 };
+
+export default fourthYearISICurriculum;
