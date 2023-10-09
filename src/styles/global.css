@@ -28,3 +28,7 @@
 .wrapper {
   @apply mx-auto max-w-7xl px-4;
 }
+
+.year-codename-underline::after {
+  @apply absolute bottom-1 left-3 -z-10 h-3 w-full bg-blue-light content-[""];
+}
