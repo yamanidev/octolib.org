@@ -1,7 +1,7 @@
 import type { Specialty } from './types';
 
 const fourthYear: Specialty = {
-  iasd: {
+  IASD: {
     semester1: [
       {
         title: 'Operating Systems 1',
@@ -71,7 +71,7 @@ const fourthYear: Specialty = {
       }
     ]
   },
-  isi: {
+  ISI: {
     semester1: [
       {
         title: 'Embedded Systems 1',
@@ -137,7 +137,7 @@ const fourthYear: Specialty = {
       }
     ]
   },
-  siw: {
+  SIW: {
     semester1: [
       {
         title: 'Operating Systems 1',
