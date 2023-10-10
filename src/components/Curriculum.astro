@@ -30,18 +30,21 @@ const { yearCodeName, curriculum, className } = Astro.props;
 </script>
 
 <section id={yearCodeName} class={`text-blue-dark ${className}`}>
-  <div class="mx-auto max-w-[67.5rem] rounded-lg bg-blue-dark px-16 pb-14 pt-5 shadow-curriculum">
+  <div
+    class="mx-auto max-w-[67.5rem] rounded-lg bg-blue-dark pb-14 pt-5 shadow-curriculum sm:px-16">
     <h2 class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige">
       {yearCodeName}
     </h2>
     <div class="relative mt-9">
-      <button id={`prevButton-${yearCodeName}`} class="absolute -left-10 top-64 lg:hidden">
+      <button
+        id={`prevButton-${yearCodeName}`}
+        class="absolute -bottom-11 left-1/3 sm:-left-10 sm:bottom-auto sm:top-64 lg:hidden">
         <img src="/images/chevron-left.svg" alt="chevron left icon" width="27" />
       </button>
-      <div id={`carousel-${yearCodeName}`} class="flex gap-5 overflow-hidden transition">
+      <div id={`carousel-${yearCodeName}`} class="flex gap-5 overflow-hidden px-2 transition">
         <div class="carousel-slide w-full flex-[1_0_100%] lg:flex-auto">
           <h4 class="text-center text-2xl font-bold text-beige">semester 1</h4>
-          <div class="mt-4 flex min-h-[30rem] flex-col gap-3 rounded-lg bg-beige px-5 py-6">
+          <div class="mt-4 flex min-h-[30rem] flex-col gap-3 rounded-lg bg-beige px-3 py-6 sm:px-5">
             {
               curriculum.semester1.map((semesterClass) => (
                 <a href={semesterClass.link} class="flex items-center gap-2 text-lg leading-tight">
@@ -56,7 +59,7 @@ const { yearCodeName, curriculum, className } = Astro.props;
         </div>
         <div class="carousel-slide w-full flex-[1_0_100%] lg:flex-auto">
           <h4 class="text-center text-2xl font-bold text-beige">semester 2</h4>
-          <div class="mt-4 flex min-h-[30rem] flex-col gap-3 rounded-lg bg-beige px-5 py-6">
+          <div class="mt-4 flex min-h-[30rem] flex-col gap-3 rounded-lg bg-beige px-3 py-6 sm:px-5">
             {
               curriculum.semester2.map((semesterClass) => (
                 <a href={semesterClass.link} class="flex items-center gap-2 text-lg leading-tight">
@@ -70,7 +73,9 @@ const { yearCodeName, curriculum, className } = Astro.props;
           </div>
         </div>
       </div>
-      <button id={`nextButton-${yearCodeName}`} class="absolute -right-10 top-64 z-10 lg:hidden">
+      <button
+        id={`nextButton-${yearCodeName}`}
+        class="absolute -bottom-11 right-1/3 z-10 sm:-right-10 sm:bottom-auto sm:top-64 lg:hidden">
         <img src="/images/chevron-right.svg" alt="" width="27" />
       </button>
     </div>
