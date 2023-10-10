@@ -10,42 +10,69 @@ interface Props {
 const { yearCodeName, curriculum, className } = Astro.props;
 ---
 
+<script define:vars={{ yearCodeName }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById(`carousel-${yearCodeName}`);
+    const carouselSlide = document.querySelector('.carousel-slide');
+    const prevButton = document.getElementById(`prevButton-${yearCodeName}`);
+    const nextButton = document.getElementById(`nextButton-${yearCodeName}`);
+
+    nextButton.addEventListener('click', () => {
+      const slideWidth = carouselSlide.clientWidth;
+      carousel.scrollLeft += slideWidth + 20;
+    });
+
+    prevButton.addEventListener('click', () => {
+      const slideWidth = carouselSlide.clientWidth;
+      carousel.scrollLeft -= slideWidth + 20;
+    });
+  });
+</script>
+
 <section id={yearCodeName} class={`text-blue-dark ${className}`}>
   <div class="mx-auto max-w-[67.5rem] rounded-lg bg-blue-dark px-16 pb-14 pt-5 shadow-curriculum">
     <h2 class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige">
       {yearCodeName}
     </h2>
-    <div class="mt-9 flex gap-5">
-      <div class="w-full">
-        <h4 class="text-center text-2xl font-bold text-beige">semester 1</h4>
-        <div class="mt-4 flex min-h-[30rem] flex-col gap-3 rounded-lg bg-beige px-5 py-6">
-          {
-            curriculum.semester1.map((semesterClass) => (
-              <a href={semesterClass.link} class="flex items-center gap-2 text-lg leading-tight">
-                <span>
-                  <img src="/images/document-icon.svg" alt="text document icon" width="35" />
-                </span>
-                <span>{semesterClass.title}</span>
-              </a>
-            ))
-          }
+    <div class="relative mt-9">
+      <button id={`prevButton-${yearCodeName}`} class="absolute -left-10 top-64 lg:hidden">
+        <img src="/images/chevron-left.svg" alt="chevron left icon" width="27" />
+      </button>
+      <div id={`carousel-${yearCodeName}`} class="flex gap-5 overflow-hidden transition">
+        <div class="carousel-slide w-full flex-[1_0_100%] lg:flex-auto">
+          <h4 class="text-center text-2xl font-bold text-beige">semester 1</h4>
+          <div class="mt-4 flex min-h-[30rem] flex-col gap-3 rounded-lg bg-beige px-5 py-6">
+            {
+              curriculum.semester1.map((semesterClass) => (
+                <a href={semesterClass.link} class="flex items-center gap-2 text-lg leading-tight">
+                  <span>
+                    <img src="/images/document-icon.svg" alt="text document icon" width="35" />
+                  </span>
+                  <span>{semesterClass.title}</span>
+                </a>
+              ))
+            }
+          </div>
+        </div>
+        <div class="carousel-slide w-full flex-[1_0_100%] lg:flex-auto">
+          <h4 class="text-center text-2xl font-bold text-beige">semester 2</h4>
+          <div class="mt-4 flex min-h-[30rem] flex-col gap-3 rounded-lg bg-beige px-5 py-6">
+            {
+              curriculum.semester2.map((semesterClass) => (
+                <a href={semesterClass.link} class="flex items-center gap-2 text-lg leading-tight">
+                  <span>
+                    <img src="/images/document-icon.svg" alt="text document icon" width="35" />
+                  </span>
+                  <span>{semesterClass.title}</span>
+                </a>
+              ))
+            }
+          </div>
         </div>
       </div>
-      <div class="w-full">
-        <h4 class="text-center text-2xl font-bold text-beige">semester 2</h4>
-        <div class="mt-4 flex min-h-[30rem] flex-col gap-3 rounded-lg bg-beige px-5 py-6">
-          {
-            curriculum.semester2.map((semesterClass) => (
-              <a href={semesterClass.link} class="flex items-center gap-2 text-lg leading-tight">
-                <span>
-                  <img src="/images/document-icon.svg" alt="text document icon" width="35" />
-                </span>
-                <span>{semesterClass.title}</span>
-              </a>
-            ))
-          }
-        </div>
-      </div>
+      <button id={`nextButton-${yearCodeName}`} class="absolute -right-10 top-64 z-10 lg:hidden">
+        <img src="/images/chevron-right.svg" alt="" width="27" />
+      </button>
     </div>
   </div>
 </section>
