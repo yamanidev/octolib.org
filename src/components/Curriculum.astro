@@ -31,7 +31,7 @@ const { yearCodeName, curriculum, className } = Astro.props;
 
 <section id={yearCodeName} class={`text-blue-dark ${className}`}>
   <div
-    class="mx-auto max-w-[67.5rem] rounded-lg bg-blue-dark pb-14 pt-5 shadow-curriculum sm:px-16">
+    class="mx-auto max-w-[67.5rem] rounded-lg bg-blue-dark px-2 pb-14 pt-5 shadow-curriculum sm:px-16">
     <h2 class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige">
       {yearCodeName}
     </h2>
@@ -41,7 +41,7 @@ const { yearCodeName, curriculum, className } = Astro.props;
         class="absolute -bottom-11 left-1/3 sm:-left-10 sm:bottom-auto sm:top-64 lg:hidden">
         <img src="/images/chevron-left.svg" alt="chevron left icon" width="27" />
       </button>
-      <div id={`carousel-${yearCodeName}`} class="flex gap-5 overflow-hidden px-2 transition">
+      <div id={`carousel-${yearCodeName}`} class="flex gap-5 overflow-hidden transition">
         <div class="carousel-slide w-full flex-[1_0_100%] lg:flex-auto">
           <h4 class="text-center text-2xl font-bold text-beige">semester 1</h4>
           <div
