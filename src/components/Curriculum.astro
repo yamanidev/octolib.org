@@ -48,7 +48,7 @@ const { yearCodeName, curriculum, className } = Astro.props;
             {
               curriculum.semester1.map((semesterClass) => (
                 <a href={semesterClass.link} class="flex items-center gap-2 text-lg leading-tight">
-                  <span>
+                  <span class="flex-shrink-0">
                     <img src="/images/document-icon.svg" alt="text document icon" width="35" />
                   </span>
                   <span>{semesterClass.title}</span>
@@ -63,7 +63,7 @@ const { yearCodeName, curriculum, className } = Astro.props;
             {
               curriculum.semester2.map((semesterClass) => (
                 <a href={semesterClass.link} class="flex items-center gap-2 text-lg leading-tight">
-                  <span>
+                  <span class="flex-shrink-0">
                     <img src="/images/document-icon.svg" alt="text document icon" width="35" />
                   </span>
                   <span>{semesterClass.title}</span>
