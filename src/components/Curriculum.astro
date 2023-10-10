@@ -44,7 +44,8 @@ const { yearCodeName, curriculum, className } = Astro.props;
       <div id={`carousel-${yearCodeName}`} class="flex gap-5 overflow-hidden px-2 transition">
         <div class="carousel-slide w-full flex-[1_0_100%] lg:flex-auto">
           <h4 class="text-center text-2xl font-bold text-beige">semester 1</h4>
-          <div class="mt-4 flex min-h-[30rem] flex-col gap-3 rounded-lg bg-beige px-3 py-6 sm:px-5">
+          <div
+            class="mt-4 flex min-h-[30rem] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5">
             {
               curriculum.semester1.map((semesterClass) => (
                 <a href={semesterClass.link} class="flex items-center gap-2 text-lg leading-tight">
@@ -59,7 +60,8 @@ const { yearCodeName, curriculum, className } = Astro.props;
         </div>
         <div class="carousel-slide w-full flex-[1_0_100%] lg:flex-auto">
           <h4 class="text-center text-2xl font-bold text-beige">semester 2</h4>
-          <div class="mt-4 flex min-h-[30rem] flex-col gap-3 rounded-lg bg-beige px-3 py-6 sm:px-5">
+          <div
+            class="mt-4 flex min-h-[30rem] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5">
             {
               curriculum.semester2.map((semesterClass) => (
                 <a href={semesterClass.link} class="flex items-center gap-2 text-lg leading-tight">
