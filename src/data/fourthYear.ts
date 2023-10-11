@@ -140,69 +140,69 @@ const fourthYear: Specialty = {
   SIW: {
     semester1: [
       {
-        title: 'Operating Systems 1',
+        title: 'Advanced Databases 1',
         link: '#'
       },
       {
-        title: 'Networking 1',
+        title: 'Advanced Design Methods',
         link: '#'
       },
       {
-        title: 'Introduction to Software Engineering',
+        title: 'Advanced Information Systems',
         link: '#'
       },
       {
-        title: 'Databases',
+        title: 'Knowledge Engineering',
         link: '#'
       },
       {
-        title: 'Language Theory',
+        title: 'Human-Computer Interaction',
         link: '#'
       },
       {
-        title: 'Numerical Analysis',
+        title: 'Advanced Networking 1',
         link: '#'
       },
       {
-        title: 'Operational Research',
+        title: 'Analysis and Design of Advanced Algorithms',
         link: '#'
       },
       {
-        title: 'English Language 1',
+        title: 'Decision Support System',
         link: '#'
       }
     ],
     semester2: [
       {
-        title: 'Operating Systems 2',
+        title: 'Web Technologies and Development',
         link: '#'
       },
       {
-        title: 'Networking 2',
+        title: 'Mobile Technologies and Development',
         link: '#'
       },
       {
-        title: 'Advanced Computer Architecture',
+        title: 'Middleware and Services',
         link: '#'
       },
       {
-        title: 'Analysis and Design of Information Systems',
+        title: 'Database Administration',
         link: '#'
       },
       {
-        title: 'Web Languages and Tools',
+        title: 'Data Analysis',
         link: '#'
       },
       {
-        title: 'Introduction to Computer Security',
+        title: 'Engineering and Management of Information Systems Security',
         link: '#'
       },
       {
-        title: 'Project Management',
+        title: 'Multimedia Systems',
         link: '#'
       },
       {
-        title: 'English Language 2',
+        title: 'Modeling and Simulation',
         link: '#'
       }
     ]
