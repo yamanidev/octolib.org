@@ -23,7 +23,8 @@ function Curriculum({ yearCodeName, content, className }) {
 
   return (
     <section id={yearCodeName} class={`text-blue-dark ${className}`}>
-      <div class="mx-auto max-w-[67.5rem] rounded-lg bg-blue-dark px-2 pb-14 pt-5 shadow-curriculum sm:px-16">
+      <div class="relative z-10 mx-auto max-w-[67.5rem] rounded-lg px-2 pb-14 pt-5 shadow-curriculum sm:px-16">
+        <div className="absolute inset-0 rounded-lg bg-blue-dark opacity-60"></div>
         <h2 class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige">
           {yearCodeName}
         </h2>
