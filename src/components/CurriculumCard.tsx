@@ -59,7 +59,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
               <h4 class="text-center text-2xl font-bold text-beige">semester 1</h4>
               <div class="mt-4 flex min-h-[30rem] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5">
                 {isSpecialty(content)
-                  ? content[selectedSpecialty]?.semester1.map((semesterClass) => (
+                  ? content[selectedSpecialty].semester1.map((semesterClass) => (
                       <a
                         href={semesterClass.link}
                         class="flex items-center gap-2 text-lg leading-tight">
@@ -93,7 +93,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
               <h4 class="text-center text-2xl font-bold text-beige">semester 2</h4>
               <div class="mt-4 flex min-h-[30rem] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5">
                 {isSpecialty(content)
-                  ? content[selectedSpecialty]?.semester2.map((semesterClass) => (
+                  ? content[selectedSpecialty].semester2.map((semesterClass) => (
                       <a
                         href={semesterClass.link}
                         class="flex items-center gap-2 text-lg leading-tight">
