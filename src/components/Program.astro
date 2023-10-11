@@ -1,15 +1,16 @@
 ---
-import Curriculum from './Curriculum.astro';
 import firstYear from '../data/firstYear';
+import fourthYear from '../data/fourthYear';
 import secondYear from '../data/secondYear';
 import thirdYear from '../data/thirdYear';
+import Curriculum from './Curriculum.jsx';
 ---
 
 <section class="bg-blue-light">
   <div class="wrapper">
-    <Curriculum yearCodeName="1CP" className="mb-20" curriculum={firstYear} />
-    <Curriculum yearCodeName="2CP" className="mb-20" curriculum={secondYear} />
-    <Curriculum yearCodeName="1CS" curriculum={thirdYear} />
-    <!-- <Curriculum yearCodeName="2CS" /> -->
+    <Curriculum yearCodeName="1CP" className="mb-20" content={firstYear} client:load />
+    <Curriculum yearCodeName="2CP" className="mb-20" content={secondYear} client:load />
+    <Curriculum yearCodeName="1CS" className="mb-20" content={thirdYear} client:load />
+    <Curriculum yearCodeName="2CS" content={fourthYear} client:load />
   </div>
 </section>
