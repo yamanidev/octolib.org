@@ -32,8 +32,8 @@ function Curriculum({ yearCodeName, content, className }) {
             {Object.keys(content).map((specialty) => (
               <button
                 onClick={() => setSelectedSpecialty(specialty)}
-                class={`text-[2rem] font-bold text-beige ${
-                  selectedSpecialty === specialty && 'underline'
+                class={`relative text-[2rem] font-bold text-beige ${
+                  selectedSpecialty === specialty && 'specialty-underline'
                 }`}>
                 {specialty}
               </button>
