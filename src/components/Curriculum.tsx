@@ -1,13 +1,20 @@
 import { useRef, useState } from 'preact/hooks';
+import type { Curriculum, Specialty } from '../data/types';
 
 function isSpecialty(content) {
   return !('semester1' in content);
 }
 
-function Curriculum({ yearCodeName, content, className }) {
-  const carousel = useRef();
-  const carouselSlide = useRef();
-  const [selectedSpecialty, setSelectedSpecialty] = useState(
+interface Props {
+  yearCodeName: string;
+  content: Specialty | Curriculum;
+  className?: string;
+}
+
+function Curriculum({ yearCodeName, content, className }: Props) {
+  const carousel = useRef<HTMLDivElement>();
+  const carouselSlide = useRef<HTMLDivElement>();
+  const [selectedSpecialty, setSelectedSpecialty] = useState<string>(
     isSpecialty(content) ? Object.keys(content)[0] : null
   );
 
