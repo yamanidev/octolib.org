@@ -11,7 +11,7 @@ interface Props {
   className?: string;
 }
 
-function Curriculum({ yearCodeName, content, className }: Props) {
+function CurriculumCard({ yearCodeName, content, className }: Props) {
   const carousel = useRef<HTMLDivElement>();
   const carouselSlide = useRef<HTMLDivElement>();
   const [selectedSpecialty, setSelectedSpecialty] = useState<string>(
@@ -135,4 +135,4 @@ function Curriculum({ yearCodeName, content, className }: Props) {
   );
 }
 
-export default Curriculum;
+export default CurriculumCard;
