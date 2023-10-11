@@ -73,7 +73,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         <span>{semesterClass.title}</span>
                       </a>
                     ))
-                  : content.semester1.map((semesterClass) => (
+                  : (content as Curriculum).semester1.map((semesterClass) => (
                       <a
                         href={semesterClass.link}
                         class="flex items-center gap-2 text-lg leading-tight">
@@ -107,7 +107,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         <span>{semesterClass.title}</span>
                       </a>
                     ))
-                  : content.semester2.map((semesterClass) => (
+                  : (content as Curriculum).semester2.map((semesterClass) => (
                       <a
                         href={semesterClass.link}
                         class="flex items-center gap-2 text-lg leading-tight">
