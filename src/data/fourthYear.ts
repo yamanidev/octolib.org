@@ -4,69 +4,69 @@ const fourthYear: Specialty = {
   IASD: {
     semester1: [
       {
-        title: 'Operating Systems 1',
+        title: 'Advanced Databases',
         link: '#'
       },
       {
-        title: 'Networking 1',
+        title: 'Machine Learning',
         link: '#'
       },
       {
-        title: 'Introduction to Software Engineering',
+        title: 'Software Engineering for Data Science',
         link: '#'
       },
       {
-        title: 'Databases',
+        title: 'Knowledge Engineering',
         link: '#'
       },
       {
-        title: 'Language Theory',
+        title: 'Advanced Mathematics for Data Science',
         link: '#'
       },
       {
-        title: 'Numerical Analysis',
+        title: 'Complexity and Problem Solving',
         link: '#'
       },
       {
-        title: 'Operational Research',
+        title: 'Human-Computer Interaction',
         link: '#'
       },
       {
-        title: 'English Language 1',
+        title: 'Advanced Networking',
         link: '#'
       }
     ],
     semester2: [
       {
-        title: 'Operating Systems 2',
+        title: 'Deep Learning',
         link: '#'
       },
       {
-        title: 'Networking 2',
+        title: 'Natural Language Processing',
         link: '#'
       },
       {
-        title: 'Advanced Computer Architecture',
+        title: 'High Performance Computing',
         link: '#'
       },
       {
-        title: 'Analysis and Design of Information Systems',
+        title: 'Big Data Technologies',
         link: '#'
       },
       {
-        title: 'Web Languages and Tools',
+        title: 'IT Security',
         link: '#'
       },
       {
-        title: 'Introduction to Computer Security',
+        title: 'Modeling and Simulation',
         link: '#'
       },
       {
-        title: 'Project Management',
+        title: 'Data Analysis',
         link: '#'
       },
       {
-        title: 'English Language 2',
+        title: 'Virtual Reality and Augmented Reality',
         link: '#'
       }
     ]
