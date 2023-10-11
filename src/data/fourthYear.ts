@@ -75,65 +75,65 @@ const fourthYear: Specialty = {
     semester1: [
       {
         title: 'Embedded Systems 1',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1dmHuaqBR_OO5Rqc5mzvRSTG4oZhffEqh'
       },
       {
         title: 'Advanced Networking',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1W-TlA16jx7X6o14-6krZ5nlrQwlioa92'
       },
       {
         title: 'Advanced Databases',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1AnLQx4X7GJnf_BR45gBqc4cPNTnf2icC'
       },
       {
         title: 'Analysis and Design of Advanced Algorithms',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/178cMHzTn3v6oI-kSOVdfDer_lnUIK_N0'
       },
       {
         title: 'Human-Computer Interaction',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1DmaAyiK6i_qOYMzfPuKWARA3dAM2AiYf'
       },
       {
         title: 'Knowledge Engineering',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/19wVaXhPpKSwA8WPBcIHCTJrdKpNseIlW'
       },
       {
         title: 'Decision Support Systems',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1jYq5lqgAon0crfPbmyywQ6AXi4AREenx'
       },
       {
         title: 'Web Technologies and Development',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1aTQBTfL3gFoYBtDp7eDfT3UrMZSvxPXI'
       }
     ],
     semester2: [
       {
         title: 'Distributed Systems',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1iL81rKoKB8NKHnhjVeB6xSxdW0fdznmm'
       },
       {
         title: 'Systems and Network Security',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1iHfZ15JgSyqCCTyG7VTWNrPXgaLUVODF'
       },
       {
         title: 'Embedded Systems 2',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1-cyuYXkH4odcIaZ0nyOnWpl8n8cowZ8u'
       },
       {
         title: 'Mobile Technologies and Development',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1hxCStv4BMqhnp1wBsa4SD2Nx_FFv3xuK'
       },
       {
         title: 'Modeling and Simulation',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1eAUXadG03g4Mde6RLbNvDAHFjv4ZwK6v'
       },
       {
         title: 'Data Analysis',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1W06i3C7FFYawuKHjOjRwgX3z-sEKrhxP'
       },
       {
         title: 'Multimedia Systems',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/15_WoSSo4_InXNTCIPvqYYTnhV2DmE_sd'
       }
     ]
   },
