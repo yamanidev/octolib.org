@@ -54,7 +54,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
             class="absolute -bottom-11 left-1/3 sm:-left-10 sm:bottom-auto sm:top-64 lg:hidden">
             <img src="/images/chevron-left.svg" alt="chevron left icon" width="27" />
           </button>
-          <div ref={carousel} class="flex gap-5 overflow-hidden transition">
+          <div ref={carousel} class="flex gap-5 overflow-hidden scroll-smooth transition">
             <div ref={carouselSlide} class="w-full flex-[1_0_100%] lg:flex-auto">
               <h4 class="text-center text-2xl font-bold text-beige">semester 1</h4>
               <div class="mt-4 flex min-h-[30rem] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5">
