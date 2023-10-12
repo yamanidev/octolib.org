@@ -9,6 +9,7 @@
 
   burgerButton.addEventListener('click', () => {
     navMenu.classList.toggle('active');
+    burgerButton.classList.toggle('active');
     if (navMenu.classList.contains('active')) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = 'visible';
   });
@@ -16,6 +17,7 @@
   for (const navbarLink of navbarLinks) {
     navbarLink.addEventListener('click', () => {
       navMenu.classList.remove('active');
+      burgerButton.classList.remove('active');
       document.body.style.overflow = 'visible';
       return true;
     });
@@ -23,7 +25,19 @@
 </script>
 
 <style>
-  .active {
+  #burgerButton.active span:nth-child(1) {
+    @apply translate-y-2.5 rotate-45;
+  }
+
+  #burgerButton.active span:nth-child(3) {
+    @apply -translate-y-2.5 -rotate-45;
+  }
+
+  #burgerButton.active span:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  #navMenu.active {
     @apply absolute inset-0 block h-screen bg-beige px-2 pt-28 text-center lg:static lg:pt-0;
   }
 </style>
@@ -43,9 +57,9 @@
         </a>
       </div>
       <button id="burgerButton" class="relative z-10 flex flex-col gap-1 lg:hidden">
-        <span class="inline-block h-1.5 w-12 bg-blue-light"></span>
-        <span class="inline-block h-1.5 w-12 bg-blue-light"></span>
-        <span class="inline-block h-1.5 w-12 bg-blue-light"></span>
+        <span class="inline-block h-1.5 w-12 bg-blue-light transition duration-500"></span>
+        <span class="inline-block h-1.5 w-12 bg-blue-light transition duration-300"></span>
+        <span class="inline-block h-1.5 w-12 bg-blue-light transition duration-500"></span>
       </button>
       <div id="navMenu" class="hidden lg:block">
         <ul
