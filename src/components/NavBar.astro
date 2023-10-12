@@ -5,10 +5,21 @@
 <script>
   const navMenu = document.getElementById('navMenu');
   const burgerButton = document.getElementById('burgerButton');
+  const navbarLinks = document.getElementsByClassName('navbar-link');
 
   burgerButton.addEventListener('click', () => {
     navMenu.classList.toggle('active');
+    if (navMenu.classList.contains('active')) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'visible';
   });
+
+  for (const navbarLink of navbarLinks) {
+    navbarLink.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      document.body.style.overflow = 'visible';
+      return true;
+    });
+  }
 </script>
 
 <style>
@@ -40,19 +51,19 @@
         <ul
           class="flex flex-col gap-9 text-2xl font-bold text-blue-light lg:w-[29rem] lg:flex-row lg:justify-between lg:gap-0 lg:text-base">
           <li>
-            <a href="#1CP" class="transition hover:text-blue-dark">1CP</a>
+            <a href="#1CP" class="navbar-link transition hover:text-blue-dark">1CP</a>
           </li>
           <li>
-            <a href="#2CP" class="transition hover:text-blue-dark">2CP</a>
+            <a href="#2CP" class="navbar-link transition hover:text-blue-dark">2CP</a>
           </li>
           <li>
-            <a href="#1CS" class="transition hover:text-blue-dark">1CS</a>
+            <a href="#1CS" class="navbar-link transition hover:text-blue-dark">1CS</a>
           </li>
           <li>
-            <a href="#2CS" class="transition hover:text-blue-dark">2CS</a>
+            <a href="#2CS" class="navbar-link transition hover:text-blue-dark">2CS</a>
           </li>
           <li>
-            <a href="#3CS" class="transition hover:text-blue-dark">3CS</a>
+            <a href="#3CS" class="navbar-link transition hover:text-blue-dark">3CS</a>
           </li>
         </ul>
         <div class="mx-auto mt-12 h-0.5 max-w-[16.5rem] bg-blue-light lg:hidden"></div>
