@@ -15,6 +15,8 @@ We welcome contributions to this hub. In fact they're necessary for the relevanc
 
 - All resources must be hosted on Google Drive.
 - Folder structure must follow the format below.
+- Stick to PDF formats. Export/convert other formats to PDF.
+- If some document is only available in physical format, kindly scan it with your phone. Microsoft Lens is a great app for that: download from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&pcampaignid=web_share) or [Apple Store](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059).
 - No pirated content is allowed.
 
 ### Folder structure format
