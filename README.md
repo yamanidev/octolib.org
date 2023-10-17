@@ -13,9 +13,9 @@ Octolib is the school hub for [ESI SBA](https://www.esi-sba.dz/) students that s
 
 We welcome contributions to this hub. In fact they're necessary for the relevance of the resources, and thus must be updated on a yearly basis. Here are some rules for the sake of consistency and regulation:
 
-- No pirated content.
 - All resources must be hosted on Google Drive.
 - Folder structure must follow the format below.
+- No pirated content is allowed.
 
 ### Folder structure format
 
