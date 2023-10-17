@@ -38,27 +38,27 @@ const firstYearCurriculum: Curriculum = {
   semester2: [
     {
       title: 'Algorithms and Dynamic Data Structures',
-      link: 'https://drive.google.com/drive/folders/154937lMeCeaxflpU7SlbTvx3NZV6NDUT'
+      link: 'https://drive.google.com/drive/folders/11Ngl4Ct9VBB_F-1uJLaIyxeip43DJFdb?usp=drive_link'
     },
     {
       title: 'Introduction to Operating Systems 2',
-      link: 'https://drive.google.com/drive/folders/1CD9AMbiiRBUI21B043lvDm5aehtxRoSn'
+      link: 'https://drive.google.com/drive/folders/1c3wA7JY1N1uSeR7pWx93bSST2sGodKC7?usp=drive_link'
     },
     {
       title: 'Mathematical Analysis 2',
-      link: 'https://drive.google.com/drive/folders/1KNGS0bNQ0xWUm8_5_5uNnQwVhxeL7q5D'
+      link: 'https://drive.google.com/drive/folders/1RUloq4QLOCFXXzXKAm0msBLT5Q97sQO9?usp=drive_link'
     },
     {
       title: 'Algebra 2',
-      link: 'https://drive.google.com/drive/folders/1PBcK2wXwNwOjyZC5U5znHDEtDdqeK3OM'
+      link: 'https://drive.google.com/drive/folders/1NSRMsq_uK6tGF003XexFyo5By3tj3T-C?usp=drive_link'
     },
     {
       title: 'Point Mechanics',
-      link: 'https://drive.google.com/drive/folders/1Ye1cI2aXVtSS8gQIEM-sxZhgjtROYpin'
+      link: 'https://drive.google.com/drive/folders/1aP7UUcAjk4tZW27tCxv6g85EFln3ngJo?usp=drive_link'
     },
     {
       title: 'Fundamental Electronics 1',
-      link: 'https://drive.google.com/drive/folders/1RXl_BXdqICfHofZIQ_QyUtzeIjFd6gwJ'
+      link: 'https://drive.google.com/drive/folders/1CDkV2jBjCrtXsOgGLtUJTMnWIFtH3f8A?usp=drive_link'
     },
     {
       title: 'Oral Expression Technique',
@@ -66,7 +66,7 @@ const firstYearCurriculum: Curriculum = {
     },
     {
       title: 'English Language 1',
-      link: 'https://drive.google.com/drive/folders/1W3WSY_HG76eq0t0La3506TmgzNo0SUTn'
+      link: '#'
     }
   ]
 };
