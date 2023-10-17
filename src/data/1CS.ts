@@ -4,69 +4,69 @@ const thirdYearCurriculum: Curriculum = {
   semester1: [
     {
       title: 'Operating Systems 1',
-      link: 'https://drive.google.com/drive/folders/1MchW0vyEuAYzld2ZPuqNnexNZyaXWObL'
+      link: 'https://drive.google.com/drive/folders/1E8cd4C62pun4swD1ZUpXYTFpfSoVeTM9?usp=drive_link'
     },
     {
       title: 'Networking 1',
-      link: 'https://drive.google.com/drive/folders/1mKRlik1kLsBzY-mpfFNnmqRycYouE4uu'
+      link: 'https://drive.google.com/drive/folders/1qyOb7btaonZfLkqLc5ntCVpK3YfTU4mE?usp=drive_link'
     },
     {
       title: 'Introduction to Software Engineering',
-      link: 'https://drive.google.com/drive/folders/1oWKyLE8Ad-yoldx_TIu2r67u8sIXZbd9'
+      link: 'https://drive.google.com/drive/folders/1B01_vJT040UCCjTcGbv03MbjohNGT0b4?usp=drive_link'
     },
     {
       title: 'Databases',
-      link: 'https://drive.google.com/drive/folders/12vypF9gefKKttsT1ME2DoHA7K5hy9WnZ'
+      link: 'https://drive.google.com/drive/folders/123LZ4iQMtfLcVR8nfcEjn7tD-8QNQTKt?usp=drive_link'
     },
     {
       title: 'Language Theory',
-      link: 'https://drive.google.com/drive/folders/1kQrJl306JDEi8Di9r2f8vjpCvfA1-Mb6'
+      link: 'https://drive.google.com/drive/folders/1wWbM0so3rgfym5MQutLJPBIvOPXXCo4X?usp=drive_link'
     },
     {
       title: 'Numerical Analysis',
-      link: 'https://drive.google.com/drive/folders/1heQ60aw381mrekk2PANjxcPEJ4JkjXBE'
+      link: 'https://drive.google.com/drive/folders/1gtYvDHcW0hhiM5Iq0tDtMFiXRz0zlotE?usp=drive_link'
     },
     {
       title: 'Operational Research',
-      link: 'https://drive.google.com/drive/folders/1mdvVQFVAPxTPZAFR67I8jk-dNrmxuVeZ'
+      link: 'https://drive.google.com/drive/folders/1QK3a4EsPJW4PFN7dkDDoYIKAilBi8rRZ?usp=drive_link'
     },
     {
       title: 'English Language 1',
-      link: 'https://drive.google.com/drive/folders/1w49sDyGGs95s4X9xJ7JJcB60a5yzD_SG'
+      link: 'https://drive.google.com/drive/folders/14KxmN_w0A1yOu9NWQLdq1q670KJsm8il?usp=drive_link'
     }
   ],
   semester2: [
     {
       title: 'Operating Systems 2',
-      link: 'https://drive.google.com/drive/folders/1nMEKQgiAwXEMwdIps1OHpVWZ2O6V-Amh'
+      link: 'https://drive.google.com/drive/folders/1jFRmkDmTZYMd59uOVbAsDu9Zc2IBDg2Z?usp=drive_link'
     },
     {
       title: 'Networking 2',
-      link: 'https://drive.google.com/drive/folders/15r4YETTP3e1M2-UDL64JqRnRxmNLtSwK'
+      link: 'https://drive.google.com/drive/folders/1415WpOW3cxvvQYfPxqSZyx7jscPU9yO-?usp=drive_link'
     },
     {
       title: 'Advanced Computer Architecture',
-      link: 'https://drive.google.com/drive/folders/1b6y8I6_sW4_2XBbA3-qkvOXwCVtltDlL'
+      link: 'https://drive.google.com/drive/folders/1tA9PKzn_lVQJ6QlVK0raA4AcekhgeqSv?usp=drive_link'
     },
     {
       title: 'Analysis and Design of Information Systems',
-      link: 'https://drive.google.com/drive/folders/1-TD0Q1xQLyxd1sIdHkbhM2Yfd1AhEB5W'
+      link: 'https://drive.google.com/drive/folders/1Js8aIMaiQ5PHZw5wf12nj9pUscTKM7uE?usp=drive_link'
     },
     {
       title: 'Web Languages and Tools',
-      link: 'https://drive.google.com/drive/folders/1H6jmkJIBKzMm5dGHjeLzn-JZSqhPg2JD'
+      link: 'https://drive.google.com/drive/folders/1ZNU6IZuCNsDxHwl4hdgPte0vOCElr3T1?usp=drive_link'
     },
     {
       title: 'Introduction to Computer Security',
-      link: 'https://drive.google.com/drive/folders/1sr3ClWrSRFND-Nv1gi2z4M0tfBf_pHpc'
+      link: 'https://drive.google.com/drive/folders/1zXI8fvDNVDGrtRRzAh1eXJ5B3hfhKl6l?usp=drive_link'
     },
     {
       title: 'Project Management',
-      link: 'https://drive.google.com/drive/folders/1X_-5nb7u_KpEVZAOB4NIJqCg8nCQdIet'
+      link: 'https://drive.google.com/drive/folders/1Q3tATwRViBZ1dwY1nkpeAdcdaoyTTpJt?usp=drive_link'
     },
     {
       title: 'English Language 2',
-      link: 'https://drive.google.com/drive/folders/1ojgb2ZKU9R-bPUqSBNfJcazeCNyw5BcZ'
+      link: 'https://drive.google.com/drive/folders/1G3aGgk9_Jj3ofCWI7I_v_87wClpXKINn?usp=drive_link'
     }
   ]
 };
