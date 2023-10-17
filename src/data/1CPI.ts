@@ -4,27 +4,27 @@ const firstYearCurriculum: Curriculum = {
   semester1: [
     {
       title: 'Algorithms and Static Data Structures',
-      link: '#'
+      link: 'https://drive.google.com/drive/folders/1-acdARyTxjaP9mfTMyTsiBWtvXieNKol?usp=drive_link'
     },
     {
       title: 'Computer Architecture 1',
-      link: '#'
+      link: 'https://drive.google.com/drive/folders/1zoLYPn-MBnb_SxFC6kUaxBnc4xNZqmHf?usp=drive_link'
     },
     {
       title: 'Introduction to Operating Systems 1',
-      link: '#'
+      link: 'https://drive.google.com/drive/folders/1bbnW1Ri6DRXjiMerxK58mGMYb9YAQebD?usp=drive_link'
     },
     {
       title: 'Mathematical Analysis 1',
-      link: '#'
+      link: 'https://drive.google.com/drive/folders/1yneXsxIznOCUEP2e_fu8PLw6Q0M09P4Y?usp=drive_link'
     },
     {
       title: 'Algebra 1',
-      link: '#'
+      link: 'https://drive.google.com/drive/folders/1mUzInm0dJhhvypSUszW1Y-2Ac2D9-EnC?usp=drive_link'
     },
     {
       title: 'Electricity',
-      link: '#'
+      link: 'https://drive.google.com/drive/folders/1GoLtkZqJpDFCL1K5isy-ox-n1nj7olsK?usp=drive_link'
     },
     {
       title: 'Written Expression Technique',
@@ -32,7 +32,7 @@ const firstYearCurriculum: Curriculum = {
     },
     {
       title: 'Office and Web',
-      link: '#'
+      link: 'https://drive.google.com/drive/folders/1iETqAjcHVxheAENSMutoo7KSIyKAgOCZ?usp=drive_link'
     }
   ],
   semester2: [
