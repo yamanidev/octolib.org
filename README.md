@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="/public/images/logo.png" alt="octolib logo" />
+</p>
+
 ## About
 
 Octolib is the school hub for [ESI SBA](https://www.esi-sba.dz/) students that shares:
