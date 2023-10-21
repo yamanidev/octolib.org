@@ -71,35 +71,35 @@ const fourthYear: Specialty = {
     semester1: [
       {
         title: 'Advanced Databases 1',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1Q8CWsfI23E08YnnXEujfNcvsnEUY5Z9X?usp=share_link'
       },
       {
         title: 'Advanced Design Methods',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1aZQfuwjhceZhX0f2_n8GFQhL3CmLg_OS?usp=share_link'
       },
       {
         title: 'Advanced Information Systems',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1m7hMzBpojDG7ATupw14v9gdc9H3tPHDy?usp=share_link'
       },
       {
         title: 'Knowledge Engineering',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1_i1-3JdIhE1xTVRCtdMmFk4OsVdBPYj2?usp=share_link'
       },
       {
         title: 'Human-Computer Interaction',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1Qew4UdLzWRjUnTXQXS7LRQu-XD43E2xU?usp=share_link'
       },
       {
         title: 'Advanced Networking 1',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1dPyAz4J-vyt6vHd6sQiSoEBa8HM9xa_F?usp=share_link'
       },
       {
-        title: 'Analysis and Design of Advanced Algorithms',
-        link: '#'
+        title: 'Web Technologies and Development',
+        link: 'https://drive.google.com/drive/folders/1bpC-wJmxjoyaUffG89os1jMD_PkEohM3?usp=share_link'
       },
       {
         title: 'Decision Support System',
-        link: '#'
+        link: 'https://drive.google.com/drive/folders/1wDZRJZLkEUUsZ3AoJhbCX1bRQ929N4b7?usp=share_link'
       }
     ],
     semester2: [
