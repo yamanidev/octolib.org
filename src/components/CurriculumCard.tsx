@@ -62,7 +62,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                   ? content[selectedSpecialty].semester1.map((semesterClass) => (
                       <a
                         href={semesterClass.link}
-                        class="flex items-center gap-2 text-lg leading-tight">
+                        class="flex items-center gap-2 text-lg leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
@@ -76,7 +76,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                   : (content as Curriculum).semester1.map((semesterClass) => (
                       <a
                         href={semesterClass.link}
-                        class="flex items-center gap-2 text-lg leading-tight">
+                        class="flex items-center gap-2 text-lg leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
