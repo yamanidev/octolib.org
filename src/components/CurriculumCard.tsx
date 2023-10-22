@@ -1,7 +1,7 @@
 import { useRef, useState } from 'preact/hooks';
-import type { Curriculum, Specialty } from '../data/types';
+import type { Class, Curriculum, Specialty } from '../data/types';
 
-function isSpecialty(content) {
+function isSpecialty(content: Specialty | Curriculum) {
   return !('semester1' in content);
 }
 
@@ -59,7 +59,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
               <h4 class="text-center text-2xl font-bold text-beige">semester 1</h4>
               <div class="mt-4 flex min-h-[30rem] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5">
                 {isSpecialty(content)
-                  ? content[selectedSpecialty].semester1.map((semesterClass) => (
+                  ? content[selectedSpecialty].semester1.map((semesterClass: Class) => (
                       <a
                         href={semesterClass.link}
                         class="flex items-center gap-2 text-lg leading-tight hover:underline">
@@ -73,7 +73,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         <span>{semesterClass.title}</span>
                       </a>
                     ))
-                  : (content as Curriculum).semester1.map((semesterClass) => (
+                  : (content as Curriculum).semester1.map((semesterClass: Class) => (
                       <a
                         href={semesterClass.link}
                         class="flex items-center gap-2 text-lg leading-tight hover:underline">
