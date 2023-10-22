@@ -62,6 +62,8 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                   ? content[selectedSpecialty].semester1.map((semesterClass: Class) => (
                       <a
                         href={semesterClass.link}
+                        target="_blank"
+                        rel="noreferrer"
                         class="flex items-center gap-2 text-lg leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
@@ -76,6 +78,8 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                   : (content as Curriculum).semester1.map((semesterClass: Class) => (
                       <a
                         href={semesterClass.link}
+                        target="_blank"
+                        rel="noreferrer"
                         class="flex items-center gap-2 text-lg leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
@@ -93,9 +97,11 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
               <h4 class="text-center text-2xl font-bold text-beige">semester 2</h4>
               <div class="mt-4 flex min-h-[30rem] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5">
                 {isSpecialty(content)
-                  ? content[selectedSpecialty].semester2.map((semesterClass) => (
+                  ? content[selectedSpecialty].semester2.map((semesterClass: Class) => (
                       <a
                         href={semesterClass.link}
+                        target="_blank"
+                        rel="noreferrer"
                         class="flex items-center gap-2 text-lg leading-tight">
                         <span class="flex-shrink-0">
                           <img
@@ -107,8 +113,10 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         <span>{semesterClass.title}</span>
                       </a>
                     ))
-                  : (content as Curriculum).semester2.map((semesterClass) => (
+                  : (content as Curriculum).semester2.map((semesterClass: Class) => (
                       <a
+                        target="_blank"
+                        rel="noreferrer"
                         href={semesterClass.link}
                         class="flex items-center gap-2 text-lg leading-tight">
                         <span class="flex-shrink-0">
