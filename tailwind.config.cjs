@@ -10,6 +10,7 @@ module.exports = {
         beige: '#FAEBD9',
         'blue-light': '#2B9AAE',
         'blue-dark': '#1B5F6A',
+        'aero-blue': '#C9F1ED',
         sand: '#D4A040'
       },
       fontFamily: {
