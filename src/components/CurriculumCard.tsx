@@ -52,7 +52,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
           <button
             onClick={slidePrev}
             class="absolute -bottom-11 left-1/3 sm:-left-10 sm:bottom-auto sm:top-64 lg:hidden">
-            <img src="/images/chevron-left.svg" alt="chevron left icon" width="27" />
+            <img src="/images/chevron-left.svg" alt="chevron left icon" width="28" height="36" />
           </button>
           <div ref={carousel} class="flex gap-5 overflow-hidden scroll-smooth transition">
             <div ref={carouselSlide} class="w-full flex-[1_0_100%] lg:flex-auto">
@@ -70,6 +70,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                             src="/images/document-icon.svg"
                             alt="text document icon"
                             width="35"
+                            height="35"
                           />
                         </span>
                         <span>{semesterClass.title}</span>
@@ -135,7 +136,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
           <button
             onClick={slideNext}
             class="absolute -bottom-11 right-1/3 z-10 sm:-right-10 sm:bottom-auto sm:top-64 lg:hidden">
-            <img src="/images/chevron-right.svg" alt="" width="27" />
+            <img src="/images/chevron-right.svg" alt="" width="28" height="36" />
           </button>
         </div>
       </div>
