@@ -4,14 +4,11 @@
 
 ## About
 
-Octolib is the school hub for [ESI SBA](https://www.esi-sba.dz/) students that shares:
-
-- School materials (lessons, exercices with solution, labs...).
-- Previous exams with solution.
+A student-managed ESI SBA library for lessons, labs and previous exams.
 
 ## Contribution guidlines
 
-We welcome contributions to this hub. In fact they're necessary for the relevance of the resources, and thus must be updated on a yearly basis. Here are some rules for the sake of consistency and regulation:
+We welcome contributions, in fact this project needs them on a yearly basis in order to survive and stay relevant. Here are the some guidelines to ease the process and to regular the content:
 
 - All resources must be hosted on Google Drive.
 - Folder structure must follow the format below.
