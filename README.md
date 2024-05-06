@@ -19,37 +19,37 @@ We welcome contributions to this hub. In fact they're necessary for the relevanc
 - If some document is only available in physical format, kindly scan it with your phone. Microsoft Lens is a great app for that: download from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&pcampaignid=web_share) or [Apple Store](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059).
 - No pirated content is allowed.
 
-### Folder structure format
+### Folder structure and file naming conventions
 
-**Note**: Folders are mostly named in French abbreviations, because that is the used language at school.
+**Note**: Folders are mostly named in French abbreviations, because it is the teaching language of ESI SBA.
 
 Google Drive (one for each school year):
 
-- S1 (semester 1):
+- S1 (1st semester):
 
   - Module:
     - Cours:
-      - 2019-2020 (folder named after the academic year):
+      - 2019-2020 (academic year of the resources):
         - Lesson 1
         - Lesson 2
         - ...
     - TD:
-      - 2019-2020 (folder name after the academic year):
+      - 2019-2020 (academic year of the resources):
         - TD 1
         - TD 2
         - ...
     - TP:
-      - 2019-2020 (folder name after the academic year):
+      - 2019-2020 (academic year of the resources):
         - TP 1
         - TP 2
         - ...
     - Examens:
-      - 2019-2020 (folder name after the academic year):
-        - EMD1.pdf
-        - EMD1-solution.pdf
-        - EMD2.pdf
-        - EMD2-solution.pdf
+      - 2019-2020 (academic year of the resources):
+        - EMD1
+        - EMD1 solution
+        - EMD2
+        - EMD2 solution
     - Autres (extra files):
       - Whatever
 
-- S2 (semester 2. Same structure):
+- S2 (2nd semester. Same structure as S1):
