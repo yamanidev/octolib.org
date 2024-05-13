@@ -12,20 +12,20 @@ interface Props {
 }
 
 function CurriculumCard({ yearCodeName, content, className }: Props) {
-  const carousel = useRef<HTMLDivElement>();
-  const carouselSlide = useRef<HTMLDivElement>();
+  const carouselRef = useRef<HTMLDivElement>();
+  const carouselSlideRef = useRef<HTMLDivElement>();
   const [selectedSpecialty, setSelectedSpecialty] = useState<string>(
     isSpecialty(content) ? Object.keys(content)[0] : null
   );
 
   function slidePrev() {
-    const slideWidth = carouselSlide.current.clientWidth;
-    carousel.current.scrollLeft -= slideWidth + 20;
+    const slideWidth = carouselSlideRef.current.clientWidth;
+    carouselRef.current.scrollLeft -= slideWidth + 20;
   }
 
   function slideNext() {
-    const slideWidth = carouselSlide.current.clientWidth;
-    carousel.current.scrollLeft += slideWidth + 20;
+    const slideWidth = carouselSlideRef.current.clientWidth;
+    carouselRef.current.scrollLeft += slideWidth + 20;
   }
 
   return (
@@ -54,8 +54,8 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
             class="absolute -bottom-11 left-1/3 sm:-left-10 sm:bottom-auto sm:top-64 lg:hidden">
             <img src="/images/chevron-left.svg" alt="chevron left icon" width="28" height="36" />
           </button>
-          <div ref={carousel} class="flex gap-5 overflow-hidden scroll-smooth transition">
-            <div ref={carouselSlide} class="w-full flex-[1_0_100%] lg:flex-auto">
+          <div ref={carouselRef} class="flex gap-5 overflow-hidden scroll-smooth transition">
+            <div ref={carouselSlideRef} class="w-full flex-[1_0_100%] lg:flex-auto">
               <h4 class="text-center text-2xl font-bold text-beige">semester 1</h4>
               <div class="mt-4 flex min-h-[30rem] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5">
                 {isSpecialty(content)
