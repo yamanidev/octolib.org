@@ -47,6 +47,6 @@ Google Drive (one for each school year):
         - EMD2
         - EMD2 solution
     - Autres (extra files):
-      - Whatever
+      - Additional resources (summaries for example)
 
 - S2 (2nd semester. Same structure as S1):
