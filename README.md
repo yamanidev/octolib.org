@@ -8,7 +8,7 @@ A student-managed ESI SBA library for lessons, labs and previous exams.
 
 ## Contribution guidlines
 
-We welcome contributions, in fact this project needs them on a yearly basis in order to survive and stay relevant. Here are the some guidelines to ease the process and to regular the content:
+We welcome contributions, in fact this project needs them on a yearly basis in order to survive and stay relevant. Here are some guidelines to ease the process:
 
 - All resources must be hosted on Google Drive.
 - Folder structure must follow the format below.
