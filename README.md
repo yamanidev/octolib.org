@@ -50,3 +50,16 @@ Google Drive folder (one for each class. For example: 1CP, 2CP...):
       - Additional resources (summaries for example)
 
 - S2 (2nd semester. Same structure as S1):
+
+---
+
+## Acknowledgements
+
+Octolib is made possible by the continuous efforts along the years of ESI SBA students and alumni. We're immensely grateful to everyone who contributes their time and effort to make this resource available to everyone. Here are some of the amazing people who have contributed to this project:
+
+- [Yacine Kharoubi](https://github.com/Neoxs)
+- [Dahou Meziane](https://github.com/dahoumeziane)
+- [Abdechakour Mechri](https://www.linkedin.com/in/mechriabdechakour)
+- [Amdjed Bensalah](https://www.linkedin.com/in/amdj3dax/)
+
+If you have contributed to Octolib but can't find your name in the list, please submit a pull request or [contact me](https://github.com/yamanidev#connect-with-me) to fix it.
