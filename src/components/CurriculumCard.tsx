@@ -64,7 +64,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         href={semesterClass.link}
                         target="_blank"
                         rel="noreferrer"
-                        class="flex items-center gap-2 text-lg leading-tight hover:underline">
+                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
@@ -81,7 +81,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         href={semesterClass.link}
                         target="_blank"
                         rel="noreferrer"
-                        class="flex items-center gap-2 text-lg leading-tight hover:underline">
+                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
@@ -103,7 +103,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         href={semesterClass.link}
                         target="_blank"
                         rel="noreferrer"
-                        class="flex items-center gap-2 text-lg leading-tight hover:underline">
+                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
@@ -119,7 +119,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         target="_blank"
                         rel="noreferrer"
                         href={semesterClass.link}
-                        class="flex items-center gap-2 text-lg leading-tight hover:underline">
+                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
