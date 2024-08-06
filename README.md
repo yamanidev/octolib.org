@@ -10,6 +10,7 @@ A student-managed library for [ESI SBA (École Supérieure en Informatique de Si
 
 We welcome contributions, in fact this project needs them on a yearly basis in order to survive and stay relevant. Here are some guidelines to ease the process:
 
+- All resources must be coming from the teaching staff of ESI SBA. They're usually distributed via email.
 - All resources must be hosted on Google Drive.
 - Folder structure must follow the format below.
 - Stick to PDF formats. Export/convert other formats to PDF.
