@@ -136,7 +136,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
           <button
             onClick={slideNext}
             class="absolute -bottom-11 right-1/3 z-10 sm:-right-10 sm:bottom-auto sm:top-64 lg:hidden">
-            <img src="/images/chevron-right.svg" alt="" width="28" height="36" />
+            <img src="/images/chevron-right.svg" alt="chevron right icon" width="28" height="36" />
           </button>
         </div>
       </div>
