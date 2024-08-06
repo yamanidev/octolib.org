@@ -4,7 +4,7 @@
 
 ## About
 
-A student-managed ESI SBA library for lessons, labs and previous exams.
+A student-managed library for [ESI SBA (École Supérieure en Informatique de Sidi Bel Abbès)](https://www.esi-sba.dz/) hosting lessons, labs, and previous exams.
 
 ## Contribution guidelines
 
