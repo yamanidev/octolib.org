@@ -6,7 +6,7 @@
 
 A student-managed ESI SBA library for lessons, labs and previous exams.
 
-## Contribution guidlines
+## Contribution guidelines
 
 We welcome contributions, in fact this project needs them on a yearly basis in order to survive and stay relevant. Here are some guidelines to ease the process:
 
@@ -20,7 +20,7 @@ We welcome contributions, in fact this project needs them on a yearly basis in o
 
 **Note**: Folders are mostly named in French abbreviations, because it is the teaching language of ESI SBA.
 
-Google Drive (one for each school year):
+Google Drive folder (one for each class. For example: 1CP, 2CP...):
 
 - S1 (1st semester):
 
