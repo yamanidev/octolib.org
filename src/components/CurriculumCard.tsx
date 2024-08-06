@@ -1,8 +1,8 @@
-import { useRef, useState } from 'preact/hooks';
-import type { Class, Curriculum, Specialty } from '../data/types';
+import { useRef, useState } from "preact/hooks";
+import type { Class, Curriculum, Specialty } from "../data/types";
 
 function isSpecialty(content: Specialty | Curriculum) {
-  return !('semester1' in content);
+  return !("semester1" in content);
 }
 
 interface Props {
@@ -41,7 +41,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
               <button
                 onClick={() => setSelectedSpecialty(specialty)}
                 class={`relative text-[2rem] font-bold text-beige ${
-                  selectedSpecialty === specialty && 'specialty-underline'
+                  selectedSpecialty === specialty && "specialty-underline"
                 }`}>
                 {specialty}
               </button>
@@ -64,7 +64,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         href={semesterClass.link}
                         target="_blank"
                         rel="noreferrer"
-                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
+                        class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
@@ -81,7 +81,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         href={semesterClass.link}
                         target="_blank"
                         rel="noreferrer"
-                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
+                        class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
@@ -103,7 +103,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         href={semesterClass.link}
                         target="_blank"
                         rel="noreferrer"
-                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
+                        class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
@@ -119,7 +119,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         target="_blank"
                         rel="noreferrer"
                         href={semesterClass.link}
-                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
+                        class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"

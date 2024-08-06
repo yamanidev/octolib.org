@@ -3,22 +3,22 @@
 ---
 
 <script>
-  const navMenu = document.getElementById('navMenu');
-  const burgerButton = document.getElementById('burgerButton');
-  const navbarLinks = document.getElementsByClassName('navbar-link');
+  const navMenu = document.getElementById("navMenu");
+  const burgerButton = document.getElementById("burgerButton");
+  const navbarLinks = document.getElementsByClassName("navbar-link");
 
-  burgerButton.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    burgerButton.classList.toggle('active');
-    if (navMenu.classList.contains('active')) document.body.style.overflow = 'hidden';
-    else document.body.style.overflow = 'visible';
+  burgerButton.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    burgerButton.classList.toggle("active");
+    if (navMenu.classList.contains("active")) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "visible";
   });
 
   for (const navbarLink of navbarLinks) {
-    navbarLink.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      burgerButton.classList.remove('active');
-      document.body.style.overflow = 'visible';
+    navbarLink.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      burgerButton.classList.remove("active");
+      document.body.style.overflow = "visible";
       return true;
     });
   }
