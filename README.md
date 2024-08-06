@@ -63,5 +63,6 @@ Octolib is made possible by the continuous efforts along the years of ESI SBA st
 - [Abdechakour Mechri](https://www.linkedin.com/in/mechriabdechakour)
 - [Amdjed Bensalah](https://www.linkedin.com/in/amdj3dax/)
 - [Merouane Meddad](https://www.linkedin.com/in/merouane-meddad/)
+- [Ilyas Benhammadi](https://github.com/Mitchi-02)
 
 If you have contributed to Octolib but can't find your name in the list, please submit a pull request or [contact me](https://github.com/yamanidev#connect-with-me) to fix it.
