@@ -56,7 +56,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
           </button>
           <div ref={carouselRef} class="flex gap-5 overflow-hidden scroll-smooth transition">
             <div ref={carouselSlideRef} class="w-full flex-[1_0_100%] lg:flex-auto">
-              <h4 class="text-center text-2xl font-bold text-beige">semester 1</h4>
+              <h3 class="text-center text-2xl font-bold text-beige">semester 1</h3>
               <div class="mt-4 flex min-h-[30rem] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5">
                 {isSpecialty(content)
                   ? content[selectedSpecialty].semester1.map((semesterClass: Class) => (
@@ -64,7 +64,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         href={semesterClass.link}
                         target="_blank"
                         rel="noreferrer"
-                        class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
+                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
@@ -81,7 +81,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         href={semesterClass.link}
                         target="_blank"
                         rel="noreferrer"
-                        class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
+                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
@@ -95,7 +95,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
               </div>
             </div>
             <div class="carousel-slide w-full flex-[1_0_100%] lg:flex-auto">
-              <h4 class="text-center text-2xl font-bold text-beige">semester 2</h4>
+              <h3 class="text-center text-2xl font-bold text-beige">semester 2</h3>
               <div class="mt-4 flex min-h-[30rem] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5">
                 {isSpecialty(content)
                   ? content[selectedSpecialty].semester2.map((semesterClass: Class) => (
@@ -103,7 +103,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         href={semesterClass.link}
                         target="_blank"
                         rel="noreferrer"
-                        class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
+                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
@@ -119,7 +119,7 @@ function CurriculumCard({ yearCodeName, content, className }: Props) {
                         target="_blank"
                         rel="noreferrer"
                         href={semesterClass.link}
-                        class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
+                        class="xs:text-lg flex items-center gap-2 leading-tight hover:underline">
                         <span class="flex-shrink-0">
                           <img
                             src="/images/document-icon.svg"
