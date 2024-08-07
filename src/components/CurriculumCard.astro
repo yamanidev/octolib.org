@@ -1,0 +1,63 @@
+---
+import type { Curriculum } from "../data/types";
+import SemesterCurriculumList from "./SemesterCurriculumList.astro";
+
+interface Props {
+  yearCodeName: string;
+  content: Curriculum;
+  className?: string;
+}
+
+const { yearCodeName, content, className } = Astro.props;
+---
+
+<section id={yearCodeName} class={`text-blue-dark ${className}`}>
+  <div
+    class="relative z-10 mx-auto max-w-[67.5rem] rounded-lg px-2 pb-14 pt-5 shadow-curriculum sm:px-16">
+    <div class="absolute inset-0 rounded-lg bg-blue-dark opacity-60"></div>
+    <h2 class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige">
+      {yearCodeName}
+    </h2>
+    <div class="relative mt-9">
+      <button
+        id={`slidePrev-${yearCodeName}`}
+        class="absolute -bottom-11 left-1/3 sm:-left-10 sm:bottom-auto sm:top-64 lg:hidden">
+        <img src="/images/chevron-left.svg" alt="chevron left icon" width="28" height="36" />
+      </button>
+      <div
+        id={`carousel-${yearCodeName}`}
+        class="flex gap-5 overflow-hidden scroll-smooth transition">
+        <div class="carousel-slide w-full flex-[1_0_100%] lg:flex-auto">
+          <h3 class="text-center text-2xl font-bold text-beige">semester 1</h3>
+          <SemesterCurriculumList semesterCurriculum={content.semester1} />
+        </div>
+        <div class="carousel-slide w-full flex-[1_0_100%] lg:flex-auto">
+          <h3 class="text-center text-2xl font-bold text-beige">semester 2</h3>
+          <SemesterCurriculumList semesterCurriculum={content.semester2} />
+        </div>
+      </div>
+      <button
+        id={`slideNext-${yearCodeName}`}
+        class="absolute -bottom-11 right-1/3 z-10 sm:-right-10 sm:bottom-auto sm:top-64 lg:hidden">
+        <img src="/images/chevron-right.svg" alt="chevron right icon" width="28" height="36" />
+      </button>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ yearCodeName }}>
+  const carousel = document.getElementById(`carousel-${yearCodeName}`);
+  const carouselSlide = document.getElementsByClassName("carousel-slide")[0];
+  const slidePrevButton = document.getElementById(`slidePrev-${yearCodeName}`);
+  const slideNextButton = document.getElementById(`slideNext-${yearCodeName}`);
+
+  slidePrevButton.addEventListener("click", () => {
+    const slideWidth = carouselSlide.clientWidth;
+    carousel.scrollLeft -= slideWidth + 20;
+  });
+
+  slideNextButton.addEventListener("click", () => {
+    const slideWidth = carouselSlide.clientWidth;
+    carousel.scrollLeft += slideWidth + 20;
+  });
+</script>
