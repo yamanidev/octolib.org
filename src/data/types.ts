@@ -8,6 +8,6 @@ export interface Curriculum {
   semester2: Class[];
 }
 
-export interface Specialty {
+export interface BranchedCurriculum {
   [key: string]: Curriculum;
 }
