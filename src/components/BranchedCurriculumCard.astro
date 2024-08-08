@@ -41,7 +41,7 @@ const { yearCodeName, content, className } = Astro.props;
       <div
         id={`carousel-${yearCodeName}`}
         class="flex gap-5 overflow-hidden scroll-smooth transition">
-        <div class="w-full flex-[1_0_100%] lg:flex-auto">
+        <div class="caoursel-slide w-full flex-[1_0_100%] lg:flex-auto">
           <h3 class="text-center text-2xl font-bold text-beige">semester 1</h3>
           <SemesterCurriculumList
             semesterCurriculum={content.ISI.semester1}
