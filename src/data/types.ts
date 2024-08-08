@@ -9,5 +9,7 @@ export interface Curriculum {
 }
 
 export interface BranchedCurriculum {
-  [key: string]: Curriculum;
+  ISI: Curriculum;
+  SIW: Curriculum;
+  IASD: Curriculum;
 }
