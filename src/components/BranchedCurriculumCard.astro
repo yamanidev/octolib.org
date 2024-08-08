@@ -86,6 +86,10 @@ const { yearCodeName, content, className } = Astro.props;
   const carouselSlide = document.querySelector(`#carousel-${yearCodeName} > div`);
   const slidePrevButton = document.getElementById(`slidePrev-${yearCodeName}`);
   const slideNextButton = document.getElementById(`slideNext-${yearCodeName}`);
+  const panes = document.getElementsByClassName(`${yearCodeName}-pane`);
+  const selectedPanes = document.getElementsByClassName(
+    `${yearCodeName}-${specialtyButtons[i].textContent}-pane`
+  );
   const specialtyButtons = document.getElementsByClassName(`specialtyButtons-${yearCodeName}`);
 
   slidePrevButton.addEventListener("click", () => {
@@ -100,11 +104,6 @@ const { yearCodeName, content, className } = Astro.props;
 
   for (let i = 0; i < specialtyButtons.length; i++) {
     specialtyButtons[i].addEventListener("click", () => {
-      const panes = document.getElementsByClassName(`${yearCodeName}-pane`);
-      const selectedPanes = document.getElementsByClassName(
-        `${yearCodeName}-${specialtyButtons[i].textContent}-pane`
-      );
-
       console.log(`${yearCodeName}-${specialtyButtons[i].textContent}-pane`);
 
       console.log({ selectedPanes });
