@@ -105,6 +105,8 @@ const { yearCodeName, content, className } = Astro.props;
         `${yearCodeName}-${specialtyButtons[i].textContent}-pane`
       );
 
+      console.log(`${yearCodeName}-${specialtyButtons[i].textContent}-pane`);
+
       console.log({ selectedPanes });
 
       for (button of specialtyButtons) {
