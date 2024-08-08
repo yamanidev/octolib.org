@@ -70,7 +70,7 @@ const fourthYear: BranchedCurriculum = {
   SIW: {
     semester1: [
       {
-        title: "Advanced Databases 1",
+        title: "Advanced Databases",
         link: "https://drive.google.com/drive/folders/1Q8CWsfI23E08YnnXEujfNcvsnEUY5Z9X?usp=share_link"
       },
       {
