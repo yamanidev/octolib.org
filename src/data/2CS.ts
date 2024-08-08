@@ -1,6 +1,6 @@
-import type { Specialty } from "./types";
+import type { BranchedCurriculum } from "./types";
 
-const fourthYear: Specialty = {
+const fourthYear: BranchedCurriculum = {
   ISI: {
     semester1: [
       {
