@@ -27,10 +27,6 @@ const firstYearCurriculum: Curriculum = {
       link: "https://drive.google.com/drive/folders/1GoLtkZqJpDFCL1K5isy-ox-n1nj7olsK?usp=drive_link"
     },
     {
-      title: "Written Expression Technique",
-      link: "#"
-    },
-    {
       title: "Office and Web",
       link: "https://drive.google.com/drive/folders/1iETqAjcHVxheAENSMutoo7KSIyKAgOCZ?usp=drive_link"
     }
@@ -59,14 +55,6 @@ const firstYearCurriculum: Curriculum = {
     {
       title: "Fundamental Electronics 1",
       link: "https://drive.google.com/drive/folders/1CDkV2jBjCrtXsOgGLtUJTMnWIFtH3f8A?usp=drive_link"
-    },
-    {
-      title: "Oral Expression Technique",
-      link: "#"
-    },
-    {
-      title: "English Language 1",
-      link: "#"
     }
   ]
 };

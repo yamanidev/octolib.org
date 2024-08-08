@@ -102,40 +102,7 @@ const fourthYear: BranchedCurriculum = {
         link: "https://drive.google.com/drive/folders/1wDZRJZLkEUUsZ3AoJhbCX1bRQ929N4b7?usp=share_link"
       }
     ],
-    semester2: [
-      {
-        title: "Web Technologies and Development",
-        link: "#"
-      },
-      {
-        title: "Mobile Technologies and Development",
-        link: "#"
-      },
-      {
-        title: "Middleware and Services",
-        link: "#"
-      },
-      {
-        title: "Database Administration",
-        link: "#"
-      },
-      {
-        title: "Data Analysis",
-        link: "#"
-      },
-      {
-        title: "Engineering and Management of Information Systems Security",
-        link: "#"
-      },
-      {
-        title: "Multimedia Systems",
-        link: "#"
-      },
-      {
-        title: "Modeling and Simulation",
-        link: "#"
-      }
-    ]
+    semester2: []
   },
   IASD: {
     semester1: [
