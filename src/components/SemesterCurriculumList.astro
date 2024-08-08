@@ -10,19 +10,36 @@ const { semesterCurriculum, className } = Astro.props;
 ---
 
 <div
-  class={`mt-4 flex min-h-[30rem] flex-[1_0_auto] flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:gap-3 sm:px-5 ${className}`}>
+  class={`mt-4 flex min-h-[30rem] flex-[1_0_auto] bg-beige flex-col gap-5 rounded-lg px-3 py-6 sm:gap-3 sm:px-5 ${
+    semesterCurriculum.length === 0 && "bg-opacity-80 items-center justify-center"
+  } ${className}`}>
   {
-    semesterCurriculum.map((semesterClass) => (
-      <a
-        href={semesterClass.link}
-        target="_blank"
-        rel="noreferrer"
-        class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
-        <span class="flex-shrink-0">
-          <img src="/images/document-icon.svg" alt="text document icon" width="35" height="35" />
-        </span>
-        <span>{semesterClass.title}</span>
-      </a>
-    ))
+    semesterCurriculum.length > 0 ? (
+      semesterCurriculum.map((semesterClass) => (
+        <a
+          href={semesterClass.link}
+          target="_blank"
+          rel="noreferrer"
+          class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
+          <span class="flex-shrink-0">
+            <img src="/images/document-icon.svg" alt="text document icon" width="35" height="35" />
+          </span>
+          <span>{semesterClass.title}</span>
+        </a>
+      ))
+    ) : (
+      <>
+        <p class="text-center text-sm">
+          No content has been added yet. Please consider contributing!
+        </p>
+        <a
+          href="https://github.com/yamanidev/octolib?tab=readme-ov-file#contribution-guidelines"
+          class="inline-block rounded-md bg-blue-light px-5 py-1 text-sm font-bold text-beige transition hover:bg-blue-dark"
+          rel="noreferrer"
+          target="_blank">
+          Contribute
+        </a>
+      </>
+    )
   }
 </div>
