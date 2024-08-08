@@ -88,7 +88,7 @@ const { yearCodeName, content, className } = Astro.props;
   const slideNextButton = document.getElementById(`slideNext-${yearCodeName}`);
   const panes = document.getElementsByClassName(`${yearCodeName}-pane`);
   const selectedPanes = document.getElementsByClassName(
-    `${yearCodeName}-${specialtyButtons[i].textContent}-pane`
+    `${yearCodeName}-${specialtyButtons[i].textContent.trim()}-pane`
   );
   const specialtyButtons = document.getElementsByClassName(`specialtyButtons-${yearCodeName}`);
 
@@ -104,7 +104,7 @@ const { yearCodeName, content, className } = Astro.props;
 
   for (let i = 0; i < specialtyButtons.length; i++) {
     specialtyButtons[i].addEventListener("click", () => {
-      console.log(`${yearCodeName}-${specialtyButtons[i].textContent}-pane`);
+      console.log(`${yearCodeName}-${specialtyButtons[i].textContent.trim()}-pane`);
 
       console.log({ selectedPanes });
 
