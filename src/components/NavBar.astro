@@ -3,8 +3,8 @@
 ---
 
 <script>
-  const navMenu = document.getElementById("navMenu");
-  const burgerButton = document.getElementById("burgerButton");
+  const navMenu = document.getElementById("navMenu") as HTMLDivElement;
+  const burgerButton = document.getElementById("burgerButton") as HTMLButtonElement;
   const navbarLinks = document.getElementsByClassName("navbar-link");
 
   burgerButton.addEventListener("click", () => {
