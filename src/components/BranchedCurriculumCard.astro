@@ -105,10 +105,6 @@ const { yearCodeName, content, className } = Astro.props;
         `${yearCodeName}-${specialtyButtons[i].textContent.trim()}-pane`
       );
 
-      console.log(`${yearCodeName}-${specialtyButtons[i].textContent.trim()}-pane`);
-
-      console.log({ selectedPanes });
-
       for (button of specialtyButtons) {
         button.classList.remove("specialty-underline");
       }
@@ -116,13 +112,10 @@ const { yearCodeName, content, className } = Astro.props;
       specialtyButtons[i].classList.add("specialty-underline");
 
       for (pane of panes) {
-        console.log("hiding all panes");
         pane.classList.add("hidden");
       }
 
       for (pane of selectedPanes) {
-        console.log("showing selected panes");
-        console.log({ selectedPanes });
         pane.classList.remove("hidden");
       }
     });
