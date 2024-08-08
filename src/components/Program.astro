@@ -3,6 +3,7 @@ import firstYear from "../data/1CPI";
 import thirdYear from "../data/1CS";
 import secondYear from "../data/2CPI";
 import fourthYear from "../data/2CS";
+import fifthYear from "../data/3CS";
 import BranchedCurriculumCard from "./BranchedCurriculumCard.astro";
 import CurriculumCard from "./CurriculumCard.astro";
 ---
@@ -22,6 +23,7 @@ import CurriculumCard from "./CurriculumCard.astro";
       class="absolute right-1/4 top-[90rem] w-72 md:w-auto"
     />
     <CurriculumCard yearCodeName="1CS" className="mb-20" content={thirdYear} />
-    <BranchedCurriculumCard yearCodeName="2CS" content={fourthYear} />
+    <BranchedCurriculumCard yearCodeName="2CS" className="mb-20" content={fourthYear} />
+    <BranchedCurriculumCard yearCodeName="3CS" content={fifthYear} />
   </div>
 </section>
