@@ -64,6 +64,7 @@ Octolib is made possible by the continuous efforts along the years of ESI SBA st
 - [Amdjed Bensalah](https://www.linkedin.com/in/amdj3dax/)
 - [Merouane Meddad](https://www.linkedin.com/in/merouane-meddad/)
 - [Ilyas Benhammadi](https://github.com/Mitchi-02)
+- [Ilyes Mekhalfa](https://github.com/Ilyes-Mekhalfa)
 - [Norene Filali](https://www.linkedin.com/in/norene-filali-15b1b7162/)
 - Anes Saadi
 
