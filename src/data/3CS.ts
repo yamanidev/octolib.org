@@ -40,7 +40,7 @@ const fifthYear: BranchedCurriculum = {
         link: "https://drive.google.com/drive/folders/1h89HJp3MIBeXlM-lqgWF78iVWLyY8vVM?usp=drive_link"
       },
       {
-        title: "Master classes",
+        title: "Master's classes",
         link: "https://drive.google.com/drive/folders/11p8cgdMIBk0XacASMq949XMukZ58ZmIy?usp=drive_link"
       }
     ],
@@ -71,6 +71,10 @@ const fifthYear: BranchedCurriculum = {
       {
         title: "Geographic Information System",
         link: "https://drive.google.com/drive/folders/1h89HJp3MIBeXlM-lqgWF78iVWLyY8vVM?usp=drive_link"
+      },
+      {
+        title: "Master's classes",
+        link: "https://drive.google.com/drive/folders/11p8cgdMIBk0XacASMq949XMukZ58ZmIy?usp=drive_link"
       }
     ],
     semester2: []
@@ -112,6 +116,10 @@ const fifthYear: BranchedCurriculum = {
       {
         title: "Web Semantics",
         link: "https://drive.google.com/drive/folders/1a5BYlH_QCfAtMW15sbpZo38p8vJ8_Bla?usp=drive_link"
+      },
+      {
+        title: "Master's classes",
+        link: "https://drive.google.com/drive/folders/11p8cgdMIBk0XacASMq949XMukZ58ZmIy?usp=drive_link"
       }
     ],
     semester2: []
