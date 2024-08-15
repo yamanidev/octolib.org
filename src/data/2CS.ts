@@ -102,7 +102,44 @@ const fourthYear: BranchedCurriculum = {
         link: "https://drive.google.com/drive/folders/1wDZRJZLkEUUsZ3AoJhbCX1bRQ929N4b7?usp=share_link"
       }
     ],
-    semester2: []
+    semester2: [
+      {
+        title: "Systems and Network Security",
+        link: "https://drive.google.com/drive/folders/1QDmqRJG5_tanKnu7GCYzVUbrcOlrxCfN?usp=drive_link"
+      },
+      {
+        title: "Embedded Systems 2",
+        link: "https://drive.google.com/drive/folders/1XoKVCOu51Xdoi_a6QfmURzLn87WNdVa3?usp=drive_link"
+      },
+      {
+        title: "Mobile Technologies and Development",
+        link: "https://drive.google.com/drive/folders/1tFTGMPZwDuwaXjJnN-zvxGHvHLGPbBYF?usp=drive_link"
+      },
+      {
+        title: "Modeling and Simulation",
+        link: "https://drive.google.com/drive/folders/1298EWpUbWedkB2zKXWPyz5bbrwAd4GYL?usp=drive_link"
+      },
+      {
+        title: "Data Analysis",
+        link: "https://drive.google.com/drive/folders/1SWhcQrBjNGDItd8oF2dRiODumNnoC1pq?usp=drive_link"
+      },
+      {
+        title: "Multimedia Systems",
+        link: "https://drive.google.com/drive/folders/19S7AB2U5iZXh7u4n-5jFJTHfH9DQseRc?usp=drive_link"
+      },
+      {
+        title: "Web Technologies and Development 2",
+        link: "https://drive.google.com/drive/folders/1-vzbsnlnVQhYRiILURr7Tbfaax_Zqeb7?usp=drive_link"
+      },
+      {
+        title: "Database Administration",
+        link: "https://drive.google.com/drive/folders/1eat84vZn04MfmFQd8kv1rHTnF_lHofun?usp=drive_link"
+      },
+      {
+        title: "Middleware and Services",
+        link: "https://drive.google.com/drive/folders/10nHJCwfKdStuuDvPO2EoKZSdH7GVj3rD?usp=drive_link"
+      }
+    ]
   },
   IASD: {
     semester1: [
