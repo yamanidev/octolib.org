@@ -71,35 +71,35 @@ const fourthYear: BranchedCurriculum = {
     semester1: [
       {
         title: "Advanced Databases",
-        link: "https://drive.google.com/drive/folders/1Q8CWsfI23E08YnnXEujfNcvsnEUY5Z9X?usp=share_link"
+        link: "https://drive.google.com/drive/folders/1pDt-T_yChswzICzaKpVRSA0d2RZaxty1?usp=drive_link"
       },
       {
         title: "Advanced Design Methods",
-        link: "https://drive.google.com/drive/folders/1aZQfuwjhceZhX0f2_n8GFQhL3CmLg_OS?usp=share_link"
+        link: "https://drive.google.com/drive/folders/1B7rcRE2prf_DHd4JLQ6IsmT_NJNcBqRz?usp=drive_link"
       },
       {
         title: "Advanced Information Systems",
-        link: "https://drive.google.com/drive/folders/1m7hMzBpojDG7ATupw14v9gdc9H3tPHDy?usp=share_link"
+        link: "https://drive.google.com/drive/folders/1aIRSIwYSzwKoMUGDbzj8pWrAaUhN9XMY?usp=drive_link"
       },
       {
         title: "Knowledge Engineering",
-        link: "https://drive.google.com/drive/folders/1_i1-3JdIhE1xTVRCtdMmFk4OsVdBPYj2?usp=share_link"
+        link: "https://drive.google.com/drive/folders/1nNMmuzwVeAdD1UeETRm8IN0rTKC9eKV1?usp=drive_link"
       },
       {
         title: "Human-Computer Interaction",
-        link: "https://drive.google.com/drive/folders/1Qew4UdLzWRjUnTXQXS7LRQu-XD43E2xU?usp=share_link"
+        link: "https://drive.google.com/drive/folders/1S1jjE4IS5sS1cgHlpFQTP3kZp2eq0iRy?usp=drive_link"
       },
       {
-        title: "Advanced Networking 1",
-        link: "https://drive.google.com/drive/folders/1dPyAz4J-vyt6vHd6sQiSoEBa8HM9xa_F?usp=share_link"
+        title: "Advanced Networking",
+        link: "https://drive.google.com/drive/folders/1jfWqo43l31bbGq-71Lx4PVon4B-CB-67?usp=drive_link"
       },
       {
         title: "Web Technologies and Development",
-        link: "https://drive.google.com/drive/folders/1bpC-wJmxjoyaUffG89os1jMD_PkEohM3?usp=share_link"
+        link: "https://drive.google.com/drive/folders/1YwloQu2V2kXmOcWGSZQibar5rfGNfV_J?usp=drive_link"
       },
       {
         title: "Decision Support System",
-        link: "https://drive.google.com/drive/folders/1wDZRJZLkEUUsZ3AoJhbCX1bRQ929N4b7?usp=share_link"
+        link: "https://drive.google.com/drive/folders/1IdumPeKK5w0LdTy3aUuneZTMzR90vOnI?usp=drive_link"
       }
     ],
     semester2: [
