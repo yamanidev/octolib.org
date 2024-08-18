@@ -6,53 +6,23 @@
 
 A student-managed library for [ESI SBA (École Supérieure en Informatique de Sidi Bel Abbès)](https://www.esi-sba.dz/) hosting lessons, labs, and previous exams.
 
-## Contribution guidelines
+## Context
 
-We welcome contributions, in fact this project needs them on a yearly basis in order to survive and stay relevant. Here are some guidelines to ease the process:
+At this school, materials and resources are distributed by professors, mostly via email. Unfortunately, this has several issues:
 
-- All resources must be coming from the teaching staff of ESI SBA. They're usually distributed via email.
-- All resources must be hosted on Google Drive.
-- Folder structure must follow the format below.
-- Stick to PDF formats. Export/convert other formats to PDF.
-- If some document is only available in physical format, kindly scan it with your phone. Microsoft Lens is a great app for that: download from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&pcampaignid=web_share) or [Apple Store](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059).
-- No pirated content is allowed.
+- Some professors only send the materials after the lectures, which is inconvenient for many students.
+- Other professors withhold materials until just weeks before the exam sessions, a sort of way to force students to attend lectures.
+- The above applies to course materials, labs, exercises, solutions... making it difficult for students to prepare effectively.
 
-### Folder structure and file naming conventions
+In response, some students were kind enough to compile the materials and upload them to a public Google Drive sharing it with their peers. While this helped a ton, it had limitations:
 
-**Note**: Folders are mostly named in French abbreviations, because it is the teaching language of ESI SBA.
+- The resources often remained disorganized.
+- They weren't consistently maintained.
+- They sometimes became outdated
 
-Google Drive folder (one for each class. For example: 1CP, 2CP...):
+Octolib is a community-driven initiative that aims to solve the aforementioned problems by providing a centralized hub for all the school's resources that are organized in a consistent format and updated on a yearly basis.
 
-- S1 (1st semester):
-
-  - Module:
-    - Cours:
-      - 2019-2020 (academic year of the resources):
-        - Lesson 1
-        - Lesson 2
-        - ...
-    - TD:
-      - 2019-2020 (academic year of the resources):
-        - TD 1
-        - TD 2
-        - ...
-    - TP:
-      - 2019-2020 (academic year of the resources):
-        - TP 1
-        - TP 2
-        - ...
-    - Examens:
-      - 2019-2020 (academic year of the resources):
-        - EMD1
-        - EMD1 solution
-        - EMD2
-        - EMD2 solution
-    - Autres (extra files):
-      - Additional resources (summaries for example)
-
-- S2 (2nd semester. Same structure as S1):
-
----
+In order to achieve this goal, we rely on contributions from students to keep our resources current and comprehensive. If you'd like to contribute, check out the [CONTRIBUTIONS.md](CONTRIBUTIONS.md)
 
 ## Acknowledgements
 
