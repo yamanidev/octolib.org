@@ -1,3 +1,7 @@
+---
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
 <head>
   <meta charset="UTF-8" />
   <title>Octolib - ESI SBA Library</title>
@@ -9,8 +13,8 @@
   <script
     defer
     src="https://static.cloudflareinsights.com/beacon.min.js"
-    data-cf-beacon='{"token": "c926b0ceb77c48d89aed8b1cfcb6e5b1"}'
-  ></script>
+    data-cf-beacon='{"token": "c926b0ceb77c48d89aed8b1cfcb6e5b1"}'>
+  </script>
   <!-- End Cloudflare Web Analytics -->
 
   <!-- Open Graph -->
@@ -33,6 +37,7 @@
   />
   <meta property="twitter:image" content={new URL("/preview.png", Astro.url)} />
 
+  <link rel="canonical" href={canonicalURL} />
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
