@@ -2,7 +2,7 @@
 
 1. Read the contribution guidelines below.
 2. Go through your school email, and download all the resources for all the modules: lessons, exercises, labs, exams, solutions...
-3. For the materials that are not digital, kindly scan them with your phone and export them as PDF (check the guidelines for this).
+3. For the materials that are in a physical format, kindly scan them with your phone and export them as PDF (check the guidelines for this).
 4. Organize all the resources following the structure and naming conventions mentioned above.
 5. Upload everything to a public Google Drive and share it [with me](https://github.com/yamanidev#connect-with-me) when you're done.
 
