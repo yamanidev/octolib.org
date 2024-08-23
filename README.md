@@ -37,5 +37,6 @@ Octolib is made possible by the continuous efforts along the years of ESI SBA st
 - [Ilyes Mekhalfa](https://github.com/Ilyes-Mekhalfa)
 - [Norene Filali](https://www.linkedin.com/in/norene-filali-15b1b7162/)
 - [Anes Saadi](https://github.com/anessaadi)
+- [Daoud Hadjajd](https://github.com/HADJADJDAOUD)
 
 If you have contributed to Octolib but can't find your name in the list, please submit a pull request or [contact me](https://github.com/yamanidev#connect-with-me) to fix it.
