@@ -24,7 +24,7 @@ const fifthYear: BranchedCurriculum = {
         link: "https://drive.google.com/drive/folders/1ZU3b4VOQZ_WJyC27lp9G7hbZF0UQX7mK?usp=drive_link"
       },
       {
-        title: "Internet of Objects",
+        title: "Internet of Things",
         link: "https://drive.google.com/drive/folders/1kDLV3VLLoXRbedWDix757Zpc02ar-Xbh?usp=drive_link"
       },
       {
@@ -61,7 +61,7 @@ const fifthYear: BranchedCurriculum = {
         link: "https://drive.google.com/drive/folders/1D31py7zZD5mU_XADZwTdHHQjkYLYjnis?usp=drive_link"
       },
       {
-        title: "Internet of Objects",
+        title: "Internet of Things",
         link: "https://drive.google.com/drive/folders/1kDLV3VLLoXRbedWDix757Zpc02ar-Xbh?usp=drive_link"
       },
       {
