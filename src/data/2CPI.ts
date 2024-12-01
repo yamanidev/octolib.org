@@ -67,43 +67,43 @@ const secondYearCurriculum: Curriculum = {
   ],
   concour: [
     {
-      title: "2023",
+      year: "2023",
       link: "https://drive.google.com/drive/folders/1wwu37VpKgVFIGLOnKrOilzk78qykqrA6?usp=drive_link"
     },
     {
-      title: "2022",
+      year: "2022",
       link: "https://drive.google.com/drive/folders/1GiBRglhCY2yw0BX0UHrM6OBpdz6l_ckN?usp=drive_link"
     },
     {
-      title: "2021",
+      year: "2021",
       link: "https://drive.google.com/drive/folders/1QvVz3bckRgyYoVxQaubCVXfzzhcPXlXE?usp=drive_link"
     },
     {
-      title: "2020",
+      year: "2020",
       link: "https://drive.google.com/drive/folders/1joApImXzwH51wMQbplwD65JAbugSwrpZ?usp=drive_link"
     },
     {
-      title: "2019",
+      year: "2019",
       link: "https://drive.google.com/drive/folders/1u9rv5zmH5mGt89vfkbxmJSsE5NQpLAO0?usp=drive_link"
     },
     {
-      title: "2018",
+      year: "2018",
       link: "https://drive.google.com/drive/folders/1CMlHkzSfxjxfRDBwpfhFHe7LG63WiLSs?usp=drive_link"
     },
     {
-      title: "2017",
+      year: "2017",
       link: "https://drive.google.com/drive/folders/11VtFRoH8VZu3h03u2u_a0-09OnCYrXWW?usp=drive_link"
     },
     {
-      title: "2016",
+      year: "2016",
       link: "https://drive.google.com/drive/folders/1Ax7PXDrEi6VM48mQbC1z7Fha6jwpF5lR?usp=drive_link"
     },
     {
-      title: "2015",
+      year: "2015",
       link: "https://drive.google.com/drive/folders/1Y04YDcfICYkeicUtEuVHGzDxmxOdYBZG?usp=drive_link"
     },
     {
-      title: "2014",
+      year: "2014",
       link: "https://drive.google.com/drive/folders/1OhM_hAh54xxO7rHRq2pBXG2EhORK3_ZO?usp=drive_link"
     }
   ]

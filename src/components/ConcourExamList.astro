@@ -1,8 +1,8 @@
 ---
-import type { Class } from "../data/types";
+import type { Concours } from "../data/types";
 
 interface Props {
-  concourExams: Class[];
+  concourExams: Concours[];
   className?: string;
 }
 
@@ -24,7 +24,7 @@ const { concourExams, className } = Astro.props;
           <span class="flex-shrink-0">
             <img src="/images/document-icon.svg" alt="text document icon" width="35" height="35" />
           </span>
-          <span>{exam.title}</span>
+          <span>{exam.year}</span>
         </a>
       ))
     ) : (

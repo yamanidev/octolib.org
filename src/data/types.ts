@@ -3,10 +3,15 @@ export interface Class {
   link: string;
 }
 
+export interface Concours {
+  year: string;
+  link: string;
+}
+
 export interface Curriculum {
   semester1: Class[];
   semester2: Class[];
-  concour?: Class[];
+  concour?: Concours[];
 }
 
 export interface BranchedCurriculum {
