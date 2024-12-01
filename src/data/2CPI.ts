@@ -64,6 +64,48 @@ const secondYearCurriculum: Curriculum = {
       title: "English Language 3",
       link: "https://drive.google.com/drive/folders/1Ezwi-_R1VlycJuTIeh6JGNxMdJDF_joY?usp=drive_link"
     }
+  ],
+  concour: [
+    {
+      title: "2023",
+      link: "https://drive.google.com/drive/u/1/folders/17_oMxOLgrjgmB5SPjd2DaE7yF3UeaivD?usp=drive_link"
+    },
+    {
+      title: "2022",
+      link: "https://drive.google.com/drive/u/1/folders/165OjHb1EW7KhQ2x0qyvX6KkEe-sU4qri?usp=drive_link"
+    },
+    {
+      title: "2021",
+      link: "https://drive.google.com/drive/folders/1Mauu1rz79hSnsNJmZrI-_VxLIwyfx_IZ?usp=drive_link"
+    },
+    {
+      title: "2020",
+      link: "https://drive.google.com/drive/folders/1b_9bqw9V4S3ny1oTWR2hrfmUZYYP6F2c?usp=drive_link"
+    },
+    {
+      title: "2019",
+      link: "https://drive.google.com/drive/folders/1ChA7gChrR_xMUbTNahMY1B5afyEQn5vd?usp=drive_link"
+    },
+    {
+      title: "2018",
+      link: "https://drive.google.com/drive/folders/1IAdxD44BV8dQcR0NJsM2tvSkN5VToFwP?usp=drive_link"
+    },
+    {
+      title: "2017",
+      link: "https://drive.google.com/drive/folders/1XTsMG_zrDh_yPqamHNITMK46k0kT-x8S?usp=drive_link"
+    },
+    {
+      title: "2016",
+      link: "https://drive.google.com/drive/folders/1pP-H_xUeicyHb3kuTHZS0cz4hbGIImES?usp=drive_link"
+    },
+    {
+      title: "2015",
+      link: "https://drive.google.com/drive/folders/1LQiXMwFoEqfqTIKRsHBC7A7ElBYbYXJt?usp=drive_link"
+    },
+    {
+      title: "2014",
+      link: "https://drive.google.com/drive/folders/12i0dXvWmIRYRP3sh54s9Plsv20DTXdZo?usp=drive_link"
+    },
   ]
 };
 

@@ -6,6 +6,7 @@ export interface Class {
 export interface Curriculum {
   semester1: Class[];
   semester2: Class[];
+  concour?: Class[];
 }
 
 export interface BranchedCurriculum {
