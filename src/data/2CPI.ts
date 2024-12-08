@@ -67,6 +67,10 @@ const secondYearCurriculum: Curriculum = {
   ],
   concour: [
     {
+      year: "2024",
+      link: "https://drive.google.com/drive/folders/1stymGBntmt-9lgsmrd_guPUoqDo5CfxE?usp=drive_link"
+    },
+    {
       year: "2023",
       link: "https://drive.google.com/drive/folders/1wwu37VpKgVFIGLOnKrOilzk78qykqrA6?usp=drive_link"
     },
