@@ -109,6 +109,18 @@ const secondYearCurriculum: Curriculum = {
     {
       year: "2014",
       link: "https://drive.google.com/drive/folders/1OhM_hAh54xxO7rHRq2pBXG2EhORK3_ZO?usp=drive_link"
+    },
+    {
+      year: "2013",
+      link: "https://drive.google.com/drive/folders/1UrkmxhnFeHnpuF2q4g9Z-AIgSdeI1OzC?usp=drive_link"
+    },
+    {
+      year: "2012",
+      link: "https://drive.google.com/drive/folders/1_6XhD_FumaQOGMIE0y3QliXLtiUhVpxO?usp=drive_link"
+    },
+    {
+      year: "2011",
+      link: "https://drive.google.com/drive/folders/1hkWmV4pR7JQHkNcqCtBG4bNwskjlOWGq?usp=drive_link"
     }
   ]
 };
