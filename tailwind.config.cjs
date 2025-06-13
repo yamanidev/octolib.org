@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     screens: {
       xs: "475px",
-      ...defaultTheme.screens
+      ...defaultTheme.screens,
     },
     extend: {
       colors: {
@@ -15,19 +15,19 @@ module.exports = {
         "blue-light": "#2B9AAE",
         "blue-dark": "#1B5F6A",
         "aero-blue": "#C9F1ED",
-        sand: "#D4A040"
+        sand: "#D4A040",
       },
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"]
+        montserrat: ["Montserrat", "sans-serif"],
       },
       boxShadow: {
         navbar: "0px 4px 10px 0px rgba(0, 0, 0, 0.25)",
-        curriculum: "-5px 4px 10px 0px #00000040"
-      }
-    }
+        curriculum: "-5px 4px 10px 0px #00000040",
+      },
+    },
   },
   future: {
-    hoverOnlyWhenSupported: true
+    hoverOnlyWhenSupported: true,
   },
-  plugins: []
+  plugins: [],
 };

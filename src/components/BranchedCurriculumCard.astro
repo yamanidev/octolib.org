@@ -102,7 +102,7 @@ const { yearCodeName, content, className } = Astro.props;
   for (let i = 0; i < specialtyButtons.length; i++) {
     specialtyButtons[i].addEventListener("click", () => {
       const selectedPanes = document.getElementsByClassName(
-        `${yearCodeName}-${specialtyButtons[i].textContent.trim()}-pane`
+        `${yearCodeName}-${specialtyButtons[i].textContent.trim()}-pane`,
       );
 
       for (button of specialtyButtons) {
