@@ -43,5 +43,6 @@ Octolib is made possible by the continuous efforts along the years of ESI SBA st
 - [Abdelillah Serghine](https://github.com/serghine-abdelillah)
 - [Abir Hammache](https://www.linkedin.com/in/abir-hammache/)
 - [Nizar Guessoum](https://github.com/M0nizar)
+- [Fatah](https://github.com/fatah255)
 
 If you have contributed to Octolib but can't find your name in the list, please submit a pull request or [contact me](https://github.com/yamanidev#connect-with-me) to fix it.
