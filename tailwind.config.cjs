@@ -4,6 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     screens: {
       xs: "475px",
@@ -11,9 +12,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        beige: "#FAEBD9",
-        "blue-light": "#2B9AAE",
-        "blue-dark": "#1B5F6A",
+        beige: "rgb(var(--color-beige) / <alpha-value>)",
+        "blue-light": "rgb(var(--color-blue-light) / <alpha-value>)",
+        "blue-dark": "rgb(var(--color-blue-dark) / <alpha-value>)",
         "aero-blue": "#C9F1ED",
         sand: "#D4A040",
       },

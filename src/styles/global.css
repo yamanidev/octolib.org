@@ -1,3 +1,15 @@
+:root {
+  --color-beige: 250 235 217;
+  --color-blue-light: 43 154 174;
+  --color-blue-dark: 27 95 106;
+}
+
+.dark {
+  --color-beige: 30 108 120;
+  --color-blue-light: 20 72 81;
+  --color-blue-dark: 250 235 217;
+}
+
 @font-face {
   font-family: "Montserrat";
   font-weight: 500;
