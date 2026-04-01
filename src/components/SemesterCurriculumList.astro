@@ -22,7 +22,20 @@ const { semesterCurriculum, className } = Astro.props;
           rel="noreferrer"
           class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
           <span class="flex-shrink-0">
-            <img src="/images/document-icon.svg" alt="text document icon" width="35" height="35" />
+            <img
+              src="/images/document-icon.svg"
+              alt="text document icon"
+              width="35"
+              height="35"
+              class="dark:hidden"
+            />
+            <img
+              src="/images/document-icon-dark-mode.svg"
+              alt="text document icon"
+              width="35"
+              height="35"
+              class="hidden dark:block"
+            />
           </span>
           <span>{semesterClass.title}</span>
         </a>
@@ -34,7 +47,7 @@ const { semesterCurriculum, className } = Astro.props;
         </p>
         <a
           href="https://github.com/yamanidev/octolib.org/blob/main/CONTRIBUTIONS.md"
-          class="inline-block rounded-md bg-blue-light px-5 py-1 text-sm font-bold text-beige transition hover:bg-blue-dark"
+          class="inline-block rounded-md bg-blue-light px-5 py-1 text-sm font-bold text-beige transition hover:bg-blue-dark dark:bg-blue-dark dark:text-beige"
           rel="noreferrer"
           target="_blank">
           Contribute

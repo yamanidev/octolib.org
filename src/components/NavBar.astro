@@ -1,5 +1,5 @@
 ---
-
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <script>
@@ -47,51 +47,75 @@
     <div class="wrapper flex items-center justify-between py-4">
       <div class="flex items-center gap-24">
         <a href="/" class="shrink-0">
-          <img src="/images/logo.png" alt="octolib logo" width="90" height="51" />
+          <img
+            src="/images/logo.png"
+            alt="octolib logo"
+            width="90"
+            height="51"
+            class="dark:hidden"
+          />
+          <img
+            src="/images/logo-dark-mode.png"
+            alt="octolib logo"
+            width="90"
+            height="51"
+            class="hidden dark:block"
+          />
         </a>
         <a
           href="https://github.com/yamanidev/octolib.org/blob/main/CONTRIBUTIONS.md"
-          class="hidden rounded-md bg-blue-light px-5 py-1 text-xl font-bold text-beige transition hover:bg-blue-dark lg:block"
+          class="hidden rounded-md bg-blue-light px-5 py-1 text-xl font-bold text-beige transition hover:bg-blue-dark dark:bg-blue-dark dark:text-beige lg:block"
           rel="noreferrer"
           target="_blank">
           Contribute
         </a>
       </div>
-      <button
-        id="burgerButton"
-        aria-label="toggle navigation menu"
-        class="relative z-10 flex flex-col gap-1 lg:hidden">
-        <span class="inline-block h-1.5 w-12 bg-blue-light transition duration-500"></span>
-        <span class="inline-block h-1.5 w-12 bg-blue-light transition duration-300"></span>
-        <span class="inline-block h-1.5 w-12 bg-blue-light transition duration-500"></span>
-      </button>
-      <div id="navMenu" class="hidden lg:block">
-        <ul
-          class="flex flex-col gap-9 text-2xl font-bold text-blue-light lg:w-[29rem] lg:flex-row lg:justify-between lg:gap-0 lg:text-base">
-          <li>
-            <a href="#1CP" class="navbar-link transition hover:text-blue-dark">1CP</a>
-          </li>
-          <li>
-            <a href="#2CP" class="navbar-link transition hover:text-blue-dark">2CP</a>
-          </li>
-          <li>
-            <a href="#1CS" class="navbar-link transition hover:text-blue-dark">1CS</a>
-          </li>
-          <li>
-            <a href="#2CS" class="navbar-link transition hover:text-blue-dark">2CS</a>
-          </li>
-          <li>
-            <a href="#3CS" class="navbar-link transition hover:text-blue-dark">3CS</a>
-          </li>
-        </ul>
-        <div class="mx-auto mt-12 h-0.5 max-w-[16.5rem] bg-blue-light lg:hidden"></div>
-        <a
-          href="https://github.com/yamanidev/octolib.org/blob/main/CONTRIBUTIONS.md"
-          class="mt-10 inline-block rounded-md bg-blue-light px-5 py-1 text-xl font-bold text-beige transition hover:bg-blue-dark lg:hidden"
-          rel="noreferrer"
-          target="_blank">
-          Contribute
-        </a>
+      <div class="flex items-center gap-4">
+        <div id="navMenu" class="hidden lg:block">
+          <ul
+            class="flex flex-col gap-9 text-2xl font-bold text-blue-light dark:text-blue-dark lg:w-[29rem] lg:flex-row lg:justify-between lg:gap-0 lg:text-base">
+            <li>
+              <a href="#1CP" class="navbar-link transition hover:text-blue-dark">1CP</a>
+            </li>
+            <li>
+              <a href="#2CP" class="navbar-link transition hover:text-blue-dark">2CP</a>
+            </li>
+            <li>
+              <a href="#1CS" class="navbar-link transition hover:text-blue-dark">1CS</a>
+            </li>
+            <li>
+              <a href="#2CS" class="navbar-link transition hover:text-blue-dark">2CS</a>
+            </li>
+            <li>
+              <a href="#3CS" class="navbar-link transition hover:text-blue-dark">3CS</a>
+            </li>
+          </ul>
+          <div
+            class="mx-auto mt-12 h-0.5 max-w-[16.5rem] bg-blue-light dark:bg-blue-dark lg:hidden">
+          </div>
+          <a
+            href="https://github.com/yamanidev/octolib.org/blob/main/CONTRIBUTIONS.md"
+            class="mt-10 inline-block rounded-md bg-blue-light px-5 py-1 text-xl font-bold text-beige transition hover:bg-blue-dark dark:bg-blue-dark dark:text-beige lg:hidden"
+            rel="noreferrer"
+            target="_blank">
+            Contribute
+          </a>
+        </div>
+        <ThemeToggle />
+        <button
+          id="burgerButton"
+          aria-label="toggle navigation menu"
+          class="relative z-10 flex flex-col gap-1 lg:hidden">
+          <span
+            class="inline-block h-1.5 w-12 bg-blue-light transition duration-500 dark:bg-blue-dark">
+          </span>
+          <span
+            class="inline-block h-1.5 w-12 bg-blue-light transition duration-300 dark:bg-blue-dark">
+          </span>
+          <span
+            class="inline-block h-1.5 w-12 bg-blue-light transition duration-500 dark:bg-blue-dark">
+          </span>
+        </button>
       </div>
     </div>
   </nav>

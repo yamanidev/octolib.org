@@ -22,7 +22,20 @@ const { concourExams, className } = Astro.props;
           rel="noreferrer"
           class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
           <span class="flex-shrink-0">
-            <img src="/images/document-icon.svg" alt="text document icon" width="35" height="35" />
+            <img
+              src="/images/document-icon.svg"
+              alt="text document icon"
+              width="35"
+              height="35"
+              class="dark:hidden"
+            />
+            <img
+              src="/images/document-icon-dark-mode.svg"
+              alt="text document icon"
+              width="35"
+              height="35"
+              class="hidden dark:block"
+            />
           </span>
           <span>{exam.year}</span>
         </a>

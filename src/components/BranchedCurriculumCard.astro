@@ -14,8 +14,9 @@ const { yearCodeName, content, className } = Astro.props;
 <section id={yearCodeName} class={`text-blue-dark ${className}`}>
   <div
     class="relative z-10 mx-auto max-w-[67.5rem] rounded-lg px-2 pb-14 pt-5 shadow-curriculum sm:px-16">
-    <div class="absolute inset-0 rounded-lg bg-blue-dark opacity-60"></div>
-    <h2 class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige">
+    <div class="absolute inset-0 rounded-lg bg-blue-dark opacity-60 dark:bg-beige"></div>
+    <h2
+      class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige dark:text-blue-dark">
       {yearCodeName}
     </h2>
 
@@ -24,7 +25,7 @@ const { yearCodeName, content, className } = Astro.props;
         Object.keys(content).map((specialty, index) => (
           <button
             id={`${yearCodeName}-${specialty}-button`}
-            class={`specialtyButtons-${yearCodeName} relative text-[2rem] font-bold text-beige ${
+            class={`specialtyButtons-${yearCodeName} relative text-[2rem] font-bold text-beige dark:text-blue-dark ${
               index === 0 && "specialty-underline"
             }`}>
             {specialty}
@@ -42,7 +43,7 @@ const { yearCodeName, content, className } = Astro.props;
         id={`carousel-${yearCodeName}`}
         class="flex gap-5 overflow-hidden scroll-smooth transition">
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
-          <h3 class="text-center text-2xl font-bold text-beige">semester 1</h3>
+          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">semester 1</h3>
           <SemesterCurriculumList
             semesterCurriculum={content.ISI.semester1}
             className={`${yearCodeName}-pane ${yearCodeName}-ISI-pane`}
@@ -57,7 +58,7 @@ const { yearCodeName, content, className } = Astro.props;
           />
         </div>
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
-          <h3 class="text-center text-2xl font-bold text-beige">semester 2</h3>
+          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">semester 2</h3>
           <SemesterCurriculumList
             semesterCurriculum={content.ISI.semester2}
             className={`${yearCodeName}-pane ${yearCodeName}-ISI-pane`}

@@ -14,13 +14,23 @@ import CurriculumCard from "./CurriculumCard.astro";
     <img
       src="/images/fish-swarm-big.svg"
       alt="big swarm of fish"
-      class="absolute right-0 top-[38rem] w-80 md:w-auto xl:w-[43rem]"
+      class="absolute right-0 top-[38rem] w-80 dark:hidden md:w-auto xl:w-[43rem]"
+    />
+    <img
+      src="/images/fish-swarm-big-dark-mode.svg"
+      alt="big swarm of fish"
+      class="absolute right-0 top-[38rem] hidden w-80 dark:block md:w-auto xl:w-[43rem]"
     />
     <CurriculumCard yearCodeName="2CP" className="mb-20" content={secondYear} />
     <img
       src="/images/fish-swarm-small.svg"
       alt="big swarm of fish"
-      class="absolute right-1/4 top-[90rem] w-72 md:w-auto"
+      class="absolute right-1/4 top-[90rem] w-72 dark:hidden md:w-auto"
+    />
+    <img
+      src="/images/fish-swarm-small-dark-mode.svg"
+      alt="big swarm of fish"
+      class="absolute right-1/4 top-[90rem] hidden w-72 dark:block md:w-auto"
     />
     <CurriculumCard yearCodeName="1CS" className="mb-20" content={thirdYear} />
     <BranchedCurriculumCard yearCodeName="2CS" className="mb-20" content={fourthYear} />

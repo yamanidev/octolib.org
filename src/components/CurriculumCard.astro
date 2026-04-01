@@ -15,8 +15,9 @@ const { yearCodeName, content, className } = Astro.props;
 <section id={yearCodeName} class={`text-blue-dark ${className}`}>
   <div
     class="relative z-10 mx-auto max-w-[67.5rem] rounded-lg px-2 pb-14 pt-5 shadow-curriculum sm:px-16">
-    <div class="absolute inset-0 z-0 rounded-lg bg-blue-dark opacity-60"></div>
-    <h2 class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige">
+    <div class="absolute inset-0 z-0 rounded-lg bg-blue-dark opacity-60 dark:bg-beige"></div>
+    <h2
+      class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige dark:text-blue-dark">
       {yearCodeName}
     </h2>
     <div class="relative mt-9">
@@ -29,11 +30,11 @@ const { yearCodeName, content, className } = Astro.props;
         id={`carousel-${yearCodeName}`}
         class="flex gap-5 overflow-hidden scroll-smooth transition">
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
-          <h3 class="text-center text-2xl font-bold text-beige">semester 1</h3>
+          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">semester 1</h3>
           <SemesterCurriculumList semesterCurriculum={content.semester1} />
         </div>
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
-          <h3 class="text-center text-2xl font-bold text-beige">semester 2</h3>
+          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">semester 2</h3>
           <SemesterCurriculumList semesterCurriculum={content.semester2} />
         </div>
       </div>
@@ -46,7 +47,7 @@ const { yearCodeName, content, className } = Astro.props;
     {
       yearCodeName === "2CP" && content?.concour && (
         <div class="relative z-10 mt-20 transition sm:mt-10">
-          <h3 class="text-center text-2xl font-bold text-beige">concours</h3>
+          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">concours</h3>
           <ConcourExamList concourExams={content.concour} />
         </div>
       )
