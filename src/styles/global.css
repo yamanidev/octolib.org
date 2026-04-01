@@ -42,9 +42,9 @@
 }
 
 .year-codename-underline::after {
-  @apply absolute bottom-1 left-3 -z-10 h-3 w-full bg-blue-light content-[""];
+  @apply absolute bottom-1 left-3 -z-10 h-3 w-full bg-[#2B9AAE] content-[""];
 }
 
 .specialty-underline::after {
-  @apply absolute inset-x-0 bottom-0 h-1 bg-blue-light content-[""];
+  @apply absolute inset-x-0 bottom-0 h-1 bg-[#2B9AAE] content-[""];
 }
