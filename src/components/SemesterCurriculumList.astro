@@ -1,5 +1,6 @@
 ---
 import type { Class } from "../data/types";
+import DocumentIcon from "./DocumentIcon.astro";
 
 interface Props {
   semesterCurriculum: Class[];
@@ -22,20 +23,7 @@ const { semesterCurriculum, className } = Astro.props;
           rel="noreferrer"
           class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
           <span class="flex-shrink-0">
-            <img
-              src="/images/document-icon.svg"
-              alt="text document icon"
-              width="35"
-              height="35"
-              class="dark:hidden"
-            />
-            <img
-              src="/images/document-icon-dark-mode.svg"
-              alt="text document icon"
-              width="35"
-              height="35"
-              class="hidden dark:block"
-            />
+            <DocumentIcon />
           </span>
           <span>{semesterClass.title}</span>
         </a>
