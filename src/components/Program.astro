@@ -6,12 +6,14 @@ import fourthYear from "../data/2CS";
 import fifthYear from "../data/3CS";
 import BranchedCurriculumCard from "./BranchedCurriculumCard.astro";
 import CurriculumCard from "./CurriculumCard.astro";
+import GlobeDecoration from "./GlobeDecoration.astro";
 import WhaleDecoration from "./WhaleDecoration.astro";
 ---
 
 <section class="relative bg-blue-light">
   <div class="wrapper py-10">
     <CurriculumCard yearCodeName="1CP" className="mb-20" content={firstYear} />
+    <GlobeDecoration class="absolute right-20 top-20 hidden xl:block" />
     <img
       src="/images/fish-swarm-big.svg"
       alt="big swarm of fish"
