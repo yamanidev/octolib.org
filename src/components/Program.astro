@@ -6,6 +6,7 @@ import fourthYear from "../data/2CS";
 import fifthYear from "../data/3CS";
 import BranchedCurriculumCard from "./BranchedCurriculumCard.astro";
 import CurriculumCard from "./CurriculumCard.astro";
+import WhaleDecoration from "./WhaleDecoration.astro";
 ---
 
 <section class="relative bg-blue-light">
@@ -33,6 +34,9 @@ import CurriculumCard from "./CurriculumCard.astro";
       class="absolute right-1/4 top-[90rem] hidden w-72 dark:block md:w-auto"
     />
     <CurriculumCard yearCodeName="1CS" className="mb-20" content={thirdYear} />
+    <WhaleDecoration
+      class="absolute left-0 top-[145rem] hidden w-96 sm:block md:w-[31.25rem] lg:w-auto"
+    />
     <BranchedCurriculumCard yearCodeName="2CS" className="mb-20" content={fourthYear} />
     <BranchedCurriculumCard yearCodeName="3CS" content={fifthYear} />
   </div>
