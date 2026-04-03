@@ -1,0 +1,77 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"svg"> {}
+
+const { width = 80, height = 80, class: className, ...rest } = Astro.props;
+---
+
+<svg
+  {width}
+  {height}
+  viewBox="0 0 110 110"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  class={className}
+  {...rest}>
+  <g clip-path="url(#clip0_80_1534)">
+    <g filter="url(#filter0_d_80_1534)">
+      <circle cx="55" cy="55" r="25.7041" fill="#2B9AAE"></circle>
+      <circle cx="55" cy="55" r="25.7041" fill="#D4A040"></circle>
+      <rect x="19.1938" y="42.7653" width="72.1735" height="4.26531" fill="#1B5F6A"></rect>
+      <rect
+        x="43.7754"
+        y="91.0306"
+        width="72.1735"
+        height="4.26531"
+        transform="rotate(-90 43.7754 91.0306)"
+        fill="#1B5F6A">
+      </rect>
+      <rect x="18.9695" y="61.5102" width="72.1735" height="4.26531" fill="#1B5F6A"></rect>
+      <rect
+        x="62.5205"
+        y="91.2551"
+        width="72.1735"
+        height="4.26531"
+        transform="rotate(-90 62.5205 91.2551)"
+        fill="#1B5F6A">
+      </rect>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M55 110C85.3757 110 110 85.3757 110 55C110 24.6243 85.3757 0 55 0C24.6243 0 0 24.6243 0 55C0 85.3757 24.6243 110 55 110ZM55 80.7041C69.196 80.7041 80.7041 69.196 80.7041 55C80.7041 40.804 69.196 29.2959 55 29.2959C40.804 29.2959 29.2959 40.804 29.2959 55C29.2959 69.196 40.804 80.7041 55 80.7041Z"
+        fill="#1B5F6A">
+      </path>
+    </g>
+  </g>
+  <defs>
+    <filter
+      id="filter0_d_80_1534"
+      x="-4"
+      y="0"
+      width="118"
+      height="118"
+      filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+      <feColorMatrix
+        in="SourceAlpha"
+        type="matrix"
+        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        result="hardAlpha">
+      </feColorMatrix>
+      <feOffset dy="4"></feOffset>
+      <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+      <feComposite in2="hardAlpha" operator="out"></feComposite>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+      </feColorMatrix>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_80_1534"></feBlend>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_80_1534" result="shape">
+      </feBlend>
+    </filter>
+    <clipPath id="clip0_80_1534">
+      <circle cx="55" cy="55" r="55"></circle>
+    </clipPath>
+  </defs>
+</svg>

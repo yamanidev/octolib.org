@@ -1,14 +1,58 @@
 ---
-
+import OceanBackgroundDark from "./OceanBackgroundDark.astro";
+import OceanBackgroundLight from "./OceanBackgroundLight.astro";
 ---
 
-<section
-  class="-mb-0.5 min-h-[calc(100vh-5.2rem)] bg-beige bg-[url('/images/ocean-background-light.svg')] bg-cover bg-[0_20%] dark:bg-[url('/images/ocean-background-dark.svg')]">
-  <div class="wrapper pt-24 md:pt-48">
+<section class="relative -mb-0.5 min-h-[calc(100vh-5.2rem)] overflow-hidden bg-beige">
+  <div class="hero-bg absolute inset-0 overflow-hidden">
+    <OceanBackgroundLight />
+    <OceanBackgroundDark />
+  </div>
+
+  <div class="wrapper relative z-10 pt-24 md:pt-48">
     <h1
-      class="mx-auto max-w-[18.75rem] text-2xl text-blue-dark md:mx-0 md:max-w-[35rem] md:text-5xl md:leading-[3.625rem]">
+      class="hero-title mx-auto max-w-[18.75rem] text-2xl text-blue-dark md:mx-0 md:max-w-[35rem] md:text-5xl md:leading-[3.625rem]">
       The online archive for <span class="font-bold">ESI-SBA</span> students to find school
       <span class="font-bold">resources</span>!
     </h1>
   </div>
 </section>
+
+<style>
+  @keyframes ken-burns {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.06);
+    }
+  }
+  .hero-bg {
+    animation: ken-burns 36s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes text-entrance {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .hero-title {
+    animation: text-entrance 0.9s ease-out 0.15s both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-bg {
+      animation: none;
+    }
+    .hero-title {
+      animation: none;
+    }
+  }
+</style>
