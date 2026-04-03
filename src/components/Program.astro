@@ -6,6 +6,8 @@ import fourthYear from "../data/2CS";
 import fifthYear from "../data/3CS";
 import BranchedCurriculumCard from "./BranchedCurriculumCard.astro";
 import CurriculumCard from "./CurriculumCard.astro";
+import FishSwarmBig from "./FishSwarmBig.astro";
+import FishSwarmSmall from "./FishSwarmSmall.astro";
 import GlobeDecoration from "./GlobeDecoration.astro";
 import WhaleDecoration from "./WhaleDecoration.astro";
 ---
@@ -14,26 +16,12 @@ import WhaleDecoration from "./WhaleDecoration.astro";
   <div class="wrapper py-10">
     <CurriculumCard yearCodeName="1CP" className="mb-20" content={firstYear} />
     <GlobeDecoration class="absolute left-20 top-[110rem] hidden xl:block" />
-    <img
-      src="/images/fish-swarm-big.svg"
-      alt="big swarm of fish"
-      class="absolute right-0 top-[150rem] w-80 dark:hidden md:w-auto xl:w-[43rem]"
-    />
-    <img
-      src="/images/fish-swarm-big-dark-mode.svg"
-      alt="big swarm of fish"
-      class="absolute right-0 top-[150rem] hidden w-80 dark:block md:w-auto xl:w-[43rem]"
+    <FishSwarmBig
+      class="absolute right-0 top-[150rem] w-80 text-[#1B5F6A] dark:text-[#2EA5B8] md:w-auto xl:w-[43rem]"
     />
     <CurriculumCard yearCodeName="2CP" className="mb-20" content={secondYear} />
-    <img
-      src="/images/fish-swarm-small.svg"
-      alt="big swarm of fish"
-      class="absolute right-10 top-[38rem] w-72 dark:hidden md:w-auto"
-    />
-    <img
-      src="/images/fish-swarm-small-dark-mode.svg"
-      alt="big swarm of fish"
-      class="absolute right-10 top-[38rem] hidden w-72 dark:block md:w-auto"
+    <FishSwarmSmall
+      class="absolute right-10 top-[38rem] w-72 text-[#1B5F6A] dark:text-[#2EA5B8] md:w-auto"
     />
     <CurriculumCard yearCodeName="1CS" className="mb-20" content={thirdYear} />
     <WhaleDecoration
