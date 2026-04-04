@@ -168,41 +168,63 @@ const semesterLinks = Object.fromEntries(
     carousel.scrollLeft += slideWidth + 20;
   });
 
+  function selectSpecialty(specialty) {
+    const selectedPanes = document.getElementsByClassName(`${yearCodeName}-${specialty}-pane`);
+
+    for (button of specialtyButtons) {
+      button.classList.remove("specialty-underline");
+    }
+
+    for (button of specialtyButtons) {
+      if (button.textContent.trim() === specialty) {
+        button.classList.add("specialty-underline");
+        break;
+      }
+    }
+
+    for (pane of panes) {
+      pane.classList.add("hidden");
+    }
+
+    for (pane of selectedPanes) {
+      pane.classList.remove("hidden");
+    }
+
+    const links = semesterLinks[specialty] ?? {};
+
+    if (semester1El) {
+      if (links.semester1) {
+        semester1El.setAttribute("href", links.semester1);
+      } else {
+        semester1El.removeAttribute("href");
+      }
+    }
+    if (semester2El) {
+      if (links.semester2) {
+        semester2El.setAttribute("href", links.semester2);
+      } else {
+        semester2El.removeAttribute("href");
+      }
+    }
+  }
+
   for (let i = 0; i < specialtyButtons.length; i++) {
     specialtyButtons[i].addEventListener("click", () => {
       const specialty = specialtyButtons[i].textContent.trim();
-      const selectedPanes = document.getElementsByClassName(`${yearCodeName}-${specialty}-pane`);
-
-      for (button of specialtyButtons) {
-        button.classList.remove("specialty-underline");
-      }
-
-      specialtyButtons[i].classList.add("specialty-underline");
-
-      for (pane of panes) {
-        pane.classList.add("hidden");
-      }
-
-      for (pane of selectedPanes) {
-        pane.classList.remove("hidden");
-      }
-
-      const links = semesterLinks[specialty] ?? {};
-
-      if (semester1El) {
-        if (links.semester1) {
-          semester1El.setAttribute("href", links.semester1);
-        } else {
-          semester1El.removeAttribute("href");
-        }
-      }
-      if (semester2El) {
-        if (links.semester2) {
-          semester2El.setAttribute("href", links.semester2);
-        } else {
-          semester2El.removeAttribute("href");
-        }
-      }
+      localStorage.setItem("specialty", specialty);
+      document.dispatchEvent(new CustomEvent("specialty-change", { detail: specialty }));
     });
+  }
+
+  document.addEventListener("specialty-change", (e) => {
+    const specialty = e.detail;
+    if (semesterLinks[specialty] !== undefined) {
+      selectSpecialty(specialty);
+    }
+  });
+
+  const savedSpecialty = localStorage.getItem("specialty");
+  if (savedSpecialty && semesterLinks[savedSpecialty] !== undefined) {
+    selectSpecialty(savedSpecialty);
   }
 </script>
