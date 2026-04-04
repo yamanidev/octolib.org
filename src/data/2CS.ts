@@ -3,8 +3,10 @@ import type { BranchedCurriculum } from "./types";
 const fourthYear: BranchedCurriculum = {
   link: "https://drive.google.com/drive/folders/1NShWgKSPt9rsXtqubK-tl-peJ_eAMMHD?usp=drive_link",
   ISI: {
-    semester1Link: "https://drive.google.com/drive/folders/1itdo7bAUMt5OfuJnk_KXS3naNgVgY0aI?usp=drive_link",
-    semester2Link: "https://drive.google.com/drive/folders/1RbV4d9_6fvXCuR8qPJJ5WD_WJYOvhw3x?usp=drive_link",
+    semester1Link:
+      "https://drive.google.com/drive/folders/1itdo7bAUMt5OfuJnk_KXS3naNgVgY0aI?usp=drive_link",
+    semester2Link:
+      "https://drive.google.com/drive/folders/1RbV4d9_6fvXCuR8qPJJ5WD_WJYOvhw3x?usp=drive_link",
     semester1: [
       {
         title: "Embedded Systems 1",
@@ -71,8 +73,10 @@ const fourthYear: BranchedCurriculum = {
     ],
   },
   SIW: {
-    semester1Link: "https://drive.google.com/drive/folders/16mw6xxZz1mhvjg25eCxHZdaYc_h0AXaZ?usp=drive_link",
-    semester2Link: "https://drive.google.com/drive/folders/1EKLBRLmjmvuZJFdhStvDnyptPxayjG1Z?usp=drive_link",
+    semester1Link:
+      "https://drive.google.com/drive/folders/16mw6xxZz1mhvjg25eCxHZdaYc_h0AXaZ?usp=drive_link",
+    semester2Link:
+      "https://drive.google.com/drive/folders/1EKLBRLmjmvuZJFdhStvDnyptPxayjG1Z?usp=drive_link",
     semester1: [
       {
         title: "Advanced Databases",
@@ -147,8 +151,10 @@ const fourthYear: BranchedCurriculum = {
     ],
   },
   IASD: {
-    semester1Link: "https://drive.google.com/drive/folders/1XnWkQb3nPq25tNmAgJvSrLx62TAQJcwn?usp=drive_link",
-    semester2Link: "https://drive.google.com/drive/folders/1TTTWGTXnIibJAL_fatpr_Lpz5pH6_VnX?usp=drive_link",
+    semester1Link:
+      "https://drive.google.com/drive/folders/1XnWkQb3nPq25tNmAgJvSrLx62TAQJcwn?usp=drive_link",
+    semester2Link:
+      "https://drive.google.com/drive/folders/1TTTWGTXnIibJAL_fatpr_Lpz5pH6_VnX?usp=drive_link",
     semester1: [
       {
         title: "Advanced Databases",

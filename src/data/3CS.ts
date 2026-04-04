@@ -3,7 +3,8 @@ import type { BranchedCurriculum } from "./types";
 const fifthYear: BranchedCurriculum = {
   link: "https://drive.google.com/drive/folders/1-ZVtEBvBxmk0NVhho_g-MD-Q9tnPT4xL?usp=drive_link",
   ISI: {
-    semester1Link: "https://drive.google.com/drive/folders/1sCG5kV9yERKJ8Ye3OAUKmDwDtFLu95qe?usp=drive_link",
+    semester1Link:
+      "https://drive.google.com/drive/folders/1sCG5kV9yERKJ8Ye3OAUKmDwDtFLu95qe?usp=drive_link",
     semester1: [
       {
         title: "Machine Learning and Data Mining",
@@ -82,7 +83,8 @@ const fifthYear: BranchedCurriculum = {
     semester2: [],
   },
   IASD: {
-    semester1Link: "https://drive.google.com/drive/folders/1q4a3zujpweWSchLw85v_ZQFa6NIMSvfz?usp=drive_link",
+    semester1Link:
+      "https://drive.google.com/drive/folders/1q4a3zujpweWSchLw85v_ZQFa6NIMSvfz?usp=drive_link",
     semester1: [
       {
         title: "Cloud",

@@ -2,9 +2,12 @@ import type { Curriculum } from "./types";
 
 const secondYearCurriculum: Curriculum = {
   link: "https://drive.google.com/drive/folders/1SUE6mjbsJNstX6SyJsj0juvc_0VmfxSS?usp=drive_link",
-  semester1Link: "https://drive.google.com/drive/folders/1i8St_o1D68a4lfYFFmXqMXBqcwHNvYSd?usp=drive_link",
-  semester2Link: "https://drive.google.com/drive/folders/1_eqx9Ey8tNa7I1AuVibyeoBT6ySSY1lz?usp=drive_link",
-  concourLink: "https://drive.google.com/drive/folders/1DnsQFQF_QYF66TuA9lBWzcv46-undIot?usp=drive_link",
+  semester1Link:
+    "https://drive.google.com/drive/folders/1i8St_o1D68a4lfYFFmXqMXBqcwHNvYSd?usp=drive_link",
+  semester2Link:
+    "https://drive.google.com/drive/folders/1_eqx9Ey8tNa7I1AuVibyeoBT6ySSY1lz?usp=drive_link",
+  concourLink:
+    "https://drive.google.com/drive/folders/1DnsQFQF_QYF66TuA9lBWzcv46-undIot?usp=drive_link",
   semester1: [
     {
       title: "File and Data Structures",
