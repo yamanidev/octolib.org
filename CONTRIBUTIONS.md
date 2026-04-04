@@ -1,18 +1,19 @@
 ## How to contribute?
 
+You don't need to contribute an entire semester — **a single document is a valid and welcome contribution**.
+
 1. Read the contribution guidelines below.
-2. Go through your school email, and download all the resources for all the modules: lessons, exercises, labs, exams, solutions...
-3. For the materials that are in a physical format, kindly scan them with your phone and export them as PDF (check the guidelines for this).
-4. Organize all the resources following the structure and naming conventions mentioned above.
-5. Upload everything to a public Google Drive and share it [with me](https://github.com/yamanidev#connect-with-me) when you're done.
+2. Go through your school email and gather any resources you have: lessons, exercises, labs, exams, solutions...
+3. For materials in physical format, kindly scan them with your phone and export as PDF (check the guidelines for this).
+4. Submit your files using [this Google Form](https://forms.gle/LEYaSdEo3UVDLxo89) — it will ask you for some details (class, semester, module...) so the files can be placed correctly.
+
+If for whatever reason Google Forms is not an option for you, feel free to [reach out](https://mohamedyamani.com/contact/) and we'll figure something out.
 
 ## Contribution guidelines
 
 We welcome contributions, in fact this project needs them on a yearly basis in order to survive and stay relevant. Here are some guidelines to ease the process:
 
 - All resources must be coming from the teaching staff of ESI SBA. They're usually distributed via email.
-- All resources must be hosted on Google Drive.
-- Folder structure must follow the format below.
 - Stick to PDF formats. Export/convert other formats to PDF.
 - If some document is only available in physical format, kindly scan it with your phone. Microsoft Lens is a great app for that: download from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&pcampaignid=web_share) or [Apple Store](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059).
 - No pirated content is allowed.
