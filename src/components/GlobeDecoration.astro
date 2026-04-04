@@ -16,7 +16,7 @@ const { width = 80, height = 80, class: className, ...rest } = Astro.props;
   class={className}
   {...rest}>
   <g clip-path="url(#clip0_80_1534)">
-    <g filter="url(#filter0_d_80_1534)">
+    <g class="globe-spin" filter="url(#filter0_d_80_1534)">
       <circle cx="55" cy="55" r="25.7041" fill="#2B9AAE"></circle>
       <circle cx="55" cy="55" r="25.7041" fill="#D4A040"></circle>
       <rect x="19.1938" y="42.7653" width="72.1735" height="4.26531" fill="#1B5F6A"></rect>
@@ -75,3 +75,26 @@ const { width = 80, height = 80, class: className, ...rest } = Astro.props;
     </clipPath>
   </defs>
 </svg>
+
+<style>
+  @keyframes globe-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .globe-spin {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: globe-spin 25s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .globe-spin {
+      animation: none;
+    }
+  }
+</style>

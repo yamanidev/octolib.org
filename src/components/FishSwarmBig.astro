@@ -13,7 +13,7 @@ const { class: className, width = 517, height = 355, ...rest } = Astro.props;
   fill="currentColor"
   xmlns="http://www.w3.org/2000/svg"
   aria-hidden="true"
-  class={className}
+  class:list={["fish-swim", className]}
   {...rest}>
   <path
     d="M406.777 181.485C429.139 173.492 485.825 162.301 533.67 181.485L554.738 168.67V193.718L533.67 181.485C507.359 187.764 445.146 196.553 406.777 181.485Z">
@@ -196,3 +196,25 @@ const { class: className, width = 517, height = 355, ...rest } = Astro.props;
     d="M0 150.048C13.4116 145.276 47.4084 138.596 76.1026 150.048L88.7379 142.398V157.349L76.1026 150.048C60.3231 153.795 23.0113 159.042 0 150.048Z">
   </path>
 </svg>
+
+<style>
+  @keyframes fish-swim {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-28px);
+    }
+  }
+
+  .fish-swim {
+    animation: fish-swim 7s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fish-swim {
+      animation: none;
+    }
+  }
+</style>

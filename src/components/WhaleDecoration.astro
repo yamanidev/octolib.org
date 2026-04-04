@@ -13,7 +13,7 @@ const { width = 791, height = 390, class: className, ...rest } = Astro.props;
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   aria-hidden="true"
-  class={className}
+  class:list={["whale-bob", className]}
   {...rest}>
   <path
     d="M69.5103 241.602H644.011C688.839 231.197 768.169 185.628 726.861 86.592C677.771 100.105 628.367 68.5253 618.782 54.0933C623.571 32.9691 694.042 50.1022 714.888 54.0933C722.585 34.9361 765.81 0.427615 788.224 0C803.533 36.6038 751.663 79.8215 726.861 86.592C768.946 157.897 793.227 283.872 625.944 347.33C486.898 380.791 195.4 422.334 69.5103 347.33C-56.3796 272.327 17.0562 245.594 69.5103 241.602Z"
@@ -27,3 +27,25 @@ const { width = 791, height = 390, class: className, ...rest } = Astro.props;
   </path>
   <ellipse cx="251.033" cy="305.638" rx="6.09351" ry="3.95544" fill="black"></ellipse>
 </svg>
+
+<style>
+  @keyframes whale-bob {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .whale-bob {
+    animation: whale-bob 5s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .whale-bob {
+      animation: none;
+    }
+  }
+</style>
