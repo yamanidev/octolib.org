@@ -1,6 +1,9 @@
 import type { Curriculum } from "./types";
 
 const firstYearCurriculum: Curriculum = {
+  link: "https://drive.google.com/drive/folders/191na8LEKUEpwA3M5LuLNJpNVl8Y2Lm5H?usp=drive_link",
+  semester1Link: "https://drive.google.com/drive/folders/1rPU0a-PQIa4TWN4-i2ngsFN4Izi_QclT?usp=drive_link",
+  semester2Link: "https://drive.google.com/drive/folders/1c7RdZjcHso3zFSbBd8vsadxq6AWXKFOD?usp=drive_link",
   semester1: [
     {
       title: "Algorithms and Static Data Structures",

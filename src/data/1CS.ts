@@ -1,6 +1,9 @@
 import type { Curriculum } from "./types";
 
 const thirdYearCurriculum: Curriculum = {
+  link: "https://drive.google.com/drive/folders/15Ju9If-lH2txP5VfAYdRKXfEP_Uo97Ff?usp=drive_link",
+  semester1Link: "https://drive.google.com/drive/folders/1KTqkXaOH4EOmVjwpunFSMDU20qwP-VYU?usp=drive_link",
+  semester2Link: "https://drive.google.com/drive/folders/1S3GxoJqKCqydOHwtBlGTOQ7ftSFDubqC?usp=drive_link",
   semester1: [
     {
       title: "Operating Systems 1",
