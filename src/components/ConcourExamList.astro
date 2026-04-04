@@ -2,10 +2,10 @@
 import type { Concours } from "../data/types";
 import DocumentIcon from "./DocumentIcon.astro";
 
-interface Props {
+type Props = {
   concourExams: Concours[];
   className?: string;
-}
+};
 
 const { concourExams, className } = Astro.props;
 ---

@@ -3,11 +3,11 @@ import type { BranchedCurriculum } from "../data/types";
 import SemesterCurriculumList from "./SemesterCurriculumList.astro";
 import ArrowUpRightIcon from "./ArrowUpRightIcon.astro";
 
-interface Props {
+type Props = {
   yearCodeName: string;
   content: BranchedCurriculum;
   className?: string;
-}
+};
 
 const { yearCodeName, content, className } = Astro.props;
 

@@ -2,10 +2,10 @@
 import type { Class } from "../data/types";
 import DocumentIcon from "./DocumentIcon.astro";
 
-interface Props {
+type Props = {
   semesterCurriculum: Class[];
   className?: string;
-}
+};
 
 const { semesterCurriculum, className } = Astro.props;
 ---

@@ -4,11 +4,11 @@ import SemesterCurriculumList from "./SemesterCurriculumList.astro";
 import ConcourExamList from "./ConcourExamList.astro";
 import ArrowUpRightIcon from "./ArrowUpRightIcon.astro";
 
-interface Props {
+type Props = {
   yearCodeName: string;
   content: Curriculum;
   className?: string;
-}
+};
 
 const { yearCodeName, content, className } = Astro.props;
 ---
