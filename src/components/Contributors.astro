@@ -1,0 +1,63 @@
+---
+import readme from "../../README.md?raw";
+
+const sectionMatch = readme.match(/## Acknowledgements\n([\s\S]*?)(?=\n## |$)/);
+if (!sectionMatch) {
+  throw new Error("Acknowledgements section not found in README.md");
+}
+
+const listMatches = [...sectionMatch[1].matchAll(/^- (.+)$/gm)];
+if (!listMatches.length) {
+  throw new Error("No contributors found in Acknowledgements section of README.md");
+}
+
+type Contributor = { type: "link"; name: string; url: string } | { type: "text"; name: string };
+
+const FOOTER_CREDITS = ["Mohamed Yamani", "Merouane Meddad"];
+
+const contributors: Contributor[] = listMatches.flatMap((match): Contributor[] => {
+  const item = match[1];
+
+  if (!item) return [];
+
+  const linkMatch = item.match(/^\[(.+)\]\((.+)\)$/);
+  const name = linkMatch?.[1] ?? item;
+
+  if (FOOTER_CREDITS.includes(name)) return [];
+
+  const url = linkMatch?.[2];
+  if (url) return [{ type: "link" as const, name, url }];
+
+  return [{ type: "text" as const, name }];
+});
+---
+
+<section class="bg-blue-light py-10">
+  <div class="mx-auto max-w-[67.5rem] px-4">
+    <h4
+      class="mb-3 text-xs font-semibold uppercase tracking-widest text-beige/70 dark:text-blue-dark/70">
+      Contributors
+    </h4>
+    <p class="mb-3 text-xs italic text-beige/80 dark:text-blue-dark/80">
+      Octolib is made possible by the continuous efforts of ESI SBA students and alumni. We're
+      immensely grateful to everyone who contributes their time to make this resource available to
+      all.
+    </p>
+    <p class="text-sm leading-relaxed text-beige dark:text-blue-dark">
+      {
+        contributors.map((c, i) => (
+          <span>
+            {c.type === "link" ? (
+              <a href={c.url} target="_blank" rel="noreferrer" class="hover:underline">
+                {c.name}
+              </a>
+            ) : (
+              <span>{c.name}</span>
+            )}
+            {i < contributors.length - 1 && <span aria-hidden="true"> · </span>}
+          </span>
+        ))
+      }
+    </p>
+  </div>
+</section>
