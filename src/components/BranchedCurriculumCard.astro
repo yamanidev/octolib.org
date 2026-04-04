@@ -1,6 +1,7 @@
 ---
-import type { BranchedCurriculum, Class } from "../data/types";
+import type { BranchedCurriculum } from "../data/types";
 import SemesterCurriculumList from "./SemesterCurriculumList.astro";
+import ArrowUpRightIcon from "./ArrowUpRightIcon.astro";
 
 interface Props {
   yearCodeName: string;
@@ -9,6 +10,20 @@ interface Props {
 }
 
 const { yearCodeName, content, className } = Astro.props;
+
+const specialties = Object.keys(content).filter((k) => k !== "link") as Array<
+  Exclude<keyof BranchedCurriculum, "link">
+>;
+const firstSpecialty = specialties[0];
+const initialSemester1Link = content[firstSpecialty]?.semester1Link;
+const initialSemester2Link = content[firstSpecialty]?.semester2Link;
+
+const semesterLinks = Object.fromEntries(
+  specialties.map((s) => [
+    s,
+    { semester1: content[s].semester1Link, semester2: content[s].semester2Link },
+  ]),
+);
 ---
 
 <section id={yearCodeName} class={`text-blue-dark ${className}`}>
@@ -17,12 +32,27 @@ const { yearCodeName, content, className } = Astro.props;
     <div class="absolute inset-0 rounded-lg bg-blue-dark opacity-60 dark:bg-beige"></div>
     <h2
       class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige dark:text-blue-dark">
-      {yearCodeName}
+      {
+        content.link ? (
+          <a
+            href={content.link}
+            target="_blank"
+            rel="noreferrer"
+            class="group relative inline-block hover:underline">
+            {yearCodeName}
+            <span class="absolute left-full top-0 transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+              <ArrowUpRightIcon width={20} height={20} />
+            </span>
+          </a>
+        ) : (
+          yearCodeName
+        )
+      }
     </h2>
 
     <div class="mt-4 flex justify-center gap-10">
       {
-        Object.keys(content).map((specialty, index) => (
+        specialties.map((specialty, index) => (
           <button
             id={`${yearCodeName}-${specialty}-button`}
             class={`specialtyButtons-${yearCodeName} relative text-[2rem] font-bold text-beige dark:text-blue-dark ${
@@ -43,7 +73,25 @@ const { yearCodeName, content, className } = Astro.props;
         id={`carousel-${yearCodeName}`}
         class="flex gap-5 overflow-hidden scroll-smooth transition">
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
-          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">semester 1</h3>
+          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">
+            {
+              initialSemester1Link ? (
+                <a
+                  id={`semester1-link-${yearCodeName}`}
+                  href={initialSemester1Link}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="group inline-flex items-start gap-1">
+                  <span class="group-hover:underline">semester 1</span>
+                  <span class="transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                    <ArrowUpRightIcon width={14} height={14} />
+                  </span>
+                </a>
+              ) : (
+                <span id={`semester1-link-${yearCodeName}`}>semester 1</span>
+              )
+            }
+          </h3>
           <SemesterCurriculumList
             semesterCurriculum={content.ISI.semester1}
             className={`${yearCodeName}-pane ${yearCodeName}-ISI-pane`}
@@ -58,7 +106,25 @@ const { yearCodeName, content, className } = Astro.props;
           />
         </div>
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
-          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">semester 2</h3>
+          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">
+            {
+              initialSemester2Link ? (
+                <a
+                  id={`semester2-link-${yearCodeName}`}
+                  href={initialSemester2Link}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="group inline-flex items-start gap-1">
+                  <span class="group-hover:underline">semester 2</span>
+                  <span class="transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                    <ArrowUpRightIcon width={14} height={14} />
+                  </span>
+                </a>
+              ) : (
+                <span id={`semester2-link-${yearCodeName}`}>semester 2</span>
+              )
+            }
+          </h3>
           <SemesterCurriculumList
             semesterCurriculum={content.ISI.semester2}
             className={`${yearCodeName}-pane ${yearCodeName}-ISI-pane`}
@@ -82,13 +148,15 @@ const { yearCodeName, content, className } = Astro.props;
   </div>
 </section>
 
-<script define:vars={{ yearCodeName }}>
+<script define:vars={{ yearCodeName, semesterLinks }}>
   const carousel = document.getElementById(`carousel-${yearCodeName}`);
   const carouselSlide = document.querySelector(`#carousel-${yearCodeName} > div`);
   const slidePrevButton = document.getElementById(`slidePrev-${yearCodeName}`);
   const slideNextButton = document.getElementById(`slideNext-${yearCodeName}`);
   const panes = document.getElementsByClassName(`${yearCodeName}-pane`);
   const specialtyButtons = document.getElementsByClassName(`specialtyButtons-${yearCodeName}`);
+  const semester1El = document.getElementById(`semester1-link-${yearCodeName}`);
+  const semester2El = document.getElementById(`semester2-link-${yearCodeName}`);
 
   slidePrevButton.addEventListener("click", () => {
     const slideWidth = carouselSlide.clientWidth;
@@ -102,9 +170,8 @@ const { yearCodeName, content, className } = Astro.props;
 
   for (let i = 0; i < specialtyButtons.length; i++) {
     specialtyButtons[i].addEventListener("click", () => {
-      const selectedPanes = document.getElementsByClassName(
-        `${yearCodeName}-${specialtyButtons[i].textContent.trim()}-pane`,
-      );
+      const specialty = specialtyButtons[i].textContent.trim();
+      const selectedPanes = document.getElementsByClassName(`${yearCodeName}-${specialty}-pane`);
 
       for (button of specialtyButtons) {
         button.classList.remove("specialty-underline");
@@ -118,6 +185,23 @@ const { yearCodeName, content, className } = Astro.props;
 
       for (pane of selectedPanes) {
         pane.classList.remove("hidden");
+      }
+
+      const links = semesterLinks[specialty] ?? {};
+
+      if (semester1El) {
+        if (links.semester1) {
+          semester1El.setAttribute("href", links.semester1);
+        } else {
+          semester1El.removeAttribute("href");
+        }
+      }
+      if (semester2El) {
+        if (links.semester2) {
+          semester2El.setAttribute("href", links.semester2);
+        } else {
+          semester2El.removeAttribute("href");
+        }
       }
     });
   }

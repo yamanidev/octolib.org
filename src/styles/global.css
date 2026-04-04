@@ -42,7 +42,11 @@
 }
 
 .year-codename-underline::after {
-  @apply absolute bottom-1 left-3 -z-10 h-3 w-full bg-[#2B9AAE] content-[""];
+  @apply absolute bottom-1 left-3 -z-10 h-3 w-full bg-[#2B9AAE] transition-opacity duration-150 content-[""];
+}
+
+.year-codename-underline:has(a:hover)::after {
+  @apply opacity-0;
 }
 
 .specialty-underline::after {

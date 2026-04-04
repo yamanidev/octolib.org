@@ -2,6 +2,7 @@
 import type { Curriculum } from "../data/types";
 import SemesterCurriculumList from "./SemesterCurriculumList.astro";
 import ConcourExamList from "./ConcourExamList.astro";
+import ArrowUpRightIcon from "./ArrowUpRightIcon.astro";
 
 interface Props {
   yearCodeName: string;
@@ -18,7 +19,22 @@ const { yearCodeName, content, className } = Astro.props;
     <div class="absolute inset-0 z-0 rounded-lg bg-blue-dark opacity-60 dark:bg-beige"></div>
     <h2
       class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige dark:text-blue-dark">
-      {yearCodeName}
+      {
+        content.link ? (
+          <a
+            href={content.link}
+            target="_blank"
+            rel="noreferrer"
+            class="group relative inline-block hover:underline">
+            {yearCodeName}
+            <span class="absolute left-full top-0 transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+              <ArrowUpRightIcon width={20} height={20} />
+            </span>
+          </a>
+        ) : (
+          yearCodeName
+        )
+      }
     </h2>
     <div class="relative mt-9">
       <button
@@ -30,11 +46,45 @@ const { yearCodeName, content, className } = Astro.props;
         id={`carousel-${yearCodeName}`}
         class="flex gap-5 overflow-hidden scroll-smooth transition">
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
-          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">semester 1</h3>
+          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">
+            {
+              content.semester1Link ? (
+                <a
+                  href={content.semester1Link}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="group inline-flex items-start gap-1">
+                  <span class="group-hover:underline">semester 1</span>
+                  <span class="transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                    <ArrowUpRightIcon width={14} height={14} />
+                  </span>
+                </a>
+              ) : (
+                "semester 1"
+              )
+            }
+          </h3>
           <SemesterCurriculumList semesterCurriculum={content.semester1} />
         </div>
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
-          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">semester 2</h3>
+          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">
+            {
+              content.semester2Link ? (
+                <a
+                  href={content.semester2Link}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="group inline-flex items-start gap-1">
+                  <span class="group-hover:underline">semester 2</span>
+                  <span class="transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                    <ArrowUpRightIcon width={14} height={14} />
+                  </span>
+                </a>
+              ) : (
+                "semester 2"
+              )
+            }
+          </h3>
           <SemesterCurriculumList semesterCurriculum={content.semester2} />
         </div>
       </div>
@@ -47,7 +97,22 @@ const { yearCodeName, content, className } = Astro.props;
     {
       yearCodeName === "2CP" && content?.concour && (
         <div class="relative z-10 mt-20 transition sm:mt-10">
-          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">concours</h3>
+          <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">
+            {content.concourLink ? (
+              <a
+                href={content.concourLink}
+                target="_blank"
+                rel="noreferrer"
+                class="group inline-flex items-start gap-1">
+                <span class="group-hover:underline">concours</span>
+                <span class="transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                  <ArrowUpRightIcon width={14} height={14} />
+                </span>
+              </a>
+            ) : (
+              "concours"
+            )}
+          </h3>
           <ConcourExamList concourExams={content.concour} />
         </div>
       )
