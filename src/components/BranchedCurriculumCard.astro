@@ -55,6 +55,7 @@ const semesterLinks = Object.fromEntries(
         specialties.map((specialty, index) => (
           <button
             id={`${yearCodeName}-${specialty}-button`}
+            aria-pressed={index === 0 ? "true" : "false"}
             class={`specialtyButtons-${yearCodeName} relative text-[2rem] font-bold text-beige dark:text-blue-dark ${
               index === 0 && "specialty-underline"
             }`}>
@@ -66,6 +67,7 @@ const semesterLinks = Object.fromEntries(
     <div class="relative mt-9">
       <button
         id={`slidePrev-${yearCodeName}`}
+        aria-label="Previous semester"
         class="absolute -bottom-11 left-1/3 sm:-left-10 sm:bottom-auto sm:top-64 lg:hidden">
         <img src="/images/chevron-left.svg" alt="chevron left icon" width="28" height="36" />
       </button>
@@ -141,6 +143,7 @@ const semesterLinks = Object.fromEntries(
       </div>
       <button
         id={`slideNext-${yearCodeName}`}
+        aria-label="Next semester"
         class="absolute -bottom-11 right-1/3 z-10 sm:-right-10 sm:bottom-auto sm:top-64 lg:hidden">
         <img src="/images/chevron-right.svg" alt="chevron right icon" width="28" height="36" />
       </button>
@@ -173,11 +176,13 @@ const semesterLinks = Object.fromEntries(
 
     for (button of specialtyButtons) {
       button.classList.remove("specialty-underline");
+      button.setAttribute("aria-pressed", "false");
     }
 
     for (button of specialtyButtons) {
       if (button.textContent.trim() === specialty) {
         button.classList.add("specialty-underline");
+        button.setAttribute("aria-pressed", "true");
         break;
       }
     }
