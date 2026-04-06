@@ -12,6 +12,22 @@ import GlobeDecoration from "./GlobeDecoration.astro";
 import WhaleDecoration from "./WhaleDecoration.astro";
 ---
 
+<script>
+  const cards = document.querySelectorAll(".curriculum-card");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.05, rootMargin: "0px 0px -60px 0px" },
+  );
+  cards.forEach((card) => observer.observe(card));
+</script>
+
 <section class="relative bg-blue-light">
   <div class="wrapper py-10">
     <CurriculumCard yearCodeName="1CP" className="mb-20" content={firstYear} />

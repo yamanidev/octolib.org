@@ -16,13 +16,14 @@ const { concourExams, className } = Astro.props;
   } ${className}`}>
   {
     concourExams.length > 0 ? (
-      concourExams.map((exam) => (
+      concourExams.map((exam, index) => (
         <a
           href={exam.link}
           target="_blank"
           rel="noreferrer"
-          class="flex items-center gap-2 leading-tight hover:underline xs:text-lg">
-          <span class="flex-shrink-0">
+          class="curriculum-item group -mx-2 flex items-center gap-2 px-2 leading-tight hover:underline xs:text-lg"
+          style={`--i: ${index}`}>
+          <span class="flex-shrink-0 transition-transform group-hover:scale-105">
             <DocumentIcon />
           </span>
           <span>{exam.year}</span>

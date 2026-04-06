@@ -57,3 +57,54 @@
 .specialty-underline::after {
   @apply absolute inset-x-0 bottom-0 h-1 bg-[#2B9AAE] content-[""];
 }
+
+.curriculum-card {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.curriculum-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes item-fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.curriculum-card .curriculum-item {
+  opacity: 0;
+  animation: item-fade-in 0.35s ease both paused;
+  animation-delay: calc(var(--i) * 45ms);
+}
+
+.curriculum-card.is-visible .curriculum-item {
+  animation-play-state: running;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curriculum-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .curriculum-card .curriculum-item {
+    opacity: 1;
+    animation: none;
+  }
+
+  [id^="specialty-indicator-"] {
+    transition: none;
+  }
+}
