@@ -8,32 +8,250 @@
 </script>
 
 <button id="themeToggle" aria-label="toggle theme" class="relative z-10">
-  <div class="flex items-center gap-1 rounded-full bg-[#1B5F6A] p-1">
-    <!-- Moon slot: active (beige bg) when dark mode is on -->
-    <span
-      class="flex h-7 w-7 items-center justify-center rounded-full text-[#FAEBD9] transition-colors duration-300 dark:bg-[#FAEBD9] dark:text-[#1B5F6A]">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
+  <svg width="66" height="32" viewBox="0 0 66 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Border rect -->
+    <rect width="66" height="32" rx="16" class="fill-blue-light dark:fill-blue-dark"></rect>
+
+    <!-- Track rect -->
+    <g filter="url(#filter-track)">
+      <rect x="2" y="2" width="62" height="28" rx="14" class="fill-beige"></rect>
+    </g>
+
+    <!-- Knob outer ring -->
+    <g class="dark:hidden" filter="url(#filter-knob-light)">
+      <circle cx="50" cy="16" r="12" fill="#2B9AAE"></circle>
+    </g>
+    <g class="hidden dark:inline" filter="url(#filter-knob-dark)">
+      <circle cx="17" cy="16" r="12" fill="#FAEBD9"></circle>
+    </g>
+
+    <!-- Sun dot (always right) -->
+    <g filter="url(#filter-sun)">
+      <circle cx="50" cy="16" r="9" fill="#D4A040"></circle>
+    </g>
+
+    <!-- Moon dot (always left) -->
+    <g filter="url(#filter-moon)">
+      <circle cx="17" cy="16" r="9" fill="#C9F1ED"></circle>
+    </g>
+
+    <!-- Craters (always at moon position) -->
+    <g filter="url(#filter-crater-1)">
+      <ellipse
+        cx="17.8595"
+        cy="10.9036"
+        rx="2.5"
+        ry="3"
+        transform="rotate(-41.4251 17.8595 10.9036)"
+        fill="#1B5F6A">
+      </ellipse>
+    </g>
+    <g filter="url(#filter-crater-2)">
+      <ellipse
+        cx="22"
+        cy="16.0197"
+        rx="2.02061"
+        ry="2.24427"
+        transform="rotate(-41.4251 22 16.0197)"
+        fill="#1B5F6A">
+      </ellipse>
+    </g>
+    <g filter="url(#filter-crater-3)">
+      <ellipse
+        cx="16.9863"
+        cy="16.0001"
+        rx="1.3346"
+        ry="1.48966"
+        transform="rotate(-41.4251 16.9863 16.0001)"
+        fill="#1B5F6A">
+      </ellipse>
+    </g>
+
+    <defs>
+      <filter
+        id="filter-track"
+        x="2"
+        y="2"
+        width="62"
+        height="30"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha">
+        </feColorMatrix>
+        <feOffset dy="2"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+        </feColorMatrix>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
+      </filter>
+      <filter
+        id="filter-knob-light"
+        x="38"
+        y="4"
+        width="24"
+        height="28"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha">
+        </feColorMatrix>
+        <feOffset dy="4"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+        </feColorMatrix>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
+      </filter>
+      <filter
+        id="filter-knob-dark"
+        x="5"
+        y="4"
+        width="24"
+        height="28"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha">
+        </feColorMatrix>
+        <feOffset dy="4"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+        </feColorMatrix>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
+      </filter>
+      <filter
+        id="filter-sun"
+        x="41"
+        y="7"
         width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="currentColor">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-    </span>
-    <!-- Sun slot: active (beige bg) when light mode is on -->
-    <span
-      class="flex h-7 w-7 items-center justify-center rounded-full bg-[#FAEBD9] transition-colors duration-300 dark:bg-transparent">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
+        height="22"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha">
+        </feColorMatrix>
+        <feOffset dy="4"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+        </feColorMatrix>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
+      </filter>
+      <filter
+        id="filter-moon"
+        x="8"
+        y="7"
         width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="#D4A040">
-        <path
-          d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z">
-        </path>
-      </svg>
-    </span>
-  </div>
+        height="22"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha">
+        </feColorMatrix>
+        <feOffset dy="4"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+        </feColorMatrix>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
+      </filter>
+      <filter
+        id="filter-crater-1"
+        x="15.1294"
+        y="8.11121"
+        width="5.46021"
+        height="9.58472"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha">
+        </feColorMatrix>
+        <feOffset dy="4"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+        </feColorMatrix>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
+      </filter>
+      <filter
+        id="filter-crater-2"
+        x="19.8787"
+        y="13.8704"
+        width="4.24268"
+        height="8.29871"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha">
+        </feColorMatrix>
+        <feOffset dy="4"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+        </feColorMatrix>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
+      </filter>
+      <filter
+        id="filter-crater-3"
+        x="15.5818"
+        y="14.5762"
+        width="2.80908"
+        height="6.84778"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha">
+        </feColorMatrix>
+        <feOffset dy="4"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+        </feColorMatrix>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
+      </filter>
+    </defs>
+  </svg>
 </button>
