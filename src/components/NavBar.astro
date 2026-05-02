@@ -37,8 +37,10 @@ import ThemeToggle from "./ThemeToggle.astro";
     @apply opacity-0;
   }
 
-  #navMenu.active {
-    @apply absolute inset-0 block h-screen bg-beige px-2 pt-28 text-center lg:static lg:pt-0;
+  @media (max-width: 1023px) {
+    #navMenu.active {
+      @apply absolute inset-0 block h-screen bg-beige px-2 pt-28 text-center;
+    }
   }
 </style>
 
