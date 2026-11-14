@@ -46,5 +46,8 @@ Octolib is made possible by the continuous efforts along the years of ESI SBA st
 - [Fatah](https://github.com/fatah255)
 - [Madene Meriem](https://www.linkedin.com/in/meriem-madene-83309a282/)
 - [Ayoub Ghezou](https://github.com/ayoubghezzou)
+- Lebkara Abdelfatah
+- Zegrar Taha Abderrahim
+- [Mehdi Amdjad](https://www.linkedin.com/in/mehdi-mohamed-amdjad-237298285)
 
 If you have contributed to Octolib but can't find your name in the list, please submit a pull request or [contact me](https://github.com/yamanidev#connect-with-me) to fix it.
