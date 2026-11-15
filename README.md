@@ -49,5 +49,6 @@ Octolib is made possible by the continuous efforts along the years of ESI SBA st
 - Lebkara Abdelfatah
 - [Zegrar Taha ABDERRAHIM](https://github.com/TXA-RXIM)
 - [Mehdi Amdjad](https://www.linkedin.com/in/mehdi-mohamed-amdjad-237298285)
+- [Aicha Amalou](https://www.linkedin.com/in/aicha-amalou-51a036366/)
 
 If you have contributed to Octolib but can't find your name in the list, please submit a pull request or [contact me](https://github.com/yamanidev#connect-with-me) to fix it.
