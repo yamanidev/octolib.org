@@ -1,6 +1,7 @@
 export type Class = {
   title: string;
-  link: string;
+  // Absent while the module has no folder in the library yet; the site then shows it as having no resources.
+  link?: string;
 };
 
 export type Concours = {

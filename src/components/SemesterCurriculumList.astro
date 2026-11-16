@@ -8,6 +8,12 @@ type Props = {
 };
 
 const { semesterCurriculum, className } = Astro.props;
+// A module without a link has no folder in the library yet.
+const awaitsResources = semesterCurriculum.some((semesterClass) => !semesterClass.link);
+// Modules with resources come first; the sort is stable, so each group keeps the order of the data file.
+const orderedCurriculum = [...semesterCurriculum].sort(
+  (first, second) => Number(!first.link) - Number(!second.link),
+);
 ---
 
 <div
@@ -16,19 +22,42 @@ const { semesterCurriculum, className } = Astro.props;
   } ${className}`}>
   {
     semesterCurriculum.length > 0 ? (
-      semesterCurriculum.map((semesterClass, index) => (
-        <a
-          href={semesterClass.link}
-          target="_blank"
-          rel="noreferrer"
-          class="curriculum-item group -mx-2 flex items-center gap-2 px-2 leading-tight hover:underline xs:text-lg"
-          style={`--i: ${index}`}>
-          <span class="flex-shrink-0 transition-transform group-hover:scale-105">
-            <DocumentIcon />
-          </span>
-          <span>{semesterClass.title}</span>
-        </a>
-      ))
+      orderedCurriculum.map((semesterClass, index) => {
+        const isAwaited = !semesterClass.link;
+        const label = (
+          <>
+            <span
+              class={`flex-shrink-0 transition-transform group-hover:scale-105 ${
+                isAwaited && "opacity-50"
+              }`}>
+              <DocumentIcon />
+            </span>
+            <span class={isAwaited ? "opacity-60" : ""}>
+              {semesterClass.title}
+              {isAwaited && (
+                <span class="ml-1 whitespace-nowrap text-xs italic">· no resources yet</span>
+              )}
+            </span>
+          </>
+        );
+        const layout =
+          "curriculum-item -mx-2 flex items-center gap-2 px-2 leading-tight xs:text-lg";
+
+        return semesterClass.link ? (
+          <a
+            href={semesterClass.link}
+            target="_blank"
+            rel="noreferrer"
+            class={`${layout} group hover:underline`}
+            style={`--i: ${index}`}>
+            {label}
+          </a>
+        ) : (
+          <div class={layout} style={`--i: ${index}`}>
+            {label}
+          </div>
+        );
+      })
     ) : (
       <>
         <p class="text-center text-sm">
@@ -42,6 +71,20 @@ const { semesterCurriculum, className } = Astro.props;
           Contribute
         </a>
       </>
+    )
+  }
+  {
+    awaitsResources && (
+      <p class="mt-auto pt-4 text-center text-sm">
+        Have resources for these modules?{" "}
+        <a
+          href="https://forms.gle/LEYaSdEo3UVDLxo89"
+          class="font-bold underline"
+          rel="noreferrer"
+          target="_blank">
+          Contribute
+        </a>
+      </p>
     )
   }
 </div>
