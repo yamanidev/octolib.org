@@ -29,22 +29,26 @@ import WhaleDecoration from "./WhaleDecoration.astro";
   cards.forEach((card) => observer.observe(card));
 </script>
 
+<!--
+  Each decoration follows the card it overlaps and has no top offset, so it stays where it would sit in the page flow.
+  Its negative top margin then pulls it up across that card's bottom edge, which keeps it in place however tall the cards grow.
+-->
 <section class="relative bg-blue-light">
   <div class="wrapper py-10">
     <CurriculumCard yearCodeName="1CP" className="mb-20" content={firstYear} />
-    <GlobeDecoration class="absolute left-20 top-[110rem] hidden xl:block" />
-    <FishSwarmBig
-      class="absolute right-0 top-[150rem] w-80 text-[#1B5F6A] dark:text-[#2EA5B8] md:w-auto xl:w-[43rem]"
+    <FishSwarmSmall
+      class="absolute right-10 -mt-[12.5rem] w-72 text-[#1B5F6A] dark:text-[#2EA5B8] md:w-auto"
     />
     <CurriculumCard yearCodeName="2CP" className="mb-20" content={secondYear} />
-    <FishSwarmSmall
-      class="absolute right-10 top-[38rem] w-72 text-[#1B5F6A] dark:text-[#2EA5B8] md:w-auto"
-    />
+    <GlobeDecoration class="absolute left-20 -mt-[2.125rem] hidden xl:block" />
     <CurriculumCard yearCodeName="1CS" className="mb-20" content={thirdYear} />
-    <WhaleDecoration
-      class="absolute left-0 top-[190rem] hidden w-96 sm:block md:w-[31.25rem] lg:w-auto"
+    <FishSwarmBig
+      class="absolute right-0 -mt-[10.125rem] w-80 text-[#1B5F6A] dark:text-[#2EA5B8] md:w-auto xl:w-[43rem]"
     />
     <BranchedCurriculumCard yearCodeName="2CS" className="mb-20" content={fourthYear} />
+    <WhaleDecoration
+      class="absolute left-0 -mt-[22.1875rem] hidden w-96 sm:block md:w-[31.25rem] lg:w-auto"
+    />
     <BranchedCurriculumCard yearCodeName="3CS" className="mb-20" content={fifthYear} />
     <PhdCard />
   </div>
