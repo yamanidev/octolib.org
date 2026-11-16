@@ -1,7 +1,16 @@
+---
+import { officialLinks } from "../data/official";
+import ArrowUpRightIcon from "./ArrowUpRightIcon.astro";
+---
+
 <footer class="bg-[#D4A040] text-white">
   <div class="mx-auto max-w-[67.5rem] px-4 py-12">
     <div class="flex flex-col justify-between gap-8 sm:flex-row sm:items-start">
       <div class="flex flex-col gap-4">
+        <!-- The footer is sand in both themes, so it always uses the cream logo. -->
+        <a href="/" class="w-fit" aria-label="Octolib, back to the top">
+          <img src="/images/logo-dark-mode.png" alt="octolib logo" width="110" height="62" />
+        </a>
         <p class="text-lg font-semibold">
           &copy; 2023 - {new Date().getFullYear()} Octolib. All rights reserved.
         </p>
@@ -33,15 +42,41 @@
           Contribute
         </a>
       </div>
-      <div class="border-white sm:border-l sm:pl-10">
-        <h6 class="mb-3 text-xs font-semibold uppercase tracking-widest opacity-70">Site links</h6>
-        <ul class="flex flex-col gap-2 text-sm font-semibold">
-          <li><a href="#1CP" class="hover:underline">1CP</a></li>
-          <li><a href="#2CP" class="hover:underline">2CP</a></li>
-          <li><a href="#1CS" class="hover:underline">1CS</a></li>
-          <li><a href="#2CS" class="hover:underline">2CS</a></li>
-          <li><a href="#3CS" class="hover:underline">3CS</a></li>
-        </ul>
+      <div class="flex gap-12 sm:gap-10">
+        <div class="border-white sm:border-l sm:pl-10">
+          <h6 class="mb-3 text-xs font-semibold uppercase tracking-widest opacity-70">
+            Site links
+          </h6>
+          <ul class="flex flex-col gap-2 text-sm font-semibold">
+            <li><a href="#1CP" class="hover:underline">1CP</a></li>
+            <li><a href="#2CP" class="hover:underline">2CP</a></li>
+            <li><a href="#1CS" class="hover:underline">1CS</a></li>
+            <li><a href="#2CS" class="hover:underline">2CS</a></li>
+            <li><a href="#3CS" class="hover:underline">3CS</a></li>
+            <li><a href="#PhD" class="hover:underline">PhD</a></li>
+          </ul>
+        </div>
+        <div class="border-white sm:border-l sm:pl-10">
+          <h6 class="mb-3 text-xs font-semibold uppercase tracking-widest opacity-70">
+            Official links
+          </h6>
+          <ul class="flex flex-col gap-2 text-sm font-semibold">
+            {
+              officialLinks.map((official) => (
+                <li>
+                  <a
+                    href={official.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="inline-flex items-start gap-0.5 hover:underline">
+                    {official.title}
+                    <ArrowUpRightIcon width={10} height={10} />
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </div>
   </div>
