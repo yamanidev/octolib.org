@@ -15,7 +15,7 @@ const fifthYear: BranchedCurriculum = {
         link: "https://drive.google.com/drive/folders/1CZtQJQldDA9T3yNnV_QRD6BbnopYjZBU?usp=drive_link",
       },
       {
-        title: "Cloud",
+        title: "Cloud Computing",
         link: "https://drive.google.com/drive/folders/1PaobsmQUilDQaDeqeZHPZb1mJSPpEEly?usp=drive_link",
       },
       {
@@ -56,7 +56,7 @@ const fifthYear: BranchedCurriculum = {
         link: "https://drive.google.com/drive/folders/1Mi6L0VAmzuLWTvy2I_QTviIJIFSzgqae?usp=drive_link",
       },
       {
-        title: "Cloud",
+        title: "Cloud Computing",
         link: "https://drive.google.com/drive/folders/1PaobsmQUilDQaDeqeZHPZb1mJSPpEEly?usp=drive_link",
       },
       {
@@ -87,7 +87,7 @@ const fifthYear: BranchedCurriculum = {
       "https://drive.google.com/drive/folders/1q4a3zujpweWSchLw85v_ZQFa6NIMSvfz?usp=drive_link",
     semester1: [
       {
-        title: "Cloud",
+        title: "Cloud Computing",
         link: "https://drive.google.com/drive/folders/1PaobsmQUilDQaDeqeZHPZb1mJSPpEEly?usp=drive_link",
       },
       {

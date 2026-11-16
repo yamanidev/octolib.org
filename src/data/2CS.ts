@@ -207,7 +207,7 @@ const fourthYear: BranchedCurriculum = {
         link: "https://drive.google.com/drive/folders/1uwBslHR2c_N3e6eAivw5TmYwngCwCBKW?usp=drive_link",
       },
       {
-        title: "IT Security",
+        title: "Data Security",
         link: "https://drive.google.com/drive/folders/1ZeKx-W-qEaBk8vAKyOcsWXmI7AZ7zuWy?usp=drive_link",
       },
       {
