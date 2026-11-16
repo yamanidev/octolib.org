@@ -1,7 +1,45 @@
-import type { Curriculum } from "./types";
+import type { Curriculum, Program } from "./types";
 
-const firstYearCurriculum: Curriculum = {
-  link: "https://drive.google.com/drive/folders/191na8LEKUEpwA3M5LuLNJpNVl8Y2Lm5H?usp=drive_link",
+// The current program lives in the library under `1CP/2025-present-program`.
+// A module without a link has no folder yet and is shown as having no resources.
+// When a module's first resource is added to the library, paste its folder's link here.
+const currentProgram: Program = {
+  label: "Current",
+  period: "2025–present",
+  note: "Resources are added as they are contributed.",
+  link: "https://drive.google.com/drive/folders/1c3YMmbSRaZ0K7G8eqOHm65NAB6QvmA8V?usp=drive_link",
+  semester1Link:
+    "https://drive.google.com/drive/folders/1JzeqZ7C_VJt-T6jZTjnxcYRXCF2QN8cJ?usp=drive_link",
+  semester1: [
+    { title: "Fundamental Data Structures and Algorithms" },
+    { title: "Computer Architecture: Fundamentals" },
+    { title: "Linux System Foundations" },
+    { title: "Basic Abstract Algebra" },
+    { title: "Mathematical Analysis I" },
+    { title: "General Electronics" },
+    { title: "English Communication" },
+    {
+      title: "Digital & AI Literacy",
+      link: "https://drive.google.com/drive/folders/1KJwayWBXMzHMk6A7vSKZHOOZrwUBVc7F?usp=drive_link",
+    },
+  ],
+  semester2: [
+    { title: "Dynamic Data Structures and Algorithms" },
+    { title: "Assembly Language" },
+    { title: "Information Systems Fundamentals" },
+    { title: "Mathematical Analysis II" },
+    { title: "Linear Algebra I" },
+    { title: "Digital Electronics" },
+    { title: "English for Engineers" },
+    { title: "Digital Economy" },
+  ],
+};
+
+const previousProgram: Program = {
+  label: "Previous",
+  period: "2014–2025",
+  note: "These modules are no longer part of the program.",
+  link: "https://drive.google.com/drive/folders/1j1YgZ9sPxGbuCgDMhSqCbd_Syr619bRJ?usp=drive_link",
   semester1Link:
     "https://drive.google.com/drive/folders/1rPU0a-PQIa4TWN4-i2ngsFN4Izi_QclT?usp=drive_link",
   semester2Link:
@@ -62,6 +100,15 @@ const firstYearCurriculum: Curriculum = {
       link: "https://drive.google.com/drive/folders/1CDkV2jBjCrtXsOgGLtUJTMnWIFtH3f8A?usp=drive_link",
     },
   ],
+};
+
+const firstYearCurriculum: Curriculum = {
+  link: "https://drive.google.com/drive/folders/191na8LEKUEpwA3M5LuLNJpNVl8Y2Lm5H?usp=drive_link",
+  programs: [currentProgram, previousProgram],
+  semester1Link: currentProgram.semester1Link,
+  semester2Link: currentProgram.semester2Link,
+  semester1: currentProgram.semester1,
+  semester2: currentProgram.semester2,
 };
 
 export default firstYearCurriculum;

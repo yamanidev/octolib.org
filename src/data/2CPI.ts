@@ -1,13 +1,44 @@
-import type { Curriculum } from "./types";
+import type { Curriculum, Program } from "./types";
 
-const secondYearCurriculum: Curriculum = {
-  link: "https://drive.google.com/drive/folders/1SUE6mjbsJNstX6SyJsj0juvc_0VmfxSS?usp=drive_link",
+// The current program lives in the library under `2CP/2026-present-program`.
+// That folder is created with the program's first resource, so the program and semester links are still absent.
+// A module without a link has no folder yet and is shown as having no resources.
+// When a module's first resource is added to the library, paste its folder's link here.
+const currentProgram: Program = {
+  label: "Current",
+  period: "2026–present",
+  note: "Resources are added as they are contributed.",
+  semester1: [
+    { title: "Computer Architecture Design" },
+    { title: "Object Oriented Programming" },
+    { title: "Computer Networks" },
+    { title: "Mathematical Analysis III" },
+    { title: "Linear Algebra II" },
+    { title: "Probability and Statistics I" },
+    { title: "Data Acquisition and Communication Electronics" },
+    { title: "Soft Skills / Humanities Electives / IT" },
+  ],
+  semester2: [
+    { title: "Databases: Fundamentals" },
+    { title: "Graph Algorithms and Linear Optimization" },
+    { title: "Web Technologies" },
+    { title: "Mathematical Analysis IV" },
+    { title: "Mathematical Logic" },
+    { title: "Probability and Statistics II" },
+    { title: "Multidisciplinary Project" },
+    { title: "Entrepreneurship" },
+  ],
+};
+
+const previousProgram: Program = {
+  label: "Previous",
+  period: "2015–2026",
+  note: "These modules are no longer part of the program.",
+  link: "https://drive.google.com/drive/folders/1LmQdUW2GHH2nvg4KsTKPdU9_-mFzd-GB?usp=drive_link",
   semester1Link:
     "https://drive.google.com/drive/folders/1i8St_o1D68a4lfYFFmXqMXBqcwHNvYSd?usp=drive_link",
   semester2Link:
     "https://drive.google.com/drive/folders/1_eqx9Ey8tNa7I1AuVibyeoBT6ySSY1lz?usp=drive_link",
-  concourLink:
-    "https://drive.google.com/drive/folders/1DnsQFQF_QYF66TuA9lBWzcv46-undIot?usp=drive_link",
   semester1: [
     {
       title: "File and Data Structures",
@@ -68,11 +99,34 @@ const secondYearCurriculum: Curriculum = {
       link: "https://drive.google.com/drive/folders/1dFzZrJE7tkwWrJvB6rlzeNirZyGu5Cm3?usp=drive_link",
     },
     {
+      title: "Multidisciplinary Project (resources)",
+      link: "https://drive.google.com/drive/folders/1AlL8JAfXiJTm50DVQSmfYeF4LVeyUZUU?usp=drive_link",
+    },
+    {
       title: "English Language 3",
       link: "https://drive.google.com/drive/folders/1Ezwi-_R1VlycJuTIeh6JGNxMdJDF_joY?usp=drive_link",
     },
   ],
+};
+
+const secondYearCurriculum: Curriculum = {
+  link: "https://drive.google.com/drive/folders/1SUE6mjbsJNstX6SyJsj0juvc_0VmfxSS?usp=drive_link",
+  programs: [currentProgram, previousProgram],
+  semester1Link: currentProgram.semester1Link,
+  semester2Link: currentProgram.semester2Link,
+  semester1: currentProgram.semester1,
+  semester2: currentProgram.semester2,
+  concourLink:
+    "https://drive.google.com/drive/folders/1DnsQFQF_QYF66TuA9lBWzcv46-undIot?usp=drive_link",
   concour: [
+    {
+      year: "2026",
+      link: "https://drive.google.com/drive/folders/1f3B02db71BuDsd2a4oOh8KHfXsUUwiV0?usp=drive_link",
+    },
+    {
+      year: "2025",
+      link: "https://drive.google.com/drive/folders/18TBcbpAA4R6-La-9BLdhHedC7_1Rjz7M?usp=drive_link",
+    },
     {
       year: "2024",
       link: "https://drive.google.com/drive/folders/1stymGBntmt-9lgsmrd_guPUoqDo5CfxE?usp=drive_link",

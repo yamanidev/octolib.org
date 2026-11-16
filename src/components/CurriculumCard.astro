@@ -1,5 +1,5 @@
 ---
-import type { Curriculum } from "../data/types";
+import type { Curriculum, Program } from "../data/types";
 import SemesterCurriculumList from "./SemesterCurriculumList.astro";
 import ConcourExamList from "./ConcourExamList.astro";
 import ArrowUpRightIcon from "./ArrowUpRightIcon.astro";
@@ -11,6 +11,27 @@ type Props = {
 };
 
 const { yearCodeName, content, className } = Astro.props;
+
+// A year with a single program is shown as before, as one unnamed program.
+const programs: Program[] = content.programs ?? [
+  {
+    label: "",
+    semester1Link: content.semester1Link,
+    semester2Link: content.semester2Link,
+    semester1: content.semester1,
+    semester2: content.semester2,
+  },
+];
+const hasProgramSwitch = programs.length > 1;
+const programKeys = programs.map((_, index) =>
+  index === 0 ? "current" : `previous${index > 1 ? index : ""}`,
+);
+const programDetails = programs.map((program, index) => ({
+  key: programKeys[index],
+  note: program.note ?? "",
+  semester1: program.semester1Link ?? "",
+  semester2: program.semester2Link ?? "",
+}));
 ---
 
 <section id={yearCodeName} class={`text-blue-dark ${className}`}>
@@ -36,7 +57,36 @@ const { yearCodeName, content, className } = Astro.props;
         )
       }
     </h2>
-    <div class="relative mt-9">
+    {
+      hasProgramSwitch && (
+        <div class="relative z-10 mt-3 flex flex-col items-center gap-1">
+          <div
+            role="group"
+            aria-label={`${yearCodeName} program`}
+            class="flex flex-wrap justify-center gap-x-5 gap-y-1">
+            {programs.map((program, index) => (
+              <button
+                type="button"
+                data-program={programKeys[index]}
+                aria-pressed={index === 0 ? "true" : "false"}
+                class={`programButtons-${yearCodeName} border-b-2 pb-0.5 text-xs font-semibold text-beige transition hover:opacity-100 dark:text-blue-dark xs:text-sm ${
+                  index === 0 ? "border-current opacity-100" : "border-transparent opacity-60"
+                }`}>
+                {program.label}
+                <span class="hidden sm:inline"> program</span>
+                {program.period && ` (${program.period})`}
+              </button>
+            ))}
+          </div>
+          <p
+            id={`program-note-${yearCodeName}`}
+            class="min-h-[1rem] text-center text-xs text-beige opacity-80 dark:text-blue-dark">
+            {programs[0].note}
+          </p>
+        </div>
+      )
+    }
+    <div class={`relative ${hasProgramSwitch ? "mt-5" : "mt-9"}`}>
       <button
         id={`slidePrev-${yearCodeName}`}
         aria-label="Previous semester"
@@ -48,45 +98,55 @@ const { yearCodeName, content, className } = Astro.props;
         class="flex gap-5 overflow-hidden scroll-smooth pt-2 transition">
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
           <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">
-            {
-              content.semester1Link ? (
-                <a
-                  href={content.semester1Link}
-                  target="_blank"
-                  rel="noreferrer"
-                  class="group inline-flex items-start gap-1">
-                  <span class="group-hover:underline">semester 1</span>
-                  <span class="transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
-                    <ArrowUpRightIcon width={14} height={14} />
-                  </span>
-                </a>
-              ) : (
-                "semester 1"
-              )
-            }
+            <a
+              id={`semester1-link-${yearCodeName}`}
+              href={programs[0].semester1Link}
+              target="_blank"
+              rel="noreferrer"
+              class="group inline-flex items-start gap-1">
+              <span class="group-hover:underline">semester 1</span>
+              <span
+                class="semester-arrow transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                <ArrowUpRightIcon width={14} height={14} />
+              </span>
+            </a>
           </h3>
-          <SemesterCurriculumList semesterCurriculum={content.semester1} />
+          {
+            programs.map((program, index) => (
+              <SemesterCurriculumList
+                semesterCurriculum={program.semester1}
+                className={`${yearCodeName}-program-pane ${yearCodeName}-${
+                  programKeys[index]
+                }-pane ${index === 0 ? "" : "hidden"}`}
+              />
+            ))
+          }
         </div>
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
           <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">
-            {
-              content.semester2Link ? (
-                <a
-                  href={content.semester2Link}
-                  target="_blank"
-                  rel="noreferrer"
-                  class="group inline-flex items-start gap-1">
-                  <span class="group-hover:underline">semester 2</span>
-                  <span class="transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
-                    <ArrowUpRightIcon width={14} height={14} />
-                  </span>
-                </a>
-              ) : (
-                "semester 2"
-              )
-            }
+            <a
+              id={`semester2-link-${yearCodeName}`}
+              href={programs[0].semester2Link}
+              target="_blank"
+              rel="noreferrer"
+              class="group inline-flex items-start gap-1">
+              <span class="group-hover:underline">semester 2</span>
+              <span
+                class="semester-arrow transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                <ArrowUpRightIcon width={14} height={14} />
+              </span>
+            </a>
           </h3>
-          <SemesterCurriculumList semesterCurriculum={content.semester2} />
+          {
+            programs.map((program, index) => (
+              <SemesterCurriculumList
+                semesterCurriculum={program.semester2}
+                className={`${yearCodeName}-program-pane ${yearCodeName}-${
+                  programKeys[index]
+                }-pane ${index === 0 ? "" : "hidden"}`}
+              />
+            ))
+          }
         </div>
       </div>
       <button
@@ -122,7 +182,7 @@ const { yearCodeName, content, className } = Astro.props;
   </div>
 </section>
 
-<script define:vars={{ yearCodeName }}>
+<script define:vars={{ yearCodeName, programDetails }}>
   const carousel = document.getElementById(`carousel-${yearCodeName}`);
   const carouselSlide = document.querySelector(`#carousel-${yearCodeName} > div`);
   const slidePrevButton = document.getElementById(`slidePrev-${yearCodeName}`);
@@ -137,4 +197,78 @@ const { yearCodeName, content, className } = Astro.props;
     const slideWidth = carouselSlide.clientWidth;
     carousel.scrollLeft += slideWidth + 20;
   });
+
+  // Program switch: only present on years that have more than one program.
+  const programButtons = document.getElementsByClassName(`programButtons-${yearCodeName}`);
+  const programPanes = document.getElementsByClassName(`${yearCodeName}-program-pane`);
+  const programNote = document.getElementById(`program-note-${yearCodeName}`);
+  const selectedClasses = ["border-current", "opacity-100"];
+  const idleClasses = ["border-transparent", "opacity-60"];
+  const storageKey = `program-${yearCodeName}`;
+
+  function selectProgram(key) {
+    const details = programDetails.find((program) => program.key === key);
+    if (!details) {
+      return;
+    }
+
+    for (const button of programButtons) {
+      const isSelected = button.dataset.program === key;
+      button.setAttribute("aria-pressed", isSelected ? "true" : "false");
+      button.classList.remove(...selectedClasses, ...idleClasses);
+      button.classList.add(...(isSelected ? selectedClasses : idleClasses));
+    }
+
+    for (const pane of programPanes) {
+      pane.classList.toggle("hidden", !pane.classList.contains(`${yearCodeName}-${key}-pane`));
+    }
+
+    if (programNote) {
+      programNote.textContent = details.note;
+    }
+
+    for (const semester of ["semester1", "semester2"]) {
+      const link = document.getElementById(`${semester}-link-${yearCodeName}`);
+      if (!link) {
+        continue;
+      }
+
+      if (details[semester]) {
+        link.setAttribute("href", details[semester]);
+      } else {
+        link.removeAttribute("href");
+      }
+
+      link.querySelector(".semester-arrow")?.classList.toggle("hidden", !details[semester]);
+    }
+  }
+
+  selectProgram(programDetails[0].key);
+
+  if (programButtons.length > 0) {
+    for (const button of programButtons) {
+      button.addEventListener("click", () => {
+        const key = button.dataset.program;
+        selectProgram(key);
+        localStorage.setItem(storageKey, key);
+        history.replaceState(
+          null,
+          "",
+          key === "current" ? `#${yearCodeName}` : `#${yearCodeName}-${key}`,
+        );
+      });
+    }
+
+    // A shared address such as #1CP-previous wins over the remembered choice.
+    const addressed = location.hash.startsWith(`#${yearCodeName}-`)
+      ? location.hash.slice(yearCodeName.length + 2)
+      : "";
+    const remembered = localStorage.getItem(storageKey);
+    if (addressed && programDetails.some((program) => program.key === addressed)) {
+      selectProgram(addressed);
+      document.getElementById(yearCodeName).scrollIntoView();
+    } else if (remembered) {
+      selectProgram(remembered);
+    }
+  }
 </script>
