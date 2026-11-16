@@ -1,0 +1,95 @@
+---
+import { doctoralRegistrationLink } from "../data/official";
+import phdSessions, { phdFolderLink } from "../data/phd";
+import ArrowUpRightIcon from "./ArrowUpRightIcon.astro";
+import DocumentIcon from "./DocumentIcon.astro";
+
+type Props = {
+  className?: string;
+};
+
+const { className } = Astro.props;
+---
+
+<section id="PhD" class={`text-blue-dark ${className}`}>
+  <div
+    class="relative z-10 mx-auto max-w-[67.5rem] rounded-lg px-2 pb-14 pt-5 shadow-curriculum sm:px-16">
+    <div class="absolute inset-0 z-0 rounded-lg bg-blue-dark opacity-60 dark:bg-beige"></div>
+    <h2
+      class="year-codename-underline relative z-10 mx-auto w-fit text-4xl font-bold text-beige dark:text-blue-dark">
+      {
+        phdFolderLink ? (
+          <a
+            href={phdFolderLink}
+            target="_blank"
+            rel="noreferrer"
+            class="group relative inline-block hover:underline">
+            PhD
+            <span class="absolute left-full top-0 transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+              <ArrowUpRightIcon width={20} height={20} />
+            </span>
+          </a>
+        ) : (
+          "PhD"
+        )
+      }
+    </h2>
+    <p class="relative z-10 mt-4 text-center text-sm text-beige dark:text-blue-dark">
+      Past papers of the doctoral entrance concours held at ESI SBA. Candidates register on
+      <a
+        href={doctoralRegistrationLink}
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex items-start gap-0.5 font-semibold underline hover:no-underline">
+        PROGRES
+        <ArrowUpRightIcon width={10} height={10} />
+      </a>
+    </p>
+    <div class="relative z-10 mt-6 flex flex-col gap-5 rounded-lg bg-beige px-3 py-6 sm:px-8">
+      {
+        phdSessions.map((session) => (
+          <div>
+            <h3 class="text-lg font-bold">
+              {session.link ? (
+                <a href={session.link} target="_blank" rel="noreferrer" class="hover:underline">
+                  {session.label}
+                </a>
+              ) : (
+                session.label
+              )}
+              <span class="ml-2 text-sm font-normal">· exam {session.examDate}</span>
+            </h3>
+            <div class="mt-2 flex flex-col gap-2">
+              {session.papers.map((paper, index) => (
+                <a
+                  href={paper.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="curriculum-item group -mx-2 flex items-center gap-2 px-2 leading-tight hover:underline xs:text-lg"
+                  style={`--i: ${index}`}>
+                  <span class="flex-shrink-0 transition-transform group-hover:scale-105">
+                    <DocumentIcon />
+                  </span>
+                  <span>
+                    {paper.title}
+                    {paper.common && <span class="ml-1 text-sm">(common exam)</span>}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+      <p class="mt-2 text-center text-sm">
+        Sat this concours? Share the papers:{" "}
+        <a
+          href="https://forms.gle/LEYaSdEo3UVDLxo89"
+          class="font-bold underline"
+          rel="noreferrer"
+          target="_blank">
+          Contribute
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
