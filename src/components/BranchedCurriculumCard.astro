@@ -21,7 +21,7 @@ const initialSemester2Link = content[firstSpecialty]?.semester2Link;
 const semesterLinks = Object.fromEntries(
   specialties.map((s) => [
     s,
-    { semester1: content[s].semester1Link, semester2: content[s].semester2Link },
+    { semester1: content[s]?.semester1Link, semester2: content[s]?.semester2Link },
   ]),
 );
 ---
@@ -50,13 +50,13 @@ const semesterLinks = Object.fromEntries(
       }
     </h2>
 
-    <div class="mt-4 flex justify-center gap-10">
+    <div class="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 sm:gap-10">
       {
         specialties.map((specialty, index) => (
           <button
             id={`${yearCodeName}-${specialty}-button`}
             aria-pressed={index === 0 ? "true" : "false"}
-            class={`specialtyButtons-${yearCodeName} relative text-[2rem] font-bold text-beige dark:text-blue-dark ${
+            class={`specialtyButtons-${yearCodeName} relative text-[1.75rem] font-bold text-beige dark:text-blue-dark xs:text-[2rem] ${
               index === 0 && "specialty-underline"
             }`}>
             {specialty}
@@ -94,18 +94,16 @@ const semesterLinks = Object.fromEntries(
               )
             }
           </h3>
-          <SemesterCurriculumList
-            semesterCurriculum={content.ISI.semester1}
-            className={`${yearCodeName}-pane ${yearCodeName}-ISI-pane`}
-          />
-          <SemesterCurriculumList
-            semesterCurriculum={content.SIW.semester1}
-            className={`${yearCodeName}-pane ${yearCodeName}-SIW-pane hidden`}
-          />
-          <SemesterCurriculumList
-            semesterCurriculum={content.IASD.semester1}
-            className={`${yearCodeName}-pane ${yearCodeName}-IASD-pane hidden`}
-          />
+          {
+            specialties.map((specialty, index) => (
+              <SemesterCurriculumList
+                semesterCurriculum={content[specialty]?.semester1 ?? []}
+                className={`${yearCodeName}-pane ${yearCodeName}-${specialty}-pane ${
+                  index === 0 ? "" : "hidden"
+                }`}
+              />
+            ))
+          }
         </div>
         <div class="flex w-full flex-[1_0_100%] flex-col lg:flex-auto">
           <h3 class="text-center text-2xl font-bold text-beige dark:text-blue-dark">
@@ -127,18 +125,16 @@ const semesterLinks = Object.fromEntries(
               )
             }
           </h3>
-          <SemesterCurriculumList
-            semesterCurriculum={content.ISI.semester2}
-            className={`${yearCodeName}-pane ${yearCodeName}-ISI-pane`}
-          />
-          <SemesterCurriculumList
-            semesterCurriculum={content.SIW.semester2}
-            className={`${yearCodeName}-pane ${yearCodeName}-SIW-pane hidden`}
-          />
-          <SemesterCurriculumList
-            semesterCurriculum={content.IASD.semester2}
-            className={`${yearCodeName}-pane ${yearCodeName}-IASD-pane hidden`}
-          />
+          {
+            specialties.map((specialty, index) => (
+              <SemesterCurriculumList
+                semesterCurriculum={content[specialty]?.semester2 ?? []}
+                className={`${yearCodeName}-pane ${yearCodeName}-${specialty}-pane ${
+                  index === 0 ? "" : "hidden"
+                }`}
+              />
+            ))
+          }
         </div>
       </div>
       <button

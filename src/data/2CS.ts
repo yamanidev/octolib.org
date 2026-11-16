@@ -224,6 +224,80 @@ const fourthYear: BranchedCurriculum = {
       },
     ],
   },
+  CyS: {
+    semester1Link:
+      "https://drive.google.com/drive/folders/1MWKBbPpzBImVt8xpPhUgJcjIvjhqkx6k?usp=drive_link",
+    semester2Link:
+      "https://drive.google.com/drive/folders/1xaFmFD_j7iq-LEaa0Ja08fbI-3TRE5B3?usp=drive_link",
+    semester1: [
+      {
+        title: "Advanced Cryptography",
+        link: "https://drive.google.com/drive/folders/1W9BNUt0bjHMBfTfiJbkW69xyZGJpL55i?usp=drive_link",
+      },
+      {
+        title: "Advanced Databases",
+        link: "https://drive.google.com/drive/folders/11xy0kaigTnuKc8lGWfp2s1PAqPOIm4K-?usp=drive_link",
+      },
+      {
+        title: "Computer Systems and Network Security",
+        link: "https://drive.google.com/drive/folders/18_uHrks-apGyUtrCBZznlC9hnT80iRqc?usp=drive_link",
+      },
+      {
+        title: "Complexity and Problem Solving",
+        link: "https://drive.google.com/drive/folders/1s0eju1SUAusR_fRJlEtMNOiGik95brwL?usp=drive_link",
+      },
+      {
+        title: "Fundamentals of Artificial Intelligence",
+        link: "https://drive.google.com/drive/folders/1_AaGjhHwmIY23m0ojRlA50SS3n_ZsICp?usp=drive_link",
+      },
+      {
+        title: "Information and Data Security",
+        link: "https://drive.google.com/drive/folders/1ss3rKe6G_gBcCX32zQCP18__2oZnnuQc?usp=drive_link",
+      },
+      {
+        title: "Advanced Networking",
+        link: "https://drive.google.com/drive/folders/1jXovvchoBIbK4oVW0AWkc5zriTKrb0r4?usp=drive_link",
+      },
+      {
+        title: "Web and Mobile Development",
+        link: "https://drive.google.com/drive/folders/1tNPglQgBD2o7Yq_0qlIudLorkHL9lBTJ?usp=drive_link",
+      },
+    ],
+    semester2: [
+      {
+        title: "Data Analysis",
+        link: "https://drive.google.com/drive/folders/1Q2u-bHx04Ke3dxyI1YoX_ls7moUE9u5e?usp=drive_link",
+      },
+      {
+        title: "Cloud and Fog Computing",
+        link: "https://drive.google.com/drive/folders/1goh_Dz2Pvo4Wpd3Y6LIkdAB2czLQP0Tq?usp=drive_link",
+      },
+      {
+        title: "Cybersecurity",
+        link: "https://drive.google.com/drive/folders/1-Zh_T4KTcw73Uy8XL-8qaIpYYuxp3Zg1?usp=drive_link",
+      },
+      {
+        title: "DevOps and Security",
+        link: "https://drive.google.com/drive/folders/1MQm57lD2vq2un_DcqYKzE4uAadnZbLKi?usp=drive_link",
+      },
+      {
+        title: "Embedded Systems and IoT",
+        link: "https://drive.google.com/drive/folders/1OgmRDbsinDvXaWkorljdEHqvIMCtuSdQ?usp=drive_link",
+      },
+      {
+        title: "Operating Systems Security",
+        link: "https://drive.google.com/drive/folders/1dF6juKG3Y0O0N_EUFAMmnQktMifu14zq?usp=drive_link",
+      },
+      {
+        title: "Secure Software Development and Applications",
+        link: "https://drive.google.com/drive/folders/18RuVoTC6-BFKequNrQAQNGMyCiOwdv6A?usp=drive_link",
+      },
+      {
+        title: "Wireless and Mobile Network Security",
+        link: "https://drive.google.com/drive/folders/1kKLgyo80NHEaRKpQsn7eSR8HUBAQ4txJ?usp=drive_link",
+      },
+    ],
+  },
 };
 
 export default fourthYear;

@@ -39,4 +39,5 @@ export type BranchedCurriculum = {
   ISI: Curriculum;
   SIW: Curriculum;
   IASD: Curriculum;
+  CyS?: Curriculum;
 };
