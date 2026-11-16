@@ -20,35 +20,44 @@ We welcome contributions, in fact this project needs them on a yearly basis in o
 
 ### Folder structure and file naming conventions
 
-**Note**: Folders are mostly named in French abbreviations, because it is the teaching language of ESI SBA.
+**Note**: Every name that Octolib assigns is in English, in lowercase, with words joined by hyphens.
+Official codes keep their capitals (`1CP`, `S1`, `2CS-ISI`, `ESI SBA`).
+Files keep the name their teacher gave them, unless they follow the exam convention below.
 
-Google Drive folder (one for each class. For example: 1CP, 2CP...):
+Google Drive folder (one for each class: 1CP, 2CP, 1CS, 2CS, 3CS):
 
+- 1CP and 2CP have one folder per program, named after the years it was taught (for example `2014-2025-program` and `2025-present-program`), each holding S1 and S2.
 - S1 (1st semester):
 
-  - Module:
-    - Cours:
+  - module (named after the module's English title, for example `mathematical-analysis-1`):
+    - lectures:
       - 2019-2020 (academic year of the resources):
         - Lesson 1
         - Lesson 2
         - ...
-    - TD:
+    - tutorials (TD):
       - 2019-2020 (academic year of the resources):
-        - TD 1
-        - TD 2
+        - tutorial-1
+        - tutorial-2
         - ...
-    - TP:
+    - labs (TP):
       - 2019-2020 (academic year of the resources):
-        - TP 1
-        - TP 2
+        - lab-1
+        - lab-2
         - ...
-    - Examens:
+    - exams:
       - 2019-2020 (academic year of the resources):
-        - EMD1
-        - EMD1 solution
-        - EMD2
-        - EMD2 solution
-    - Autres (extra files):
+        - exam-1
+        - exam-1-solution
+        - exam-2
+        - exam-2-solution
+        - exam-1-makeup (for students absent from the exam)
+        - exam-1-resit (for students who failed)
+        - quiz-1, test-1
+    - other (extra files):
       - Additional resources (summaries for example)
 
 - S2 (2nd semester. Same structure as S1):
+
+A folder is created only when its first file is added, so no folder is ever empty.
+A solution written by a student, not by the teacher, is marked `unofficial`: `exam-1-unofficial-solution`, `tutorial-3-unofficial-solution`, `chapter-2-unofficial-summary`.
